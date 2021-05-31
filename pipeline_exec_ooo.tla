@@ -1,6 +1,6 @@
 ---------------------------- MODULE pipeline_exec_ooo ----------------------------
 EXTENDS Sequences, instructions_ooo, Integers, TLC, FiniteSets
-VARIABLES currCycle, prog, _IF, _ID, _RS, _FU, _COM, iMiss, FU, FULat \*, IFBus
+VARIABLES currCycle, prog, _IF, _ID, _RS, _FU, _COM, iMiss, FU, FULat
 -----------------------------------------------------------------------------
 
 pipe_stages == << _IF, _ID, _RS, _FU, _COM >>
@@ -13,7 +13,6 @@ Init == /\ currCycle = 0
         /\ _RS = [ i \in (1..N_FU) |-> {} ]
         /\ _FU = [ i \in (1..N_FU) |-> [ PC |-> empty, baseLat |-> 1, currLat |-> 1, usage |-> 0 ] ]
         /\ _COM = [ i \in (1..superscal) |-> [ PC |-> empty ] ]
-         \*/\ IFBus = FALSE
 -----------------------------------------------------------------------------
 
 NxtIFBusy == \E i \in 1..superscal: _IF[i].currLat < _IF[i].baseLat \* A I-cache miss stalls each pipeline
@@ -48,8 +47,6 @@ NxtFU(i) == IF NxtFUBusy(i)
 ReadyCOM(DoneCOM) == \* The set of (indexes of) instructions *potentially* ready for in-order commit (within the ROB)
                      \* i.e., whose all previous instructions (in program order) either have been committed/are about to leave the pipeline or are about to be committed in the same cycle (depending on DoneCOM).
                       LET readyInOrder == { j \in 1..Len(prog.exec):
-                                            \*\A k \in 1..Len(prog.exec): \* Actually instructions in prog.exec are stored in-order...
-                                            \*prog.exec[k].PC.pc < prog.exec[j].PC.pc => k \in DoneCOM
                                             \A k \in 1..j-1: k \in DoneCOM
                                          } IN
                       (Exec \intersect readyInOrder) \ DoneCOM
@@ -63,10 +60,6 @@ ProgressIF == LET nxt(i) == next_instr(prog.rest, i) IN
                             THEN [ PC |-> nxt(i), baseLat |-> 1, currLat |-> 1 ]
                             ELSE IF ~NxtIFBusy /\ cacheMiss(i) THEN [ PC |-> nxt(i), baseLat |-> missLat, currLat |-> 1 ]
                             ELSE [ _IF[i] EXCEPT !.currLat = _IF[i].currLat+1 ]
-              (*LET IFBusp(i) == IF cacheHit(i)
-                            THEN FALSE
-                            ELSE IF cacheMiss(i) THEN TRUE
-                            ELSE IFBus*)
               IN _IF' = [ i \in (1..superscal) |-> IFp(i) ]
 
 \* Decode (in-order)
@@ -74,7 +67,6 @@ ProgressID == LET nxtPc(i) == IF ~NxtIFBusy THEN _IF[i].PC ELSE empty IN
               _ID' = [ i \in (1..superscal) |-> [ PC |-> nxtPc(i) ] ]
 
 \* Issue
-\* TODO (scalability): RS full => structural hazard => stalling in ID and IF
 ProgressRS == _RS' = [ i \in (1..N_FU) |-> (_RS[i] \union FURouting(i))
                      \* Instructions are erased when beginning execution and do not go to RSs if executable at once:
                                            \ { NxtFU(i) } ]
@@ -90,8 +82,7 @@ ProgressFU == LET FUp(i) == IF ~NxtFUBusy(i)
 
 \* Multiple in-order commit
 RECURSIVE nxtCOM(_)
-nxtCOM(s) ==  \*LET minInstr(min) == IF min /= 0 THEN CHOOSE i \in 1..Len(prog.exec): prog.exec[i].PC.pc = min ELSE 0 IN
-              IF s = 1
+nxtCOM(s) ==  IF s = 1
               THEN
                 \* The (index of the) instructions already ready for in-order commit
                 ReadyCOM(Done)
@@ -108,7 +99,6 @@ execList(i) == IF i = 0
                THEN prog.exec
                ELSE exec_instr(execList(i-1), [ PC |-> next_instr(prog.rest, i), executed |-> FALSE, done |-> FALSE, exStartTime |-> 0, comTime |-> 0 ])
 
-\* TODO (scalability): full ROB (structural hazard)
 \* prog.rest contains the instructions not already fetched
 \* prog.exec acts as a (non-circular) ROB
 \*  For simplification, instructions are stored while fetching and never removed.
@@ -154,5 +144,5 @@ RAWDep == \A i \in 1..Len(Program): \A d \in Program[i].dep: d < Program[i].pc
 
 =============================================================================
 \* Modification History
-\* Last modified Tue Apr 27 17:53:36 CEST 2021 by benjaminbinder
+\* Last modified Mon May 31 18:31:46 CEST 2021 by benjaminbinder
 \* Created Thu Sep 10 13:44:58 CEST 2020 by benjaminbinder

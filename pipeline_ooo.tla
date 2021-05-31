@@ -11,7 +11,6 @@ vars2 == << currCycle2, prog2, _IF2, _ID2, _RS2, _FU2, _COM2, iMiss2, FU2, FULat
 IFs == << _IF, _IF2 >>
 FUs == << _FU, _FU2 >>
 progs == << prog, prog2 >>
-\*currCycles == << currCycle, currCycle2 >>
 
 ASSUME varIF \in BOOLEAN
 ASSUME locFU \subseteq 1..N_FU
@@ -52,7 +51,6 @@ Exec2 == INSTANCE pipeline_exec_ooo
               FU <- FU2,
               FULat <- FULat2
               
-\* TODO (optim): withdraw symmetry between both executions
 Init == /\ IF modeLen /= -1 THEN /\ depProgTmp \in CartProd(DomDep, ProgLen)
                                  /\ depProg = Flatten(depProgTmp, ProgLen-1)
            ELSE depProgTmp = << >> /\ depProg = << >>
@@ -64,8 +62,6 @@ Init == /\ IF modeLen /= -1 THEN /\ depProgTmp \in CartProd(DomDep, ProgLen)
         /\ Exec2!Init
         /\ commonPre = TRUE
         /\ locWorst = [ i \in 1..2 |-> FALSE ]
-        (*/\ loct = [ i \in 1..2 |-> [ j \in 1..ProgLen |-> 0 ] ]
-        /\ globt = [ i \in 1..2 |-> [ j \in 1..ProgLen |-> 0 ] ]*)
         /\ iMissTmp \in CartProd(DomI, ProgLen)
         /\ iMiss = Flatten(iMissTmp, ProgLen-1)
         /\ FUTmp \in CartProd(DomFU, ProgLen)
@@ -106,18 +102,6 @@ Next == /\ Exec1!Next
                                                 ELSE PrintT(<< "FU", currCycle >>) /\ FALSE
                      ]
         /\ UNCHANGED << iMissTmp, FUTmp, FUTmpLat, iMissTmp2, FUTmp2, FUTmpLat2, depProg, depProgTmp >>
-        (*/\ loct' = [ i \in 1..2 |->
-                      [ j \in 1..ProgLen |-> loct[i][j] +
-                                                  Cardinality({ f \in locFU: FUs[i][f].PC /= empty /\ FUs[i][f].PC.pc = Program[j].pc })
-                      ]
-                   ]
-        /\ globt' = [ i \in 1..2 |->
-                        [ j \in 1..ProgLen |-> IF /\ \E k \in 1..Len(progs[i]'.exec): progs[i]'.exec[k].PC.pc = Program[j].pc /\ progs[i]'.exec[k].done
-                                                       /\ \A k \in 1..Len(progs[i].exec): progs[i].exec[k].PC.pc /= Program[j].pc \/ ~progs[i].exec[k].done
-                                                   THEN currCycles[i]
-                                                   ELSE globt[i][j]
-                        ]
-                    ]*)
 
 Spec == Init /\ [][Next]_<< vars, vars2, depProg, depProgTmp, commonPre, locWorst >>
 
@@ -129,17 +113,8 @@ ProgDone(n) == \A l \in 1..2: \E i \in 1..Len(progs[l].exec): progs[l].exec[i].P
 
 ComTime(ex,n) == progs[ex].exec[n].comTime
 
-\* Gebhard: heights of steps
-\* (~ Strong anomalies but why the shortest local variations?)
+\* heights of steps
 StepHeight(ex,k) == IF k = 1 THEN ComTime(ex,1) ELSE ComTime(ex,k)-ComTime(ex,k-1)
-NoTAGeb == \A k \in 1..ProgLen-1: \A n \in k+1..ProgLen:
-            IF /\ ProgDone(n)
-               /\ StepHeight(1,k) < StepHeight(2,k)
-               => ComTime(1,n) < ComTime(2,n) \* Non strict inequality in def of anomalies
-            THEN TRUE
-            ELSE PrintT(<< k, n, StepHeight(1,k), StepHeight(2,k), ComTime(2,n)-ComTime(1,n) >>) /\ FALSE
-
-\* Modified to evict bordeline cases
 NoTASteps == \A k \in 1..ProgLen-1: \A n \in k+1..ProgLen:
              IF /\ ProgDone(n)
                 /\ StepHeight(1,k) < StepHeight(2,k)
@@ -148,37 +123,21 @@ NoTASteps == \A k \in 1..ProgLen-1: \A n \in k+1..ProgLen:
              ELSE PrintT(<< k, n, StepHeight(1,k), StepHeight(2,k), ComTime(2,n)-ComTime(1,n) >>) /\ FALSE
 
 \* Intersection in plots
-\* Cassez (actually only strong anomalies and different inputs are not comparable).
-\* ~ Automatic identification (axis inversion). (Actually less than strong...)
 NoTAInter == \A k \in 1..ProgLen-1: \A n \in k+1..ProgLen:
             IF /\ ProgDone(n)
                /\ ComTime(1,k) < ComTime(2,k)
                => ComTime(1,n) <= ComTime(2,n)
             THEN TRUE
             ELSE PrintT(<< k, n, ComTime(2,k)-ComTime(1,k), ComTime(2,n)-ComTime(1,n) >>) /\ FALSE
-            
-\* Kirner: series inversion (not strong)
-\* Similar but the last intruction is the fixed reference (less intersections if several)
-NoSerKir == \A k \in 1..ProgLen-1: LET n == ProgLen IN
-               IF /\ ProgDone(n)
-                  /\ ComTime(1,k) < ComTime(2,k)
-                  => ComTime(1,n) <= ComTime(2,n)
-               THEN TRUE
-               ELSE PrintT(<< k, n, ComTime(2,k)-ComTime(1,k), ComTime(2,n)-ComTime(1,n) >>) /\ FALSE
 
-\* Reineke: locality (pipeline stages)
+\* Locality (pipeline stages)
 \* Prefixes must be the same for comparisons (=> single variation)
-\* (Actually only strong anomalies with another meaning)
-NoTALoc == \* \A n \in 1..ProgLen: \A k \in 1..n: \* It should actually be the execution of *some* sequence in the program...
-           LET n == ProgLen IN
+NoTALoc == LET n == ProgLen IN
            /\ ProgDone(n)
            /\ ~locWorst[1]
            => locWorst[2] /\ ComTime(2,n) >= ComTime(1,n)
 
-\* Kirner: parallel inversion
-\* Similar to Reineke but component contributions (~locality) are spread over the whole sequence.
-\* More likely to target only some components (e.g., FUs), i.e., specific decomposition.
-\* (Intrinsically not strong (then refinement))
+\* Parallel inversion
 NoTAComp == LET n == ProgLen IN
             LET FUusage(ex,fu) == FUs[ex][fu].usage IN
             LET usage(ex) == Sum({ [ fu |-> fu, val |-> FUusage(ex,fu) ]: fu \in locFU }) IN
@@ -187,92 +146,5 @@ NoTAComp == LET n == ProgLen IN
                => ComTime(1,n) <= ComTime(2,n)
             THEN TRUE
             ELSE PrintT(<< usage(1), usage(2), ComTime(1,n), ComTime(2,n) >>) /\ FALSE
-
-
-\* Other formulations
-(*
-LocGeb(ex, k) == IF k = 1 THEN globt[ex][1] ELSE globt[ex][k]-globt[ex][k-1]
-NoTAGeb == \A k \in 1..ProgLen-1: \A n \in k+1..ProgLen:
-            \A l \in 1..2: \E i \in 1..Len(progs[l].exec): progs[l].exec[i].PC.pc = Program[n].pc /\ progs[l].exec[i].done
-            =>
-            IF LocGeb(1,k) < LocGeb(2,k) => globt[1][n] < globt[2][n] \* Non strict inequality in def of anomalies
-            THEN TRUE
-            ELSE PrintT(<< k, n, LocGeb(2,k)-LocGeb(1,k), globt[2][n]-globt[1][n] >>) /\ FALSE
-
-NoTAGebStrict == \A k \in 1..ProgLen-1: \A n \in k+1..ProgLen:
-                   \A l \in 1..2: \E i \in 1..Len(progs[l].exec): progs[l].exec[i].PC.pc = Program[n].pc /\ progs[l].exec[i].done
-                   =>
-                   IF LocGeb(1,k) < LocGeb(2,k) => globt[1][n] <= globt[2][n] \* As if strict inequality in def
-                   THEN TRUE
-                   ELSE PrintT(<< k, n, LocGeb(2,k)-LocGeb(1,k), globt[2][n]-globt[1][n] >>) /\ FALSE
-
-NoTACass == \A k \in 1..ProgLen-1: \A n \in k+1..ProgLen:
-                \A l \in 1..2: \E i \in 1..Len(progs[l].exec): progs[l].exec[i].PC.pc = Program[n].pc /\ progs[l].exec[i].done
-                =>
-                IF globt[1][k] < globt[2][k] => globt[1][n] <= globt[2][n]
-                THEN TRUE
-                ELSE PrintT(<< k, n, globt[2][k]-globt[1][k], globt[2][n]-globt[1][n] >>) /\ FALSE
-
-NoTACass == \E ex \in 1..2: \A n \in 1..ProgLen:
-            IF (\A l \in 1..2: \E i \in 1..Len(progs[l].exec): progs[l].exec[i].PC.pc = Program[n].pc /\ progs[l].exec[i].done)
-               => globt[3-ex][n] <= globt[ex][n]
-            THEN TRUE
-            ELSE PrintT(<< n >>) /\ FALSE
             
-NoSeriesKir == \A k \in 1..ProgLen-1: LET n == ProgLen IN
-                \A l \in 1..2: \E i \in 1..Len(progs[l].exec): progs[l].exec[i].PC.pc = Program[n].pc /\ progs[l].exec[i].done
-                =>
-                IF globt[1][k] < globt[2][k] => globt[1][n] <= globt[2][n] \* As if strict inequality in def
-                THEN TRUE
-                ELSE PrintT(<< k, n, globt[2][k]-globt[1][k], globt[2][n]-globt[1][n] >>) /\ FALSE
-
-NoTARei == \* \A n \in 1..ProgLen: \A k \in 1..n: \* It should actually be the execution of *some* sequence in the program...
-           LET n == ProgLen IN
-           \A l \in 1..2: \E i \in 1..Len(progs[l].exec): progs[l].exec[i].PC.pc = Program[n].pc /\ progs[l].exec[i].done
-           =>
-           \A ex \in 1..2: ~reiLoc[ex] => (reiLoc[3-ex] /\ progs[3-ex].exec[n].comTime >= progs[ex].exec[n].comTime)
-
-LocKir(ex) == SUM(loct[ex], Len(loct[ex]))
-NoCIKir == LET n == ProgLen IN
-           \A l \in 1..2: \E i \in 1..Len(progs[l].exec): progs[l].exec[i].PC.pc = Program[n].pc /\ progs[l].exec[i].done
-           =>
-           IF LocKir(1) < LocKir(2) => globt[1][n] <= globt[2][n]
-           THEN TRUE
-           ELSE PrintT(<< LocKir(2), LocKir(1), globt[2][n]-globt[1][n] >>) /\ FALSE
-*)
-
------------------------------------------------------------------------------
-\* Kirner: parallel and series amplifications
-(*
-NoAmpliKir == LET n == ProgLen IN
-              /\ \A l \in 1..2: \E i \in 1..Len(progs[l].exec): progs[l].exec[i].PC.pc = Program[n].pc /\ progs[l].exec[i].done
-              /\ LocKir(1) < LocKir(2)
-              => globt[2][n]-globt[1][n] <= LocKir(2)-LocKir(1)
-              
-NoSeriesAmpliKir == \A n \in 2..ProgLen: \A k \in 1..n-1:
-                    IF /\ \A l \in 1..2: \E i \in 1..Len(progs[l].exec): progs[l].exec[i].PC.pc = Program[n].pc /\ progs[l].exec[i].done
-                       /\ globt[1][k] < globt[2][k]
-                       => globt[2][n]-globt[1][n] <= globt[2][k]-globt[1][k]
-                    THEN TRUE
-                    ELSE PrintT(<< k, n, globt[2][k]-globt[1][k], globt[2][n]-globt[1][n] >>) /\ FALSE
-*)
-
------------------------------------------------------------------------------
-(* 
-\* Based on Reineke but allowing different prefixes before comparisons
-NoCI == \A k \in 1..ProgLen-1: \A n \in k+1..ProgLen:
-            IF /\ \A l \in 1..2: \E i \in 1..Len(progs[l].exec): progs[l].exec[i].PC.pc = Program[n].pc /\ progs[l].exec[i].done
-               /\ loct[1][k] < loct[2][k]
-               => ComTime(1,n) <= ComTime(2,n)
-            THEN TRUE
-            ELSE PrintT(<< k, n, loct[2][k]-loct[1][k], ComTime(2,n)-ComTime(1,n) >>) /\ FALSE     
-\* Same formalism for amplifications
-NoAmpli == \A n \in 1..ProgLen: \A k \in 1..n:
-            IF /\ \A l \in 1..2: \E i \in 1..Len(progs[l].exec): progs[l].exec[i].PC.pc = Program[n].pc /\ progs[l].exec[i].done
-               /\ loct[1][k] < loct[2][k]
-               => globt[2][n]-globt[1][n] <= loct[2][k]-loct[1][k]
-            THEN TRUE
-            ELSE PrintT(<< k, n, loct[2][k]-loct[1][k], globt[2][n]-globt[1][n] >>) /\ FALSE
-*)
-
 =============================================================================
