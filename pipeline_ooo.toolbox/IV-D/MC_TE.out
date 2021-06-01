@@ -2,20 +2,20 @@
 TLC2 Version 2.16 of 31 December 2020 (rev: cdddf55)
 @!@!@ENDMSG 2262 @!@!@
 @!@!@STARTMSG 2187:0 @!@!@
-Running breadth-first search Model-Checking with fp 127 and seed 301364389636187852 with 2 workers on 4 cores with 1161MB heap and 2609MB offheap memory [pid: 6484] (Linux 5.4.0-73-generic amd64, AdoptOpenJDK 14.0.1 x86_64, OffHeapDiskFPSet, DiskStateQueue).
+Running breadth-first search Model-Checking with fp 8 and seed 4327442210121499248 with 2 workers on 4 cores with 1161MB heap and 2609MB offheap memory [pid: 18643] (Linux 5.4.0-73-generic amd64, AdoptOpenJDK 14.0.1 x86_64, OffHeapDiskFPSet, DiskStateQueue).
 @!@!@ENDMSG 2187 @!@!@
 @!@!@STARTMSG 2220:0 @!@!@
 Starting SANY...
 @!@!@ENDMSG 2220 @!@!@
-Parsing file /home/benjaminbinder/Documents/timing-anomalies/tla/OoO/pipeline_ooo.toolbox/locality/MC.tla
-Parsing file /home/benjaminbinder/Documents/timing-anomalies/tla/OoO/pipeline_ooo.toolbox/locality/pipeline_ooo.tla
+Parsing file /home/benjaminbinder/Documents/timing-anomalies/tla/OoO/pipeline_ooo.toolbox/IV-D/MC.tla
+Parsing file /home/benjaminbinder/Documents/timing-anomalies/tla/OoO/pipeline_ooo.toolbox/IV-D/pipeline_ooo.tla
 Parsing file /usr/tla_toolbox/plugins/org.lamport.tlatools_1.0.0.202012311918/tla2sany/StandardModules/TLC.tla
 Parsing file /usr/tla_toolbox/plugins/org.lamport.tlatools_1.0.0.202012311918/tla2sany/StandardModules/Sequences.tla
-Parsing file /home/benjaminbinder/Documents/timing-anomalies/tla/OoO/pipeline_ooo.toolbox/locality/instructions_ooo.tla
+Parsing file /home/benjaminbinder/Documents/timing-anomalies/tla/OoO/pipeline_ooo.toolbox/IV-D/instructions_ooo.tla
 Parsing file /usr/tla_toolbox/plugins/org.lamport.tlatools_1.0.0.202012311918/tla2sany/StandardModules/Integers.tla
 Parsing file /usr/tla_toolbox/plugins/org.lamport.tlatools_1.0.0.202012311918/tla2sany/StandardModules/FiniteSets.tla
 Parsing file /usr/tla_toolbox/plugins/org.lamport.tlatools_1.0.0.202012311918/tla2sany/StandardModules/Naturals.tla
-Parsing file /home/benjaminbinder/Documents/timing-anomalies/tla/OoO/pipeline_ooo.toolbox/locality/pipeline_exec_ooo.tla
+Parsing file /home/benjaminbinder/Documents/timing-anomalies/tla/OoO/pipeline_ooo.toolbox/IV-D/pipeline_exec_ooo.tla
 Semantic processing of module Naturals
 Semantic processing of module Sequences
 Semantic processing of module Integers
@@ -29,7 +29,7 @@ Semantic processing of module MC
 SANY finished.
 @!@!@ENDMSG 2219 @!@!@
 @!@!@STARTMSG 2185:0 @!@!@
-Starting... (2021-05-31 20:28:00)
+Starting... (2021-06-01 15:20:35)
 @!@!@ENDMSG 2185 @!@!@
 @!@!@STARTMSG 2189:0 @!@!@
 Computing initial states...
@@ -134,13 +134,13 @@ Computed 4 initial states...
 Computed 8 initial states...
 @!@!@ENDMSG 2269 @!@!@
 @!@!@STARTMSG 2190:0 @!@!@
-Finished computing initial states: 16 distinct states generated at 2021-05-31 20:28:02.
+Finished computing initial states: 16 distinct states generated at 2021-06-01 15:20:36.
 @!@!@ENDMSG 2190 @!@!@
-<< "CEX TALoc (beta local worst case) <<Alpha global time, Beta global time>>",
+<< "TALoc encountered (beta local worst case) <<Alpha global time, Beta global time>>",
    11,
    10 >>
 @!@!@STARTMSG 2110:1 @!@!@
-Invariant inv_1622485679960631000 is violated.
+Invariant inv_162255363146352000 is violated.
 @!@!@ENDMSG 2110 @!@!@
 @!@!@STARTMSG 2121:1 @!@!@
 The behavior up to this point is:
@@ -1542,7 +1542,7 @@ The behavior up to this point is:
 
 @!@!@ENDMSG 2217 @!@!@
 @!@!@STARTMSG 2201:0 @!@!@
-The coverage statistics at 2021-05-31 20:28:02
+The coverage statistics at 2021-06-01 15:20:37
 @!@!@ENDMSG 2201 @!@!@
 @!@!@STARTMSG 2773:0 @!@!@
 <Init line 54, col 1 to line 54, col 4 of module pipeline_ooo>: 32:32
@@ -2505,7 +2505,7 @@ The coverage statistics at 2021-05-31 20:28:02
   line 100, col 12 to line 100, col 103 of module pipeline_ooo: 221
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2774:0 @!@!@
-<inv_1622485679960631000 line 50, col 1 to line 50, col 23 of module MC>
+<inv_162255363146352000 line 50, col 1 to line 50, col 22 of module MC>
 @!@!@ENDMSG 2774 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
   line 51, col 1 to line 51, col 35 of module MC: 211
@@ -2517,13 +2517,13 @@ The coverage statistics at 2021-05-31 20:28:02
   ||line 51, col 2 to line 51, col 10 of module MC: 211
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  |||line 122, col 14 to line 127, col 188 of module pipeline_ooo: 211
+  |||line 122, col 14 to line 127, col 196 of module pipeline_ooo: 211
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  ||||line 122, col 37 to line 127, col 188 of module pipeline_ooo: 844
+  ||||line 122, col 37 to line 127, col 196 of module pipeline_ooo: 844
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  |||||line 123, col 13 to line 127, col 188 of module pipeline_ooo: 2110
+  |||||line 123, col 13 to line 127, col 196 of module pipeline_ooo: 2110
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
   ||||||line 123, col 16 to line 125, col 46 of module pipeline_ooo: 2110
@@ -2571,19 +2571,19 @@ The coverage statistics at 2021-05-31 20:28:02
   |line 51, col 29 to line 51, col 35 of module MC: 211
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  ||line 131, col 21 to line 131, col 27 of module pipeline_ooo: 4
+  ||line 135, col 21 to line 135, col 27 of module pipeline_ooo: 4
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  ||line 132, col 12 to line 136, col 142 of module pipeline_ooo: 211
+  ||line 136, col 12 to line 140, col 150 of module pipeline_ooo: 211
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  |||line 132, col 15 to line 134, col 60 of module pipeline_ooo: 211
+  |||line 136, col 15 to line 138, col 60 of module pipeline_ooo: 211
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  ||||line 132, col 15 to line 133, col 29 of module pipeline_ooo: 211
+  ||||line 136, col 15 to line 137, col 29 of module pipeline_ooo: 211
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  |||||line 132, col 18 to line 132, col 28 of module pipeline_ooo: 211
+  |||||line 136, col 18 to line 136, col 28 of module pipeline_ooo: 211
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
   ||||||line 108, col 16 to line 108, col 119 of module pipeline_ooo: 211
@@ -2607,22 +2607,22 @@ The coverage statistics at 2021-05-31 20:28:02
   |||||||line 108, col 25 to line 108, col 28 of module pipeline_ooo: 211
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  |||||line 133, col 18 to line 133, col 29 of module pipeline_ooo: 16
+  |||||line 137, col 18 to line 137, col 29 of module pipeline_ooo: 16
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  ||||line 134, col 18 to line 134, col 60 of module pipeline_ooo: 4
+  ||||line 138, col 18 to line 138, col 60 of module pipeline_ooo: 4
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  |||line 135, col 17 to line 135, col 20 of module pipeline_ooo: 210
+  |||line 139, col 17 to line 139, col 20 of module pipeline_ooo: 210
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  |||line 136, col 17 to line 136, col 142 of module pipeline_ooo: 1
+  |||line 140, col 17 to line 140, col 150 of module pipeline_ooo: 1
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2202:0 @!@!@
 End of statistics.
 @!@!@ENDMSG 2202 @!@!@
 @!@!@STARTMSG 2200:0 @!@!@
-Progress(14) at 2021-05-31 20:28:02: 226 states generated (5 005 s/min), 211 distinct states found (4 673 ds/min), 0 states left on queue.
+Progress(14) at 2021-06-01 15:20:37: 226 states generated (4 191 s/min), 211 distinct states found (3 913 ds/min), 0 states left on queue.
 @!@!@ENDMSG 2200 @!@!@
 @!@!@STARTMSG 2199:0 @!@!@
 226 states generated, 211 distinct states found, 0 states left on queue.
@@ -2634,5 +2634,5 @@ The depth of the complete state graph search is 14.
 The average outdegree of the complete state graph is 1 (minimum is 0, the maximum 1 and the 95th percentile is 1).
 @!@!@ENDMSG 2268 @!@!@
 @!@!@STARTMSG 2186:0 @!@!@
-Finished in 2725ms at (2021-05-31 20:28:02)
+Finished in 3241ms at (2021-06-01 15:20:37)
 @!@!@ENDMSG 2186 @!@!@

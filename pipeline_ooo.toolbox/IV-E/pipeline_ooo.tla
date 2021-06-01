@@ -116,7 +116,7 @@ NoTASteps == \A k \in 1..ProgLen-1: \A n \in k+1..ProgLen:
                 /\ StepHeight(1,k) < StepHeight(2,k)
                 => ComTime(1,n) <= ComTime(2,n) \* As if strict inequality in def
              THEN TRUE
-             ELSE PrintT(<< "CEX TASteps (<<First (loc) instr., Second (glob) instr., Delta_alpha, Delta_beta, Global end diff>>", k, n, StepHeight(1,k), StepHeight(2,k), ComTime(2,n)-ComTime(1,n) >>) /\ FALSE
+             ELSE PrintT(<< "TASteps encountered (<<First (loc) instr., Second (glob) instr., Delta_alpha, Delta_beta, Global end diff>>", k, n, StepHeight(1,k), StepHeight(2,k), ComTime(2,n)-ComTime(1,n) >>) /\ FALSE
 
 \* Intersection in plots
 NoTAInter == \A k \in 1..ProgLen-1: \A n \in k+1..ProgLen:
@@ -124,7 +124,7 @@ NoTAInter == \A k \in 1..ProgLen-1: \A n \in k+1..ProgLen:
                /\ ComTime(1,k) < ComTime(2,k)
                => ComTime(1,n) <= ComTime(2,n)
             THEN TRUE
-            ELSE PrintT(<< "CEX TAInter (<<First (loc) instr., Second (glob) instr., Local diff, Global end diff>>", k, n, ComTime(2,k)-ComTime(1,k), ComTime(2,n)-ComTime(1,n) >>) /\ FALSE
+            ELSE PrintT(<< "TAInter encountered (<<First (loc) instr., Second (glob) instr., Local diff, Global end diff>>", k, n, ComTime(2,k)-ComTime(1,k), ComTime(2,n)-ComTime(1,n) >>) /\ FALSE
 NoTAInterPart(m) == \A k \in 1..m-1: \A n \in k+1..m:
                     /\ ProgDone(n)
                     /\ ComTime(1,k) < ComTime(2,k)
@@ -137,7 +137,7 @@ NoTALoc == LET n == ProgLen IN
               /\ ~locWorst[1]
               => locWorst[2] /\ ComTime(2,n) >= ComTime(1,n)
            THEN TRUE
-           ELSE PrintT(<< "CEX TALoc (beta local worst case) <<Alpha global time, Beta global time>>", ComTime(1,n), ComTime(2,n) >>) /\ FALSE
+           ELSE PrintT(<< "TALoc encountered (beta local worst case) <<Alpha global time, Beta global time>>", ComTime(1,n), ComTime(2,n) >>) /\ FALSE
 NoTALocPart(m) == /\ ProgDone(m)
                   /\ ~locWorst[1]
                   => locWorst[2] /\ ComTime(2,m) >= ComTime(1,m)
@@ -150,6 +150,6 @@ NoTAComp == LET n == ProgLen IN
                /\ usage(1) < usage(2)
                => ComTime(1,n) <= ComTime(2,n)
             THEN TRUE
-            ELSE PrintT(<< "CEX TAComp (<<alpha occupation, beta occ, alpha global time, beta global time>>", usage(1), usage(2), ComTime(1,n), ComTime(2,n) >>) /\ FALSE
+            ELSE PrintT(<< "TAComp encountered (<<alpha occupation, beta occ, alpha global time, beta global time>>", usage(1), usage(2), ComTime(1,n), ComTime(2,n) >>) /\ FALSE
             
 =============================================================================
