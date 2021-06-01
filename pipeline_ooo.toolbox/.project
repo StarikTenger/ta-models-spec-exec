@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<projectDescription>
+	<name>pipeline_ooo</name>
+	<comment></comment>
+	<projects>
+	</projects>
+	<buildSpec>
+		<buildCommand>
+			<name>toolbox.builder.TLAParserBuilder</name>
+			<arguments>
+			</arguments>
+		</buildCommand>
+	</buildSpec>
+	<natures>
+		<nature>toolbox.natures.TLANature</nature>
+	</natures>
+	<linkedResources>
+		<link>
+			<name>instructions_ooo.tla</name>
+			<type>1</type>
+			<locationURI>PARENT-1-PROJECT_LOC/instructions_ooo.tla</locationURI>
+		</link>
+		<link>
+			<name>pipeline_exec_ooo.tla</name>
+			<type>1</type>
+			<locationURI>PARENT-1-PROJECT_LOC/pipeline_exec_ooo.tla</locationURI>
+		</link>
+		<link>
+			<name>pipeline_ooo.tla</name>
+			<type>1</type>
+			<locationURI>PARENT-1-PROJECT_LOC/pipeline_ooo.tla</locationURI>
+		</link>
+	</linkedResources>
+</projectDescription>

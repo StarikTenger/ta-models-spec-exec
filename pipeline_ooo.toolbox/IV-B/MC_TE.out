@@ -2,20 +2,20 @@
 TLC2 Version 2.16 of 31 December 2020 (rev: cdddf55)
 @!@!@ENDMSG 2262 @!@!@
 @!@!@STARTMSG 2187:0 @!@!@
-Running breadth-first search Model-Checking with fp 44 and seed 4835258341938491630 with 2 workers on 4 cores with 1161MB heap and 2609MB offheap memory [pid: 5017] (Linux 5.4.0-73-generic amd64, AdoptOpenJDK 14.0.1 x86_64, OffHeapDiskFPSet, DiskStateQueue).
+Running breadth-first search Model-Checking with fp 50 and seed 3154189479160842836 with 2 workers on 4 cores with 1161MB heap and 2609MB offheap memory [pid: 5184] (Linux 5.4.0-73-generic amd64, AdoptOpenJDK 14.0.1 x86_64, OffHeapDiskFPSet, DiskStateQueue).
 @!@!@ENDMSG 2187 @!@!@
 @!@!@STARTMSG 2220:0 @!@!@
 Starting SANY...
 @!@!@ENDMSG 2220 @!@!@
-Parsing file /home/benjaminbinder/Documents/timing-anomalies/tla/OoO/pipeline_ooo.toolbox/background/MC.tla
-Parsing file /home/benjaminbinder/Documents/timing-anomalies/tla/OoO/pipeline_ooo.toolbox/background/pipeline_ooo.tla
+Parsing file /home/benjaminbinder/Documents/timing-anomalies/tla/OoO/pipeline_ooo.toolbox/step_height/MC.tla
+Parsing file /home/benjaminbinder/Documents/timing-anomalies/tla/OoO/pipeline_ooo.toolbox/step_height/pipeline_ooo.tla
 Parsing file /usr/tla_toolbox/plugins/org.lamport.tlatools_1.0.0.202012311918/tla2sany/StandardModules/TLC.tla
 Parsing file /usr/tla_toolbox/plugins/org.lamport.tlatools_1.0.0.202012311918/tla2sany/StandardModules/Sequences.tla
-Parsing file /home/benjaminbinder/Documents/timing-anomalies/tla/OoO/pipeline_ooo.toolbox/background/instructions_ooo.tla
+Parsing file /home/benjaminbinder/Documents/timing-anomalies/tla/OoO/pipeline_ooo.toolbox/step_height/instructions_ooo.tla
 Parsing file /usr/tla_toolbox/plugins/org.lamport.tlatools_1.0.0.202012311918/tla2sany/StandardModules/Integers.tla
 Parsing file /usr/tla_toolbox/plugins/org.lamport.tlatools_1.0.0.202012311918/tla2sany/StandardModules/FiniteSets.tla
 Parsing file /usr/tla_toolbox/plugins/org.lamport.tlatools_1.0.0.202012311918/tla2sany/StandardModules/Naturals.tla
-Parsing file /home/benjaminbinder/Documents/timing-anomalies/tla/OoO/pipeline_ooo.toolbox/background/pipeline_exec_ooo.tla
+Parsing file /home/benjaminbinder/Documents/timing-anomalies/tla/OoO/pipeline_ooo.toolbox/step_height/pipeline_exec_ooo.tla
 Semantic processing of module Naturals
 Semantic processing of module Sequences
 Semantic processing of module Integers
@@ -29,7 +29,7 @@ Semantic processing of module MC
 SANY finished.
 @!@!@ENDMSG 2219 @!@!@
 @!@!@STARTMSG 2185:0 @!@!@
-Starting... (2021-05-31 19:42:34)
+Starting... (2021-05-31 19:48:11)
 @!@!@ENDMSG 2185 @!@!@
 @!@!@STARTMSG 2189:0 @!@!@
 Computing initial states...
@@ -41,7 +41,7 @@ CostModel lookup failed for expression <line 31, col 12 to line 31, col 56 of mo
 CostModel lookup failed for expression <line 31, col 15 to line 31, col 19 of module pipeline_ooo>. Reporting costs into <line 38, col 38 to line 38, col 43 of module pipeline_ooo> instead (Safety and Liveness checking is unaffected. Please report a bug.)
 @!@!@ENDMSG 2776 @!@!@
 @!@!@STARTMSG 2776:0 @!@!@
-CostModel lookup failed for expression <line 6, col 1 to line 6, col 5 of module MC>. Reporting costs into <line 38, col 38 to line 38, col 43 of module pipeline_ooo> instead (Safety and Liveness checking is unaffected. Please report a bug.)
+CostModel lookup failed for expression <line 26, col 1 to line 26, col 5 of module MC>. Reporting costs into <line 38, col 38 to line 38, col 43 of module pipeline_ooo> instead (Safety and Liveness checking is unaffected. Please report a bug.)
 @!@!@ENDMSG 2776 @!@!@
 @!@!@STARTMSG 2776:0 @!@!@
 CostModel lookup failed for expression <line 31, col 48 to line 31, col 56 of module pipeline_ooo>. Reporting costs into <line 38, col 38 to line 38, col 43 of module pipeline_ooo> instead (Safety and Liveness checking is unaffected. Please report a bug.)
@@ -56,7 +56,7 @@ CostModel lookup failed for expression <line 31, col 12 to line 31, col 56 of mo
 CostModel lookup failed for expression <line 31, col 15 to line 31, col 19 of module pipeline_ooo>. Reporting costs into <line 38, col 72 to line 38, col 77 of module pipeline_ooo> instead (Safety and Liveness checking is unaffected. Please report a bug.)
 @!@!@ENDMSG 2776 @!@!@
 @!@!@STARTMSG 2776:0 @!@!@
-CostModel lookup failed for expression <line 6, col 1 to line 6, col 5 of module MC>. Reporting costs into <line 38, col 72 to line 38, col 77 of module pipeline_ooo> instead (Safety and Liveness checking is unaffected. Please report a bug.)
+CostModel lookup failed for expression <line 26, col 1 to line 26, col 5 of module MC>. Reporting costs into <line 38, col 72 to line 38, col 77 of module pipeline_ooo> instead (Safety and Liveness checking is unaffected. Please report a bug.)
 @!@!@ENDMSG 2776 @!@!@
 @!@!@STARTMSG 2776:0 @!@!@
 CostModel lookup failed for expression <line 31, col 48 to line 31, col 56 of module pipeline_ooo>. Reporting costs into <line 38, col 72 to line 38, col 77 of module pipeline_ooo> instead (Safety and Liveness checking is unaffected. Please report a bug.)
@@ -128,47 +128,18 @@ CostModel lookup failed for expression <line 33, col 26 to line 33, col 26 of mo
 Computed 2 initial states...
 @!@!@ENDMSG 2269 @!@!@
 @!@!@STARTMSG 2190:0 @!@!@
-Finished computing initial states: 4 distinct states generated at 2021-05-31 19:42:35.
+Finished computing initial states: 4 distinct states generated at 2021-05-31 19:48:13.
 @!@!@ENDMSG 2190 @!@!@
 <<"Trace divergence in FU at instant:", 3>>
 <<"Trace divergence in FU at instant:", 3>>
-@!@!@STARTMSG 2776:0 @!@!@
-CostModel lookup failed for expression <line 27, col 27 to line 27, col 39 of module pipeline_ooo>. Reporting costs into <line 26, col 67 to line 26, col 78 of module pipeline_ooo> instead (Safety and Liveness checking is unaffected. Please report a bug.)
-@!@!@ENDMSG 2776 @!@!@
-@!@!@STARTMSG 2776:0 @!@!@
-CostModel lookup failed for expression <line 27, col 27 to line 27, col 31 of module pipeline_ooo>. Reporting costs into <line 26, col 67 to line 26, col 78 of module pipeline_ooo> instead (Safety and Liveness checking is unaffected. Please report a bug.)
-@!@!@ENDMSG 2776 @!@!@
-@!@!@STARTMSG 2776:0 @!@!@
-CostModel lookup failed for expression <line 27, col 27 to line 27, col 27 of module pipeline_ooo>. Reporting costs into <line 26, col 67 to line 26, col 78 of module pipeline_ooo> instead (Safety and Liveness checking is unaffected. Please report a bug.)
-@!@!@ENDMSG 2776 @!@!@
-@!@!@STARTMSG 2776:0 @!@!@
-CostModel lookup failed for expression <line 27, col 35 to line 27, col 39 of module pipeline_ooo>. Reporting costs into <line 26, col 67 to line 26, col 78 of module pipeline_ooo> instead (Safety and Liveness checking is unaffected. Please report a bug.)
-@!@!@ENDMSG 2776 @!@!@
-@!@!@STARTMSG 2776:0 @!@!@
-CostModel lookup failed for expression <line 27, col 27 to line 27, col 39 of module pipeline_ooo>. Reporting costs into <line 26, col 67 to line 26, col 78 of module pipeline_ooo> instead (Safety and Liveness checking is unaffected. Please report a bug.)
-@!@!@ENDMSG 2776 @!@!@
-@!@!@STARTMSG 2776:0 @!@!@
-CostModel lookup failed for expression <line 27, col 27 to line 27, col 31 of module pipeline_ooo>. Reporting costs into <line 26, col 67 to line 26, col 78 of module pipeline_ooo> instead (Safety and Liveness checking is unaffected. Please report a bug.)
-@!@!@ENDMSG 2776 @!@!@
-@!@!@STARTMSG 2776:0 @!@!@
-CostModel lookup failed for expression <line 27, col 27 to line 27, col 27 of module pipeline_ooo>. Reporting costs into <line 26, col 67 to line 26, col 78 of module pipeline_ooo> instead (Safety and Liveness checking is unaffected. Please report a bug.)
-@!@!@ENDMSG 2776 @!@!@
-@!@!@STARTMSG 2776:0 @!@!@
-CostModel lookup failed for expression <line 27, col 35 to line 27, col 39 of module pipeline_ooo>. Reporting costs into <line 26, col 67 to line 26, col 78 of module pipeline_ooo> instead (Safety and Liveness checking is unaffected. Please report a bug.)
-@!@!@ENDMSG 2776 @!@!@
-@!@!@STARTMSG 2776:0 @!@!@
-CostModel lookup failed for expression <line 27, col 35 to line 27, col 35 of module pipeline_ooo>. Reporting costs into <line 26, col 67 to line 26, col 78 of module pipeline_ooo> instead (Safety and Liveness checking is unaffected. Please report a bug.)
-@!@!@ENDMSG 2776 @!@!@
-@!@!@STARTMSG 2776:0 @!@!@
-CostModel lookup failed for expression <line 27, col 35 to line 27, col 35 of module pipeline_ooo>. Reporting costs into <line 26, col 67 to line 26, col 78 of module pipeline_ooo> instead (Safety and Liveness checking is unaffected. Please report a bug.)
-@!@!@ENDMSG 2776 @!@!@
-<< "CEX TAInter (<<First (loc) instr., Second (glob) instr., Local diff, Global end diff>>",
-   1,
+<< "CEX TASteps (<<First (loc) instr., Second (glob) instr., Delta_alpha, Delta_beta, Global end diff>>",
+   3,
    4,
-   2,
-   -2 >>
+   0,
+   1,
+   -1 >>
 @!@!@STARTMSG 2110:1 @!@!@
-Invariant NoTAInter is violated.
+Invariant inv_1622483290754234000 is violated.
 @!@!@ENDMSG 2110 @!@!@
 <<"Trace divergence in FU at instant:", 3>>
 @!@!@STARTMSG 2121:1 @!@!@
@@ -176,7 +147,7 @@ The behavior up to this point is:
 @!@!@ENDMSG 2121 @!@!@
 @!@!@STARTMSG 2217:4 @!@!@
 1: <Initial predicate>
-/\ FULat2 = <<3, 3, 3, 3>>
+/\ FULat2 = <<1, 1, 1, 3>>
 /\ iMiss2 = <<FALSE, FALSE, FALSE, FALSE>>
 /\ _RS2 = <<{}, {}>>
 /\ locWorst = <<FALSE, FALSE>>
@@ -184,7 +155,7 @@ The behavior up to this point is:
 /\ _ID = <<[PC |-> [pc |-> 0, type |-> "empty"]], [PC |-> [pc |-> 0, type |-> "empty"]]>>
 /\ _IF = << [PC |-> [pc |-> 0, type |-> "empty"], currLat |-> 1, baseLat |-> 1],
    [PC |-> [pc |-> 0, type |-> "empty"], currLat |-> 1, baseLat |-> 1] >>
-/\ FUTmpLat = <<<<<<1, 3>>, 3>>, 3>>
+/\ FUTmpLat = <<<<<<3, 1>>, 1>>, 3>>
 /\ _FU2 = << [ PC |-> [pc |-> 0, type |-> "empty"],
      currLat |-> 1,
      usage |-> 0,
@@ -206,22 +177,22 @@ The behavior up to this point is:
 /\ commonPre = TRUE
 /\ currCycle = 0
 /\ iMissTmp = <<<<<<FALSE, FALSE>>, FALSE>>, FALSE>>
-/\ FULat = <<1, 3, 3, 3>>
+/\ FULat = <<3, 1, 1, 3>>
 /\ FUTmp2 = <<<<<<1, 2>>, 2>>, 1>>
 /\ prog = [ rest |->
       << [pc |-> 1, type |-> {1}, lat |-> {1, 3}, dep |-> {}],
-         [pc |-> 2, type |-> {2}, lat |-> {3}, dep |-> {1}],
-         [pc |-> 3, type |-> {2}, lat |-> {3}, dep |-> {}],
-         [pc |-> 4, type |-> {1}, lat |-> {3}, dep |-> {3}] >>,
+         [pc |-> 2, type |-> {2}, lat |-> {1}, dep |-> {1}],
+         [pc |-> 3, type |-> {2}, lat |-> {1}, dep |-> {}],
+         [pc |-> 4, type |-> {1}, lat |-> {3}, dep |-> {2, 3}] >>,
   exec |-> <<>> ]
 /\ depProg = <<>>
-/\ FUTmpLat2 = <<<<<<3, 3>>, 3>>, 3>>
+/\ FUTmpLat2 = <<<<<<1, 1>>, 1>>, 3>>
 /\ depProgTmp = <<>>
 /\ prog2 = [ rest |->
       << [pc |-> 1, type |-> {1}, lat |-> {1, 3}, dep |-> {}],
-         [pc |-> 2, type |-> {2}, lat |-> {3}, dep |-> {1}],
-         [pc |-> 3, type |-> {2}, lat |-> {3}, dep |-> {}],
-         [pc |-> 4, type |-> {1}, lat |-> {3}, dep |-> {3}] >>,
+         [pc |-> 2, type |-> {2}, lat |-> {1}, dep |-> {1}],
+         [pc |-> 3, type |-> {2}, lat |-> {1}, dep |-> {}],
+         [pc |-> 4, type |-> {1}, lat |-> {3}, dep |-> {2, 3}] >>,
   exec |-> <<>> ]
 /\ FU = <<1, 2, 2, 1>>
 /\ _FU = << [ PC |-> [pc |-> 0, type |-> "empty"],
@@ -236,7 +207,7 @@ The behavior up to this point is:
 @!@!@ENDMSG 2217 @!@!@
 @!@!@STARTMSG 2217:4 @!@!@
 2: <Next line 78, col 9 to line 104, col 103 of module pipeline_ooo>
-/\ FULat2 = <<3, 3, 3, 3>>
+/\ FULat2 = <<1, 1, 1, 3>>
 /\ iMiss2 = <<FALSE, FALSE, FALSE, FALSE>>
 /\ _RS2 = <<{}, {}>>
 /\ locWorst = <<TRUE, TRUE>>
@@ -245,10 +216,10 @@ The behavior up to this point is:
 /\ _IF = << [ PC |-> [pc |-> 1, type |-> {1}, lat |-> {1, 3}, dep |-> {}],
      currLat |-> 1,
      baseLat |-> 1 ],
-   [ PC |-> [pc |-> 2, type |-> {2}, lat |-> {3}, dep |-> {1}],
+   [ PC |-> [pc |-> 2, type |-> {2}, lat |-> {1}, dep |-> {1}],
      currLat |-> 1,
      baseLat |-> 1 ] >>
-/\ FUTmpLat = <<<<<<1, 3>>, 3>>, 3>>
+/\ FUTmpLat = <<<<<<3, 1>>, 1>>, 3>>
 /\ _FU2 = << [ PC |-> [pc |-> 0, type |-> "empty"],
      currLat |-> 1,
      usage |-> 0,
@@ -265,7 +236,7 @@ The behavior up to this point is:
 /\ _IF2 = << [ PC |-> [pc |-> 1, type |-> {1}, lat |-> {1, 3}, dep |-> {}],
      currLat |-> 1,
      baseLat |-> 1 ],
-   [ PC |-> [pc |-> 2, type |-> {2}, lat |-> {3}, dep |-> {1}],
+   [ PC |-> [pc |-> 2, type |-> {2}, lat |-> {1}, dep |-> {1}],
      currLat |-> 1,
      baseLat |-> 1 ] >>
 /\ iMissTmp2 = <<<<<<FALSE, FALSE>>, FALSE>>, FALSE>>
@@ -274,35 +245,35 @@ The behavior up to this point is:
 /\ commonPre = TRUE
 /\ currCycle = 1
 /\ iMissTmp = <<<<<<FALSE, FALSE>>, FALSE>>, FALSE>>
-/\ FULat = <<1, 3, 3, 3>>
+/\ FULat = <<3, 1, 1, 3>>
 /\ FUTmp2 = <<<<<<1, 2>>, 2>>, 1>>
 /\ prog = [ rest |->
-      << [pc |-> 3, type |-> {2}, lat |-> {3}, dep |-> {}],
-         [pc |-> 4, type |-> {1}, lat |-> {3}, dep |-> {3}] >>,
+      << [pc |-> 3, type |-> {2}, lat |-> {1}, dep |-> {}],
+         [pc |-> 4, type |-> {1}, lat |-> {3}, dep |-> {2, 3}] >>,
   exec |->
       << [ PC |-> [pc |-> 1, type |-> {1}, lat |-> {1, 3}, dep |-> {}],
            done |-> FALSE,
            comTime |-> 0,
            executed |-> FALSE,
            exStartTime |-> 0 ],
-         [ PC |-> [pc |-> 2, type |-> {2}, lat |-> {3}, dep |-> {1}],
+         [ PC |-> [pc |-> 2, type |-> {2}, lat |-> {1}, dep |-> {1}],
            done |-> FALSE,
            comTime |-> 0,
            executed |-> FALSE,
            exStartTime |-> 0 ] >> ]
 /\ depProg = <<>>
-/\ FUTmpLat2 = <<<<<<3, 3>>, 3>>, 3>>
+/\ FUTmpLat2 = <<<<<<1, 1>>, 1>>, 3>>
 /\ depProgTmp = <<>>
 /\ prog2 = [ rest |->
-      << [pc |-> 3, type |-> {2}, lat |-> {3}, dep |-> {}],
-         [pc |-> 4, type |-> {1}, lat |-> {3}, dep |-> {3}] >>,
+      << [pc |-> 3, type |-> {2}, lat |-> {1}, dep |-> {}],
+         [pc |-> 4, type |-> {1}, lat |-> {3}, dep |-> {2, 3}] >>,
   exec |->
       << [ PC |-> [pc |-> 1, type |-> {1}, lat |-> {1, 3}, dep |-> {}],
            done |-> FALSE,
            comTime |-> 0,
            executed |-> FALSE,
            exStartTime |-> 0 ],
-         [ PC |-> [pc |-> 2, type |-> {2}, lat |-> {3}, dep |-> {1}],
+         [ PC |-> [pc |-> 2, type |-> {2}, lat |-> {1}, dep |-> {1}],
            done |-> FALSE,
            comTime |-> 0,
            executed |-> FALSE,
@@ -320,20 +291,20 @@ The behavior up to this point is:
 @!@!@ENDMSG 2217 @!@!@
 @!@!@STARTMSG 2217:4 @!@!@
 3: <Next line 78, col 9 to line 104, col 103 of module pipeline_ooo>
-/\ FULat2 = <<3, 3, 3, 3>>
+/\ FULat2 = <<1, 1, 1, 3>>
 /\ iMiss2 = <<FALSE, FALSE, FALSE, FALSE>>
 /\ _RS2 = <<{}, {}>>
 /\ locWorst = <<TRUE, TRUE>>
 /\ _COM2 = <<[PC |-> [pc |-> 0, type |-> "empty"]], [PC |-> [pc |-> 0, type |-> "empty"]]>>
 /\ _ID = << [PC |-> [pc |-> 1, type |-> {1}, lat |-> {1, 3}, dep |-> {}]],
-   [PC |-> [pc |-> 2, type |-> {2}, lat |-> {3}, dep |-> {1}]] >>
-/\ _IF = << [ PC |-> [pc |-> 3, type |-> {2}, lat |-> {3}, dep |-> {}],
+   [PC |-> [pc |-> 2, type |-> {2}, lat |-> {1}, dep |-> {1}]] >>
+/\ _IF = << [ PC |-> [pc |-> 3, type |-> {2}, lat |-> {1}, dep |-> {}],
      currLat |-> 1,
      baseLat |-> 1 ],
-   [ PC |-> [pc |-> 4, type |-> {1}, lat |-> {3}, dep |-> {3}],
+   [ PC |-> [pc |-> 4, type |-> {1}, lat |-> {3}, dep |-> {2, 3}],
      currLat |-> 1,
      baseLat |-> 1 ] >>
-/\ FUTmpLat = <<<<<<1, 3>>, 3>>, 3>>
+/\ FUTmpLat = <<<<<<3, 1>>, 1>>, 3>>
 /\ _FU2 = << [ PC |-> [pc |-> 0, type |-> "empty"],
      currLat |-> 1,
      usage |-> 0,
@@ -345,13 +316,13 @@ The behavior up to this point is:
 /\ FUTmp = <<<<<<1, 2>>, 2>>, 1>>
 /\ _COM = <<[PC |-> [pc |-> 0, type |-> "empty"]], [PC |-> [pc |-> 0, type |-> "empty"]]>>
 /\ _ID2 = << [PC |-> [pc |-> 1, type |-> {1}, lat |-> {1, 3}, dep |-> {}]],
-   [PC |-> [pc |-> 2, type |-> {2}, lat |-> {3}, dep |-> {1}]] >>
+   [PC |-> [pc |-> 2, type |-> {2}, lat |-> {1}, dep |-> {1}]] >>
 /\ currCycle2 = 2
 /\ FU2 = <<1, 2, 2, 1>>
-/\ _IF2 = << [ PC |-> [pc |-> 3, type |-> {2}, lat |-> {3}, dep |-> {}],
+/\ _IF2 = << [ PC |-> [pc |-> 3, type |-> {2}, lat |-> {1}, dep |-> {}],
      currLat |-> 1,
      baseLat |-> 1 ],
-   [ PC |-> [pc |-> 4, type |-> {1}, lat |-> {3}, dep |-> {3}],
+   [ PC |-> [pc |-> 4, type |-> {1}, lat |-> {3}, dep |-> {2, 3}],
      currLat |-> 1,
      baseLat |-> 1 ] >>
 /\ iMissTmp2 = <<<<<<FALSE, FALSE>>, FALSE>>, FALSE>>
@@ -360,7 +331,7 @@ The behavior up to this point is:
 /\ commonPre = TRUE
 /\ currCycle = 2
 /\ iMissTmp = <<<<<<FALSE, FALSE>>, FALSE>>, FALSE>>
-/\ FULat = <<1, 3, 3, 3>>
+/\ FULat = <<3, 1, 1, 3>>
 /\ FUTmp2 = <<<<<<1, 2>>, 2>>, 1>>
 /\ prog = [ rest |-> <<>>,
   exec |->
@@ -369,23 +340,23 @@ The behavior up to this point is:
            comTime |-> 0,
            executed |-> FALSE,
            exStartTime |-> 0 ],
-         [ PC |-> [pc |-> 2, type |-> {2}, lat |-> {3}, dep |-> {1}],
+         [ PC |-> [pc |-> 2, type |-> {2}, lat |-> {1}, dep |-> {1}],
            done |-> FALSE,
            comTime |-> 0,
            executed |-> FALSE,
            exStartTime |-> 0 ],
-         [ PC |-> [pc |-> 3, type |-> {2}, lat |-> {3}, dep |-> {}],
+         [ PC |-> [pc |-> 3, type |-> {2}, lat |-> {1}, dep |-> {}],
            done |-> FALSE,
            comTime |-> 0,
            executed |-> FALSE,
            exStartTime |-> 0 ],
-         [ PC |-> [pc |-> 4, type |-> {1}, lat |-> {3}, dep |-> {3}],
+         [ PC |-> [pc |-> 4, type |-> {1}, lat |-> {3}, dep |-> {2, 3}],
            done |-> FALSE,
            comTime |-> 0,
            executed |-> FALSE,
            exStartTime |-> 0 ] >> ]
 /\ depProg = <<>>
-/\ FUTmpLat2 = <<<<<<3, 3>>, 3>>, 3>>
+/\ FUTmpLat2 = <<<<<<1, 1>>, 1>>, 3>>
 /\ depProgTmp = <<>>
 /\ prog2 = [ rest |-> <<>>,
   exec |->
@@ -394,17 +365,17 @@ The behavior up to this point is:
            comTime |-> 0,
            executed |-> FALSE,
            exStartTime |-> 0 ],
-         [ PC |-> [pc |-> 2, type |-> {2}, lat |-> {3}, dep |-> {1}],
+         [ PC |-> [pc |-> 2, type |-> {2}, lat |-> {1}, dep |-> {1}],
            done |-> FALSE,
            comTime |-> 0,
            executed |-> FALSE,
            exStartTime |-> 0 ],
-         [ PC |-> [pc |-> 3, type |-> {2}, lat |-> {3}, dep |-> {}],
+         [ PC |-> [pc |-> 3, type |-> {2}, lat |-> {1}, dep |-> {}],
            done |-> FALSE,
            comTime |-> 0,
            executed |-> FALSE,
            exStartTime |-> 0 ],
-         [ PC |-> [pc |-> 4, type |-> {1}, lat |-> {3}, dep |-> {3}],
+         [ PC |-> [pc |-> 4, type |-> {1}, lat |-> {3}, dep |-> {2, 3}],
            done |-> FALSE,
            comTime |-> 0,
            executed |-> FALSE,
@@ -422,39 +393,39 @@ The behavior up to this point is:
 @!@!@ENDMSG 2217 @!@!@
 @!@!@STARTMSG 2217:4 @!@!@
 4: <Next line 78, col 9 to line 104, col 103 of module pipeline_ooo>
-/\ FULat2 = <<3, 3, 3, 3>>
+/\ FULat2 = <<1, 1, 1, 3>>
 /\ iMiss2 = <<FALSE, FALSE, FALSE, FALSE>>
-/\ _RS2 = <<{}, {[pc |-> 2, type |-> {2}, lat |-> {3}, dep |-> {1}]}>>
+/\ _RS2 = <<{}, {[pc |-> 2, type |-> {2}, lat |-> {1}, dep |-> {1}]}>>
 /\ locWorst = <<TRUE, TRUE>>
 /\ _COM2 = <<[PC |-> [pc |-> 0, type |-> "empty"]], [PC |-> [pc |-> 0, type |-> "empty"]]>>
-/\ _ID = << [PC |-> [pc |-> 3, type |-> {2}, lat |-> {3}, dep |-> {}]],
-   [PC |-> [pc |-> 4, type |-> {1}, lat |-> {3}, dep |-> {3}]] >>
+/\ _ID = << [PC |-> [pc |-> 3, type |-> {2}, lat |-> {1}, dep |-> {}]],
+   [PC |-> [pc |-> 4, type |-> {1}, lat |-> {3}, dep |-> {2, 3}]] >>
 /\ _IF = << [PC |-> [pc |-> 0, type |-> "empty"], currLat |-> 1, baseLat |-> 1],
    [PC |-> [pc |-> 0, type |-> "empty"], currLat |-> 1, baseLat |-> 1] >>
-/\ FUTmpLat = <<<<<<1, 3>>, 3>>, 3>>
+/\ FUTmpLat = <<<<<<3, 1>>, 1>>, 3>>
 /\ _FU2 = << [ PC |-> [pc |-> 1, type |-> {1}, lat |-> {1, 3}, dep |-> {}],
      currLat |-> 1,
      usage |-> 1,
-     baseLat |-> 3 ],
+     baseLat |-> 1 ],
    [ PC |-> [pc |-> 0, type |-> "empty"],
      currLat |-> 1,
      usage |-> 0,
      baseLat |-> 1 ] >>
 /\ FUTmp = <<<<<<1, 2>>, 2>>, 1>>
 /\ _COM = <<[PC |-> [pc |-> 0, type |-> "empty"]], [PC |-> [pc |-> 0, type |-> "empty"]]>>
-/\ _ID2 = << [PC |-> [pc |-> 3, type |-> {2}, lat |-> {3}, dep |-> {}]],
-   [PC |-> [pc |-> 4, type |-> {1}, lat |-> {3}, dep |-> {3}]] >>
+/\ _ID2 = << [PC |-> [pc |-> 3, type |-> {2}, lat |-> {1}, dep |-> {}]],
+   [PC |-> [pc |-> 4, type |-> {1}, lat |-> {3}, dep |-> {2, 3}]] >>
 /\ currCycle2 = 3
 /\ FU2 = <<1, 2, 2, 1>>
 /\ _IF2 = << [PC |-> [pc |-> 0, type |-> "empty"], currLat |-> 1, baseLat |-> 1],
    [PC |-> [pc |-> 0, type |-> "empty"], currLat |-> 1, baseLat |-> 1] >>
 /\ iMissTmp2 = <<<<<<FALSE, FALSE>>, FALSE>>, FALSE>>
 /\ iMiss = <<FALSE, FALSE, FALSE, FALSE>>
-/\ _RS = <<{}, {[pc |-> 2, type |-> {2}, lat |-> {3}, dep |-> {1}]}>>
+/\ _RS = <<{}, {[pc |-> 2, type |-> {2}, lat |-> {1}, dep |-> {1}]}>>
 /\ commonPre = TRUE
 /\ currCycle = 3
 /\ iMissTmp = <<<<<<FALSE, FALSE>>, FALSE>>, FALSE>>
-/\ FULat = <<1, 3, 3, 3>>
+/\ FULat = <<3, 1, 1, 3>>
 /\ FUTmp2 = <<<<<<1, 2>>, 2>>, 1>>
 /\ prog = [ rest |-> <<>>,
   exec |->
@@ -463,23 +434,23 @@ The behavior up to this point is:
            comTime |-> 0,
            executed |-> FALSE,
            exStartTime |-> 2 ],
-         [ PC |-> [pc |-> 2, type |-> {2}, lat |-> {3}, dep |-> {1}],
+         [ PC |-> [pc |-> 2, type |-> {2}, lat |-> {1}, dep |-> {1}],
            done |-> FALSE,
            comTime |-> 0,
            executed |-> FALSE,
            exStartTime |-> 0 ],
-         [ PC |-> [pc |-> 3, type |-> {2}, lat |-> {3}, dep |-> {}],
+         [ PC |-> [pc |-> 3, type |-> {2}, lat |-> {1}, dep |-> {}],
            done |-> FALSE,
            comTime |-> 0,
            executed |-> FALSE,
            exStartTime |-> 0 ],
-         [ PC |-> [pc |-> 4, type |-> {1}, lat |-> {3}, dep |-> {3}],
+         [ PC |-> [pc |-> 4, type |-> {1}, lat |-> {3}, dep |-> {2, 3}],
            done |-> FALSE,
            comTime |-> 0,
            executed |-> FALSE,
            exStartTime |-> 0 ] >> ]
 /\ depProg = <<>>
-/\ FUTmpLat2 = <<<<<<3, 3>>, 3>>, 3>>
+/\ FUTmpLat2 = <<<<<<1, 1>>, 1>>, 3>>
 /\ depProgTmp = <<>>
 /\ prog2 = [ rest |-> <<>>,
   exec |->
@@ -488,17 +459,17 @@ The behavior up to this point is:
            comTime |-> 0,
            executed |-> FALSE,
            exStartTime |-> 2 ],
-         [ PC |-> [pc |-> 2, type |-> {2}, lat |-> {3}, dep |-> {1}],
+         [ PC |-> [pc |-> 2, type |-> {2}, lat |-> {1}, dep |-> {1}],
            done |-> FALSE,
            comTime |-> 0,
            executed |-> FALSE,
            exStartTime |-> 0 ],
-         [ PC |-> [pc |-> 3, type |-> {2}, lat |-> {3}, dep |-> {}],
+         [ PC |-> [pc |-> 3, type |-> {2}, lat |-> {1}, dep |-> {}],
            done |-> FALSE,
            comTime |-> 0,
            executed |-> FALSE,
            exStartTime |-> 0 ],
-         [ PC |-> [pc |-> 4, type |-> {1}, lat |-> {3}, dep |-> {3}],
+         [ PC |-> [pc |-> 4, type |-> {1}, lat |-> {3}, dep |-> {2, 3}],
            done |-> FALSE,
            comTime |-> 0,
            executed |-> FALSE,
@@ -507,7 +478,7 @@ The behavior up to this point is:
 /\ _FU = << [ PC |-> [pc |-> 1, type |-> {1}, lat |-> {1, 3}, dep |-> {}],
      currLat |-> 1,
      usage |-> 1,
-     baseLat |-> 1 ],
+     baseLat |-> 3 ],
    [ PC |-> [pc |-> 0, type |-> "empty"],
      currLat |-> 1,
      usage |-> 0,
@@ -516,27 +487,27 @@ The behavior up to this point is:
 @!@!@ENDMSG 2217 @!@!@
 @!@!@STARTMSG 2217:4 @!@!@
 5: <Next line 78, col 9 to line 104, col 103 of module pipeline_ooo>
-/\ FULat2 = <<3, 3, 3, 3>>
+/\ FULat2 = <<1, 1, 1, 3>>
 /\ iMiss2 = <<FALSE, FALSE, FALSE, FALSE>>
-/\ _RS2 = << {[pc |-> 4, type |-> {1}, lat |-> {3}, dep |-> {3}]},
-   {[pc |-> 2, type |-> {2}, lat |-> {3}, dep |-> {1}]} >>
-/\ locWorst = <<FALSE, TRUE>>
-/\ _COM2 = <<[PC |-> [pc |-> 0, type |-> "empty"]], [PC |-> [pc |-> 0, type |-> "empty"]]>>
+/\ _RS2 = << {[pc |-> 4, type |-> {1}, lat |-> {3}, dep |-> {2, 3}]},
+   {[pc |-> 3, type |-> {2}, lat |-> {1}, dep |-> {}]} >>
+/\ locWorst = <<TRUE, FALSE>>
+/\ _COM2 = << [PC |-> [pc |-> 1, type |-> {1}, lat |-> {1, 3}, dep |-> {}]],
+   [PC |-> [pc |-> 0, type |-> "empty"]] >>
 /\ _ID = <<[PC |-> [pc |-> 0, type |-> "empty"]], [PC |-> [pc |-> 0, type |-> "empty"]]>>
 /\ _IF = << [PC |-> [pc |-> 0, type |-> "empty"], currLat |-> 1, baseLat |-> 1],
    [PC |-> [pc |-> 0, type |-> "empty"], currLat |-> 1, baseLat |-> 1] >>
-/\ FUTmpLat = <<<<<<1, 3>>, 3>>, 3>>
-/\ _FU2 = << [ PC |-> [pc |-> 1, type |-> {1}, lat |-> {1, 3}, dep |-> {}],
-     currLat |-> 2,
-     usage |-> 2,
-     baseLat |-> 3 ],
-   [ PC |-> [pc |-> 3, type |-> {2}, lat |-> {3}, dep |-> {}],
+/\ FUTmpLat = <<<<<<3, 1>>, 1>>, 3>>
+/\ _FU2 = << [ PC |-> [pc |-> 0, type |-> "empty"],
      currLat |-> 1,
      usage |-> 1,
-     baseLat |-> 3 ] >>
+     baseLat |-> 1 ],
+   [ PC |-> [pc |-> 2, type |-> {2}, lat |-> {1}, dep |-> {1}],
+     currLat |-> 1,
+     usage |-> 1,
+     baseLat |-> 1 ] >>
 /\ FUTmp = <<<<<<1, 2>>, 2>>, 1>>
-/\ _COM = << [PC |-> [pc |-> 1, type |-> {1}, lat |-> {1, 3}, dep |-> {}]],
-   [PC |-> [pc |-> 0, type |-> "empty"]] >>
+/\ _COM = <<[PC |-> [pc |-> 0, type |-> "empty"]], [PC |-> [pc |-> 0, type |-> "empty"]]>>
 /\ _ID2 = <<[PC |-> [pc |-> 0, type |-> "empty"]], [PC |-> [pc |-> 0, type |-> "empty"]]>>
 /\ currCycle2 = 4
 /\ FU2 = <<1, 2, 2, 1>>
@@ -544,91 +515,91 @@ The behavior up to this point is:
    [PC |-> [pc |-> 0, type |-> "empty"], currLat |-> 1, baseLat |-> 1] >>
 /\ iMissTmp2 = <<<<<<FALSE, FALSE>>, FALSE>>, FALSE>>
 /\ iMiss = <<FALSE, FALSE, FALSE, FALSE>>
-/\ _RS = << {[pc |-> 4, type |-> {1}, lat |-> {3}, dep |-> {3}]},
-   {[pc |-> 3, type |-> {2}, lat |-> {3}, dep |-> {}]} >>
+/\ _RS = << {[pc |-> 4, type |-> {1}, lat |-> {3}, dep |-> {2, 3}]},
+   {[pc |-> 2, type |-> {2}, lat |-> {1}, dep |-> {1}]} >>
 /\ commonPre = FALSE
 /\ currCycle = 4
 /\ iMissTmp = <<<<<<FALSE, FALSE>>, FALSE>>, FALSE>>
-/\ FULat = <<1, 3, 3, 3>>
+/\ FULat = <<3, 1, 1, 3>>
 /\ FUTmp2 = <<<<<<1, 2>>, 2>>, 1>>
 /\ prog = [ rest |-> <<>>,
   exec |->
       << [ PC |-> [pc |-> 1, type |-> {1}, lat |-> {1, 3}, dep |-> {}],
            done |-> FALSE,
            comTime |-> 0,
-           executed |-> TRUE,
-           exStartTime |-> 2 ],
-         [ PC |-> [pc |-> 2, type |-> {2}, lat |-> {3}, dep |-> {1}],
-           done |-> FALSE,
-           comTime |-> 0,
            executed |-> FALSE,
-           exStartTime |-> 3 ],
-         [ PC |-> [pc |-> 3, type |-> {2}, lat |-> {3}, dep |-> {}],
+           exStartTime |-> 2 ],
+         [ PC |-> [pc |-> 2, type |-> {2}, lat |-> {1}, dep |-> {1}],
            done |-> FALSE,
            comTime |-> 0,
            executed |-> FALSE,
            exStartTime |-> 0 ],
-         [ PC |-> [pc |-> 4, type |-> {1}, lat |-> {3}, dep |-> {3}],
+         [ PC |-> [pc |-> 3, type |-> {2}, lat |-> {1}, dep |-> {}],
+           done |-> FALSE,
+           comTime |-> 0,
+           executed |-> FALSE,
+           exStartTime |-> 3 ],
+         [ PC |-> [pc |-> 4, type |-> {1}, lat |-> {3}, dep |-> {2, 3}],
            done |-> FALSE,
            comTime |-> 0,
            executed |-> FALSE,
            exStartTime |-> 0 ] >> ]
 /\ depProg = <<>>
-/\ FUTmpLat2 = <<<<<<3, 3>>, 3>>, 3>>
+/\ FUTmpLat2 = <<<<<<1, 1>>, 1>>, 3>>
 /\ depProgTmp = <<>>
 /\ prog2 = [ rest |-> <<>>,
   exec |->
       << [ PC |-> [pc |-> 1, type |-> {1}, lat |-> {1, 3}, dep |-> {}],
            done |-> FALSE,
            comTime |-> 0,
-           executed |-> FALSE,
+           executed |-> TRUE,
            exStartTime |-> 2 ],
-         [ PC |-> [pc |-> 2, type |-> {2}, lat |-> {3}, dep |-> {1}],
-           done |-> FALSE,
-           comTime |-> 0,
-           executed |-> FALSE,
-           exStartTime |-> 0 ],
-         [ PC |-> [pc |-> 3, type |-> {2}, lat |-> {3}, dep |-> {}],
+         [ PC |-> [pc |-> 2, type |-> {2}, lat |-> {1}, dep |-> {1}],
            done |-> FALSE,
            comTime |-> 0,
            executed |-> FALSE,
            exStartTime |-> 3 ],
-         [ PC |-> [pc |-> 4, type |-> {1}, lat |-> {3}, dep |-> {3}],
+         [ PC |-> [pc |-> 3, type |-> {2}, lat |-> {1}, dep |-> {}],
+           done |-> FALSE,
+           comTime |-> 0,
+           executed |-> FALSE,
+           exStartTime |-> 0 ],
+         [ PC |-> [pc |-> 4, type |-> {1}, lat |-> {3}, dep |-> {2, 3}],
            done |-> FALSE,
            comTime |-> 0,
            executed |-> FALSE,
            exStartTime |-> 0 ] >> ]
 /\ FU = <<1, 2, 2, 1>>
-/\ _FU = << [ PC |-> [pc |-> 0, type |-> "empty"],
+/\ _FU = << [ PC |-> [pc |-> 1, type |-> {1}, lat |-> {1, 3}, dep |-> {}],
+     currLat |-> 2,
+     usage |-> 2,
+     baseLat |-> 3 ],
+   [ PC |-> [pc |-> 3, type |-> {2}, lat |-> {1}, dep |-> {}],
      currLat |-> 1,
      usage |-> 1,
-     baseLat |-> 1 ],
-   [ PC |-> [pc |-> 2, type |-> {2}, lat |-> {3}, dep |-> {1}],
-     currLat |-> 1,
-     usage |-> 1,
-     baseLat |-> 3 ] >>
+     baseLat |-> 1 ] >>
 
 @!@!@ENDMSG 2217 @!@!@
 @!@!@STARTMSG 2217:4 @!@!@
 6: <Next line 78, col 9 to line 104, col 103 of module pipeline_ooo>
-/\ FULat2 = <<3, 3, 3, 3>>
+/\ FULat2 = <<1, 1, 1, 3>>
 /\ iMiss2 = <<FALSE, FALSE, FALSE, FALSE>>
-/\ _RS2 = << {[pc |-> 4, type |-> {1}, lat |-> {3}, dep |-> {3}]},
-   {[pc |-> 2, type |-> {2}, lat |-> {3}, dep |-> {1}]} >>
-/\ locWorst = <<FALSE, TRUE>>
-/\ _COM2 = <<[PC |-> [pc |-> 0, type |-> "empty"]], [PC |-> [pc |-> 0, type |-> "empty"]]>>
+/\ _RS2 = <<{[pc |-> 4, type |-> {1}, lat |-> {3}, dep |-> {2, 3}]}, {}>>
+/\ locWorst = <<TRUE, FALSE>>
+/\ _COM2 = << [PC |-> [pc |-> 2, type |-> {2}, lat |-> {1}, dep |-> {1}]],
+   [PC |-> [pc |-> 0, type |-> "empty"]] >>
 /\ _ID = <<[PC |-> [pc |-> 0, type |-> "empty"]], [PC |-> [pc |-> 0, type |-> "empty"]]>>
 /\ _IF = << [PC |-> [pc |-> 0, type |-> "empty"], currLat |-> 1, baseLat |-> 1],
    [PC |-> [pc |-> 0, type |-> "empty"], currLat |-> 1, baseLat |-> 1] >>
-/\ FUTmpLat = <<<<<<1, 3>>, 3>>, 3>>
-/\ _FU2 = << [ PC |-> [pc |-> 1, type |-> {1}, lat |-> {1, 3}, dep |-> {}],
-     currLat |-> 3,
-     usage |-> 3,
-     baseLat |-> 3 ],
-   [ PC |-> [pc |-> 3, type |-> {2}, lat |-> {3}, dep |-> {}],
-     currLat |-> 2,
+/\ FUTmpLat = <<<<<<3, 1>>, 1>>, 3>>
+/\ _FU2 = << [ PC |-> [pc |-> 0, type |-> "empty"],
+     currLat |-> 1,
+     usage |-> 1,
+     baseLat |-> 1 ],
+   [ PC |-> [pc |-> 3, type |-> {2}, lat |-> {1}, dep |-> {}],
+     currLat |-> 1,
      usage |-> 2,
-     baseLat |-> 3 ] >>
+     baseLat |-> 1 ] >>
 /\ FUTmp = <<<<<<1, 2>>, 2>>, 1>>
 /\ _COM = <<[PC |-> [pc |-> 0, type |-> "empty"]], [PC |-> [pc |-> 0, type |-> "empty"]]>>
 /\ _ID2 = <<[PC |-> [pc |-> 0, type |-> "empty"]], [PC |-> [pc |-> 0, type |-> "empty"]]>>
@@ -638,94 +609,94 @@ The behavior up to this point is:
    [PC |-> [pc |-> 0, type |-> "empty"], currLat |-> 1, baseLat |-> 1] >>
 /\ iMissTmp2 = <<<<<<FALSE, FALSE>>, FALSE>>, FALSE>>
 /\ iMiss = <<FALSE, FALSE, FALSE, FALSE>>
-/\ _RS = << {[pc |-> 4, type |-> {1}, lat |-> {3}, dep |-> {3}]},
-   {[pc |-> 3, type |-> {2}, lat |-> {3}, dep |-> {}]} >>
+/\ _RS = << {[pc |-> 4, type |-> {1}, lat |-> {3}, dep |-> {2, 3}]},
+   {[pc |-> 2, type |-> {2}, lat |-> {1}, dep |-> {1}]} >>
 /\ commonPre = FALSE
 /\ currCycle = 5
 /\ iMissTmp = <<<<<<FALSE, FALSE>>, FALSE>>, FALSE>>
-/\ FULat = <<1, 3, 3, 3>>
+/\ FULat = <<3, 1, 1, 3>>
 /\ FUTmp2 = <<<<<<1, 2>>, 2>>, 1>>
 /\ prog = [ rest |-> <<>>,
+  exec |->
+      << [ PC |-> [pc |-> 1, type |-> {1}, lat |-> {1, 3}, dep |-> {}],
+           done |-> FALSE,
+           comTime |-> 0,
+           executed |-> FALSE,
+           exStartTime |-> 2 ],
+         [ PC |-> [pc |-> 2, type |-> {2}, lat |-> {1}, dep |-> {1}],
+           done |-> FALSE,
+           comTime |-> 0,
+           executed |-> FALSE,
+           exStartTime |-> 0 ],
+         [ PC |-> [pc |-> 3, type |-> {2}, lat |-> {1}, dep |-> {}],
+           done |-> FALSE,
+           comTime |-> 0,
+           executed |-> TRUE,
+           exStartTime |-> 3 ],
+         [ PC |-> [pc |-> 4, type |-> {1}, lat |-> {3}, dep |-> {2, 3}],
+           done |-> FALSE,
+           comTime |-> 0,
+           executed |-> FALSE,
+           exStartTime |-> 0 ] >> ]
+/\ depProg = <<>>
+/\ FUTmpLat2 = <<<<<<1, 1>>, 1>>, 3>>
+/\ depProgTmp = <<>>
+/\ prog2 = [ rest |-> <<>>,
   exec |->
       << [ PC |-> [pc |-> 1, type |-> {1}, lat |-> {1, 3}, dep |-> {}],
            done |-> TRUE,
            comTime |-> 4,
            executed |-> TRUE,
            exStartTime |-> 2 ],
-         [ PC |-> [pc |-> 2, type |-> {2}, lat |-> {3}, dep |-> {1}],
+         [ PC |-> [pc |-> 2, type |-> {2}, lat |-> {1}, dep |-> {1}],
            done |-> FALSE,
            comTime |-> 0,
-           executed |-> FALSE,
+           executed |-> TRUE,
            exStartTime |-> 3 ],
-         [ PC |-> [pc |-> 3, type |-> {2}, lat |-> {3}, dep |-> {}],
+         [ PC |-> [pc |-> 3, type |-> {2}, lat |-> {1}, dep |-> {}],
            done |-> FALSE,
            comTime |-> 0,
            executed |-> FALSE,
-           exStartTime |-> 0 ],
-         [ PC |-> [pc |-> 4, type |-> {1}, lat |-> {3}, dep |-> {3}],
-           done |-> FALSE,
-           comTime |-> 0,
-           executed |-> FALSE,
-           exStartTime |-> 0 ] >> ]
-/\ depProg = <<>>
-/\ FUTmpLat2 = <<<<<<3, 3>>, 3>>, 3>>
-/\ depProgTmp = <<>>
-/\ prog2 = [ rest |-> <<>>,
-  exec |->
-      << [ PC |-> [pc |-> 1, type |-> {1}, lat |-> {1, 3}, dep |-> {}],
-           done |-> FALSE,
-           comTime |-> 0,
-           executed |-> FALSE,
-           exStartTime |-> 2 ],
-         [ PC |-> [pc |-> 2, type |-> {2}, lat |-> {3}, dep |-> {1}],
-           done |-> FALSE,
-           comTime |-> 0,
-           executed |-> FALSE,
-           exStartTime |-> 0 ],
-         [ PC |-> [pc |-> 3, type |-> {2}, lat |-> {3}, dep |-> {}],
-           done |-> FALSE,
-           comTime |-> 0,
-           executed |-> FALSE,
-           exStartTime |-> 3 ],
-         [ PC |-> [pc |-> 4, type |-> {1}, lat |-> {3}, dep |-> {3}],
+           exStartTime |-> 4 ],
+         [ PC |-> [pc |-> 4, type |-> {1}, lat |-> {3}, dep |-> {2, 3}],
            done |-> FALSE,
            comTime |-> 0,
            executed |-> FALSE,
            exStartTime |-> 0 ] >> ]
 /\ FU = <<1, 2, 2, 1>>
-/\ _FU = << [ PC |-> [pc |-> 0, type |-> "empty"],
+/\ _FU = << [ PC |-> [pc |-> 1, type |-> {1}, lat |-> {1, 3}, dep |-> {}],
+     currLat |-> 3,
+     usage |-> 3,
+     baseLat |-> 3 ],
+   [ PC |-> [pc |-> 0, type |-> "empty"],
      currLat |-> 1,
      usage |-> 1,
-     baseLat |-> 1 ],
-   [ PC |-> [pc |-> 2, type |-> {2}, lat |-> {3}, dep |-> {1}],
-     currLat |-> 2,
-     usage |-> 2,
-     baseLat |-> 3 ] >>
+     baseLat |-> 1 ] >>
 
 @!@!@ENDMSG 2217 @!@!@
 @!@!@STARTMSG 2217:4 @!@!@
 7: <Next line 78, col 9 to line 104, col 103 of module pipeline_ooo>
-/\ FULat2 = <<3, 3, 3, 3>>
+/\ FULat2 = <<1, 1, 1, 3>>
 /\ iMiss2 = <<FALSE, FALSE, FALSE, FALSE>>
-/\ _RS2 = << {[pc |-> 4, type |-> {1}, lat |-> {3}, dep |-> {3}]},
-   {[pc |-> 2, type |-> {2}, lat |-> {3}, dep |-> {1}]} >>
-/\ locWorst = <<FALSE, TRUE>>
-/\ _COM2 = << [PC |-> [pc |-> 1, type |-> {1}, lat |-> {1, 3}, dep |-> {}]],
+/\ _RS2 = <<{}, {}>>
+/\ locWorst = <<TRUE, FALSE>>
+/\ _COM2 = << [PC |-> [pc |-> 3, type |-> {2}, lat |-> {1}, dep |-> {}]],
    [PC |-> [pc |-> 0, type |-> "empty"]] >>
 /\ _ID = <<[PC |-> [pc |-> 0, type |-> "empty"]], [PC |-> [pc |-> 0, type |-> "empty"]]>>
 /\ _IF = << [PC |-> [pc |-> 0, type |-> "empty"], currLat |-> 1, baseLat |-> 1],
    [PC |-> [pc |-> 0, type |-> "empty"], currLat |-> 1, baseLat |-> 1] >>
-/\ FUTmpLat = <<<<<<1, 3>>, 3>>, 3>>
-/\ _FU2 = << [ PC |-> [pc |-> 0, type |-> "empty"],
+/\ FUTmpLat = <<<<<<3, 1>>, 1>>, 3>>
+/\ _FU2 = << [ PC |-> [pc |-> 4, type |-> {1}, lat |-> {3}, dep |-> {2, 3}],
      currLat |-> 1,
-     usage |-> 3,
-     baseLat |-> 1 ],
-   [ PC |-> [pc |-> 3, type |-> {2}, lat |-> {3}, dep |-> {}],
-     currLat |-> 3,
-     usage |-> 3,
-     baseLat |-> 3 ] >>
+     usage |-> 2,
+     baseLat |-> 3 ],
+   [ PC |-> [pc |-> 0, type |-> "empty"],
+     currLat |-> 1,
+     usage |-> 2,
+     baseLat |-> 1 ] >>
 /\ FUTmp = <<<<<<1, 2>>, 2>>, 1>>
-/\ _COM = <<[PC |-> [pc |-> 0, type |-> "empty"]], [PC |-> [pc |-> 0, type |-> "empty"]]>>
+/\ _COM = << [PC |-> [pc |-> 1, type |-> {1}, lat |-> {1, 3}, dep |-> {}]],
+   [PC |-> [pc |-> 0, type |-> "empty"]] >>
 /\ _ID2 = <<[PC |-> [pc |-> 0, type |-> "empty"]], [PC |-> [pc |-> 0, type |-> "empty"]]>>
 /\ currCycle2 = 6
 /\ FU2 = <<1, 2, 2, 1>>
@@ -733,93 +704,92 @@ The behavior up to this point is:
    [PC |-> [pc |-> 0, type |-> "empty"], currLat |-> 1, baseLat |-> 1] >>
 /\ iMissTmp2 = <<<<<<FALSE, FALSE>>, FALSE>>, FALSE>>
 /\ iMiss = <<FALSE, FALSE, FALSE, FALSE>>
-/\ _RS = << {[pc |-> 4, type |-> {1}, lat |-> {3}, dep |-> {3}]},
-   {[pc |-> 3, type |-> {2}, lat |-> {3}, dep |-> {}]} >>
+/\ _RS = <<{[pc |-> 4, type |-> {1}, lat |-> {3}, dep |-> {2, 3}]}, {}>>
 /\ commonPre = FALSE
 /\ currCycle = 6
 /\ iMissTmp = <<<<<<FALSE, FALSE>>, FALSE>>, FALSE>>
-/\ FULat = <<1, 3, 3, 3>>
+/\ FULat = <<3, 1, 1, 3>>
 /\ FUTmp2 = <<<<<<1, 2>>, 2>>, 1>>
 /\ prog = [ rest |-> <<>>,
+  exec |->
+      << [ PC |-> [pc |-> 1, type |-> {1}, lat |-> {1, 3}, dep |-> {}],
+           done |-> FALSE,
+           comTime |-> 0,
+           executed |-> TRUE,
+           exStartTime |-> 2 ],
+         [ PC |-> [pc |-> 2, type |-> {2}, lat |-> {1}, dep |-> {1}],
+           done |-> FALSE,
+           comTime |-> 0,
+           executed |-> FALSE,
+           exStartTime |-> 5 ],
+         [ PC |-> [pc |-> 3, type |-> {2}, lat |-> {1}, dep |-> {}],
+           done |-> FALSE,
+           comTime |-> 0,
+           executed |-> TRUE,
+           exStartTime |-> 3 ],
+         [ PC |-> [pc |-> 4, type |-> {1}, lat |-> {3}, dep |-> {2, 3}],
+           done |-> FALSE,
+           comTime |-> 0,
+           executed |-> FALSE,
+           exStartTime |-> 0 ] >> ]
+/\ depProg = <<>>
+/\ FUTmpLat2 = <<<<<<1, 1>>, 1>>, 3>>
+/\ depProgTmp = <<>>
+/\ prog2 = [ rest |-> <<>>,
   exec |->
       << [ PC |-> [pc |-> 1, type |-> {1}, lat |-> {1, 3}, dep |-> {}],
            done |-> TRUE,
            comTime |-> 4,
            executed |-> TRUE,
            exStartTime |-> 2 ],
-         [ PC |-> [pc |-> 2, type |-> {2}, lat |-> {3}, dep |-> {1}],
-           done |-> FALSE,
-           comTime |-> 0,
-           executed |-> FALSE,
+         [ PC |-> [pc |-> 2, type |-> {2}, lat |-> {1}, dep |-> {1}],
+           done |-> TRUE,
+           comTime |-> 5,
+           executed |-> TRUE,
            exStartTime |-> 3 ],
-         [ PC |-> [pc |-> 3, type |-> {2}, lat |-> {3}, dep |-> {}],
-           done |-> FALSE,
-           comTime |-> 0,
-           executed |-> FALSE,
-           exStartTime |-> 0 ],
-         [ PC |-> [pc |-> 4, type |-> {1}, lat |-> {3}, dep |-> {3}],
-           done |-> FALSE,
-           comTime |-> 0,
-           executed |-> FALSE,
-           exStartTime |-> 0 ] >> ]
-/\ depProg = <<>>
-/\ FUTmpLat2 = <<<<<<3, 3>>, 3>>, 3>>
-/\ depProgTmp = <<>>
-/\ prog2 = [ rest |-> <<>>,
-  exec |->
-      << [ PC |-> [pc |-> 1, type |-> {1}, lat |-> {1, 3}, dep |-> {}],
+         [ PC |-> [pc |-> 3, type |-> {2}, lat |-> {1}, dep |-> {}],
            done |-> FALSE,
            comTime |-> 0,
            executed |-> TRUE,
-           exStartTime |-> 2 ],
-         [ PC |-> [pc |-> 2, type |-> {2}, lat |-> {3}, dep |-> {1}],
+           exStartTime |-> 4 ],
+         [ PC |-> [pc |-> 4, type |-> {1}, lat |-> {3}, dep |-> {2, 3}],
            done |-> FALSE,
            comTime |-> 0,
            executed |-> FALSE,
-           exStartTime |-> 0 ],
-         [ PC |-> [pc |-> 3, type |-> {2}, lat |-> {3}, dep |-> {}],
-           done |-> FALSE,
-           comTime |-> 0,
-           executed |-> FALSE,
-           exStartTime |-> 3 ],
-         [ PC |-> [pc |-> 4, type |-> {1}, lat |-> {3}, dep |-> {3}],
-           done |-> FALSE,
-           comTime |-> 0,
-           executed |-> FALSE,
-           exStartTime |-> 0 ] >> ]
+           exStartTime |-> 5 ] >> ]
 /\ FU = <<1, 2, 2, 1>>
 /\ _FU = << [ PC |-> [pc |-> 0, type |-> "empty"],
      currLat |-> 1,
-     usage |-> 1,
-     baseLat |-> 1 ],
-   [ PC |-> [pc |-> 2, type |-> {2}, lat |-> {3}, dep |-> {1}],
-     currLat |-> 3,
      usage |-> 3,
-     baseLat |-> 3 ] >>
+     baseLat |-> 1 ],
+   [ PC |-> [pc |-> 2, type |-> {2}, lat |-> {1}, dep |-> {1}],
+     currLat |-> 1,
+     usage |-> 2,
+     baseLat |-> 1 ] >>
 
 @!@!@ENDMSG 2217 @!@!@
 @!@!@STARTMSG 2217:4 @!@!@
 8: <Next line 78, col 9 to line 104, col 103 of module pipeline_ooo>
-/\ FULat2 = <<3, 3, 3, 3>>
+/\ FULat2 = <<1, 1, 1, 3>>
 /\ iMiss2 = <<FALSE, FALSE, FALSE, FALSE>>
 /\ _RS2 = <<{}, {}>>
-/\ locWorst = <<FALSE, TRUE>>
+/\ locWorst = <<TRUE, FALSE>>
 /\ _COM2 = <<[PC |-> [pc |-> 0, type |-> "empty"]], [PC |-> [pc |-> 0, type |-> "empty"]]>>
 /\ _ID = <<[PC |-> [pc |-> 0, type |-> "empty"]], [PC |-> [pc |-> 0, type |-> "empty"]]>>
 /\ _IF = << [PC |-> [pc |-> 0, type |-> "empty"], currLat |-> 1, baseLat |-> 1],
    [PC |-> [pc |-> 0, type |-> "empty"], currLat |-> 1, baseLat |-> 1] >>
-/\ FUTmpLat = <<<<<<1, 3>>, 3>>, 3>>
-/\ _FU2 = << [ PC |-> [pc |-> 4, type |-> {1}, lat |-> {3}, dep |-> {3}],
-     currLat |-> 1,
-     usage |-> 4,
+/\ FUTmpLat = <<<<<<3, 1>>, 1>>, 3>>
+/\ _FU2 = << [ PC |-> [pc |-> 4, type |-> {1}, lat |-> {3}, dep |-> {2, 3}],
+     currLat |-> 2,
+     usage |-> 3,
      baseLat |-> 3 ],
-   [ PC |-> [pc |-> 2, type |-> {2}, lat |-> {3}, dep |-> {1}],
+   [ PC |-> [pc |-> 0, type |-> "empty"],
      currLat |-> 1,
-     usage |-> 4,
-     baseLat |-> 3 ] >>
+     usage |-> 2,
+     baseLat |-> 1 ] >>
 /\ FUTmp = <<<<<<1, 2>>, 2>>, 1>>
-/\ _COM = << [PC |-> [pc |-> 2, type |-> {2}, lat |-> {3}, dep |-> {1}]],
-   [PC |-> [pc |-> 0, type |-> "empty"]] >>
+/\ _COM = << [PC |-> [pc |-> 2, type |-> {2}, lat |-> {1}, dep |-> {1}]],
+   [PC |-> [pc |-> 3, type |-> {2}, lat |-> {1}, dep |-> {}]] >>
 /\ _ID2 = <<[PC |-> [pc |-> 0, type |-> "empty"]], [PC |-> [pc |-> 0, type |-> "empty"]]>>
 /\ currCycle2 = 7
 /\ FU2 = <<1, 2, 2, 1>>
@@ -827,89 +797,89 @@ The behavior up to this point is:
    [PC |-> [pc |-> 0, type |-> "empty"], currLat |-> 1, baseLat |-> 1] >>
 /\ iMissTmp2 = <<<<<<FALSE, FALSE>>, FALSE>>, FALSE>>
 /\ iMiss = <<FALSE, FALSE, FALSE, FALSE>>
-/\ _RS = <<{[pc |-> 4, type |-> {1}, lat |-> {3}, dep |-> {3}]}, {}>>
+/\ _RS = <<{}, {}>>
 /\ commonPre = FALSE
 /\ currCycle = 7
 /\ iMissTmp = <<<<<<FALSE, FALSE>>, FALSE>>, FALSE>>
-/\ FULat = <<1, 3, 3, 3>>
+/\ FULat = <<3, 1, 1, 3>>
 /\ FUTmp2 = <<<<<<1, 2>>, 2>>, 1>>
 /\ prog = [ rest |-> <<>>,
-  exec |->
-      << [ PC |-> [pc |-> 1, type |-> {1}, lat |-> {1, 3}, dep |-> {}],
-           done |-> TRUE,
-           comTime |-> 4,
-           executed |-> TRUE,
-           exStartTime |-> 2 ],
-         [ PC |-> [pc |-> 2, type |-> {2}, lat |-> {3}, dep |-> {1}],
-           done |-> FALSE,
-           comTime |-> 0,
-           executed |-> TRUE,
-           exStartTime |-> 3 ],
-         [ PC |-> [pc |-> 3, type |-> {2}, lat |-> {3}, dep |-> {}],
-           done |-> FALSE,
-           comTime |-> 0,
-           executed |-> FALSE,
-           exStartTime |-> 6 ],
-         [ PC |-> [pc |-> 4, type |-> {1}, lat |-> {3}, dep |-> {3}],
-           done |-> FALSE,
-           comTime |-> 0,
-           executed |-> FALSE,
-           exStartTime |-> 0 ] >> ]
-/\ depProg = <<>>
-/\ FUTmpLat2 = <<<<<<3, 3>>, 3>>, 3>>
-/\ depProgTmp = <<>>
-/\ prog2 = [ rest |-> <<>>,
   exec |->
       << [ PC |-> [pc |-> 1, type |-> {1}, lat |-> {1, 3}, dep |-> {}],
            done |-> TRUE,
            comTime |-> 6,
            executed |-> TRUE,
            exStartTime |-> 2 ],
-         [ PC |-> [pc |-> 2, type |-> {2}, lat |-> {3}, dep |-> {1}],
+         [ PC |-> [pc |-> 2, type |-> {2}, lat |-> {1}, dep |-> {1}],
            done |-> FALSE,
            comTime |-> 0,
-           executed |-> FALSE,
-           exStartTime |-> 6 ],
-         [ PC |-> [pc |-> 3, type |-> {2}, lat |-> {3}, dep |-> {}],
+           executed |-> TRUE,
+           exStartTime |-> 5 ],
+         [ PC |-> [pc |-> 3, type |-> {2}, lat |-> {1}, dep |-> {}],
            done |-> FALSE,
            comTime |-> 0,
            executed |-> TRUE,
            exStartTime |-> 3 ],
-         [ PC |-> [pc |-> 4, type |-> {1}, lat |-> {3}, dep |-> {3}],
+         [ PC |-> [pc |-> 4, type |-> {1}, lat |-> {3}, dep |-> {2, 3}],
            done |-> FALSE,
            comTime |-> 0,
            executed |-> FALSE,
            exStartTime |-> 6 ] >> ]
+/\ depProg = <<>>
+/\ FUTmpLat2 = <<<<<<1, 1>>, 1>>, 3>>
+/\ depProgTmp = <<>>
+/\ prog2 = [ rest |-> <<>>,
+  exec |->
+      << [ PC |-> [pc |-> 1, type |-> {1}, lat |-> {1, 3}, dep |-> {}],
+           done |-> TRUE,
+           comTime |-> 4,
+           executed |-> TRUE,
+           exStartTime |-> 2 ],
+         [ PC |-> [pc |-> 2, type |-> {2}, lat |-> {1}, dep |-> {1}],
+           done |-> TRUE,
+           comTime |-> 5,
+           executed |-> TRUE,
+           exStartTime |-> 3 ],
+         [ PC |-> [pc |-> 3, type |-> {2}, lat |-> {1}, dep |-> {}],
+           done |-> TRUE,
+           comTime |-> 6,
+           executed |-> TRUE,
+           exStartTime |-> 4 ],
+         [ PC |-> [pc |-> 4, type |-> {1}, lat |-> {3}, dep |-> {2, 3}],
+           done |-> FALSE,
+           comTime |-> 0,
+           executed |-> FALSE,
+           exStartTime |-> 5 ] >> ]
 /\ FU = <<1, 2, 2, 1>>
-/\ _FU = << [ PC |-> [pc |-> 0, type |-> "empty"],
-     currLat |-> 1,
-     usage |-> 1,
-     baseLat |-> 1 ],
-   [ PC |-> [pc |-> 3, type |-> {2}, lat |-> {3}, dep |-> {}],
+/\ _FU = << [ PC |-> [pc |-> 4, type |-> {1}, lat |-> {3}, dep |-> {2, 3}],
      currLat |-> 1,
      usage |-> 4,
-     baseLat |-> 3 ] >>
+     baseLat |-> 3 ],
+   [ PC |-> [pc |-> 0, type |-> "empty"],
+     currLat |-> 1,
+     usage |-> 2,
+     baseLat |-> 1 ] >>
 
 @!@!@ENDMSG 2217 @!@!@
 @!@!@STARTMSG 2217:4 @!@!@
 9: <Next line 78, col 9 to line 104, col 103 of module pipeline_ooo>
-/\ FULat2 = <<3, 3, 3, 3>>
+/\ FULat2 = <<1, 1, 1, 3>>
 /\ iMiss2 = <<FALSE, FALSE, FALSE, FALSE>>
 /\ _RS2 = <<{}, {}>>
-/\ locWorst = <<FALSE, TRUE>>
+/\ locWorst = <<TRUE, FALSE>>
 /\ _COM2 = <<[PC |-> [pc |-> 0, type |-> "empty"]], [PC |-> [pc |-> 0, type |-> "empty"]]>>
 /\ _ID = <<[PC |-> [pc |-> 0, type |-> "empty"]], [PC |-> [pc |-> 0, type |-> "empty"]]>>
 /\ _IF = << [PC |-> [pc |-> 0, type |-> "empty"], currLat |-> 1, baseLat |-> 1],
    [PC |-> [pc |-> 0, type |-> "empty"], currLat |-> 1, baseLat |-> 1] >>
-/\ FUTmpLat = <<<<<<1, 3>>, 3>>, 3>>
-/\ _FU2 = << [ PC |-> [pc |-> 4, type |-> {1}, lat |-> {3}, dep |-> {3}],
-     currLat |-> 2,
-     usage |-> 5,
+/\ FUTmpLat = <<<<<<3, 1>>, 1>>, 3>>
+/\ _FU2 = << [ PC |-> [pc |-> 4, type |-> {1}, lat |-> {3}, dep |-> {2, 3}],
+     currLat |-> 3,
+     usage |-> 4,
      baseLat |-> 3 ],
-   [ PC |-> [pc |-> 2, type |-> {2}, lat |-> {3}, dep |-> {1}],
-     currLat |-> 2,
-     usage |-> 5,
-     baseLat |-> 3 ] >>
+   [ PC |-> [pc |-> 0, type |-> "empty"],
+     currLat |-> 1,
+     usage |-> 2,
+     baseLat |-> 1 ] >>
 /\ FUTmp = <<<<<<1, 2>>, 2>>, 1>>
 /\ _COM = <<[PC |-> [pc |-> 0, type |-> "empty"]], [PC |-> [pc |-> 0, type |-> "empty"]]>>
 /\ _ID2 = <<[PC |-> [pc |-> 0, type |-> "empty"]], [PC |-> [pc |-> 0, type |-> "empty"]]>>
@@ -919,89 +889,90 @@ The behavior up to this point is:
    [PC |-> [pc |-> 0, type |-> "empty"], currLat |-> 1, baseLat |-> 1] >>
 /\ iMissTmp2 = <<<<<<FALSE, FALSE>>, FALSE>>, FALSE>>
 /\ iMiss = <<FALSE, FALSE, FALSE, FALSE>>
-/\ _RS = <<{[pc |-> 4, type |-> {1}, lat |-> {3}, dep |-> {3}]}, {}>>
+/\ _RS = <<{}, {}>>
 /\ commonPre = FALSE
 /\ currCycle = 8
 /\ iMissTmp = <<<<<<FALSE, FALSE>>, FALSE>>, FALSE>>
-/\ FULat = <<1, 3, 3, 3>>
+/\ FULat = <<3, 1, 1, 3>>
 /\ FUTmp2 = <<<<<<1, 2>>, 2>>, 1>>
 /\ prog = [ rest |-> <<>>,
-  exec |->
-      << [ PC |-> [pc |-> 1, type |-> {1}, lat |-> {1, 3}, dep |-> {}],
-           done |-> TRUE,
-           comTime |-> 4,
-           executed |-> TRUE,
-           exStartTime |-> 2 ],
-         [ PC |-> [pc |-> 2, type |-> {2}, lat |-> {3}, dep |-> {1}],
-           done |-> TRUE,
-           comTime |-> 7,
-           executed |-> TRUE,
-           exStartTime |-> 3 ],
-         [ PC |-> [pc |-> 3, type |-> {2}, lat |-> {3}, dep |-> {}],
-           done |-> FALSE,
-           comTime |-> 0,
-           executed |-> FALSE,
-           exStartTime |-> 6 ],
-         [ PC |-> [pc |-> 4, type |-> {1}, lat |-> {3}, dep |-> {3}],
-           done |-> FALSE,
-           comTime |-> 0,
-           executed |-> FALSE,
-           exStartTime |-> 0 ] >> ]
-/\ depProg = <<>>
-/\ FUTmpLat2 = <<<<<<3, 3>>, 3>>, 3>>
-/\ depProgTmp = <<>>
-/\ prog2 = [ rest |-> <<>>,
   exec |->
       << [ PC |-> [pc |-> 1, type |-> {1}, lat |-> {1, 3}, dep |-> {}],
            done |-> TRUE,
            comTime |-> 6,
            executed |-> TRUE,
            exStartTime |-> 2 ],
-         [ PC |-> [pc |-> 2, type |-> {2}, lat |-> {3}, dep |-> {1}],
-           done |-> FALSE,
-           comTime |-> 0,
-           executed |-> FALSE,
-           exStartTime |-> 6 ],
-         [ PC |-> [pc |-> 3, type |-> {2}, lat |-> {3}, dep |-> {}],
-           done |-> FALSE,
-           comTime |-> 0,
+         [ PC |-> [pc |-> 2, type |-> {2}, lat |-> {1}, dep |-> {1}],
+           done |-> TRUE,
+           comTime |-> 7,
+           executed |-> TRUE,
+           exStartTime |-> 5 ],
+         [ PC |-> [pc |-> 3, type |-> {2}, lat |-> {1}, dep |-> {}],
+           done |-> TRUE,
+           comTime |-> 7,
            executed |-> TRUE,
            exStartTime |-> 3 ],
-         [ PC |-> [pc |-> 4, type |-> {1}, lat |-> {3}, dep |-> {3}],
+         [ PC |-> [pc |-> 4, type |-> {1}, lat |-> {3}, dep |-> {2, 3}],
            done |-> FALSE,
            comTime |-> 0,
            executed |-> FALSE,
            exStartTime |-> 6 ] >> ]
+/\ depProg = <<>>
+/\ FUTmpLat2 = <<<<<<1, 1>>, 1>>, 3>>
+/\ depProgTmp = <<>>
+/\ prog2 = [ rest |-> <<>>,
+  exec |->
+      << [ PC |-> [pc |-> 1, type |-> {1}, lat |-> {1, 3}, dep |-> {}],
+           done |-> TRUE,
+           comTime |-> 4,
+           executed |-> TRUE,
+           exStartTime |-> 2 ],
+         [ PC |-> [pc |-> 2, type |-> {2}, lat |-> {1}, dep |-> {1}],
+           done |-> TRUE,
+           comTime |-> 5,
+           executed |-> TRUE,
+           exStartTime |-> 3 ],
+         [ PC |-> [pc |-> 3, type |-> {2}, lat |-> {1}, dep |-> {}],
+           done |-> TRUE,
+           comTime |-> 6,
+           executed |-> TRUE,
+           exStartTime |-> 4 ],
+         [ PC |-> [pc |-> 4, type |-> {1}, lat |-> {3}, dep |-> {2, 3}],
+           done |-> FALSE,
+           comTime |-> 0,
+           executed |-> FALSE,
+           exStartTime |-> 5 ] >> ]
 /\ FU = <<1, 2, 2, 1>>
-/\ _FU = << [ PC |-> [pc |-> 0, type |-> "empty"],
-     currLat |-> 1,
-     usage |-> 1,
-     baseLat |-> 1 ],
-   [ PC |-> [pc |-> 3, type |-> {2}, lat |-> {3}, dep |-> {}],
+/\ _FU = << [ PC |-> [pc |-> 4, type |-> {1}, lat |-> {3}, dep |-> {2, 3}],
      currLat |-> 2,
      usage |-> 5,
-     baseLat |-> 3 ] >>
+     baseLat |-> 3 ],
+   [ PC |-> [pc |-> 0, type |-> "empty"],
+     currLat |-> 1,
+     usage |-> 2,
+     baseLat |-> 1 ] >>
 
 @!@!@ENDMSG 2217 @!@!@
 @!@!@STARTMSG 2217:4 @!@!@
 10: <Next line 78, col 9 to line 104, col 103 of module pipeline_ooo>
-/\ FULat2 = <<3, 3, 3, 3>>
+/\ FULat2 = <<1, 1, 1, 3>>
 /\ iMiss2 = <<FALSE, FALSE, FALSE, FALSE>>
 /\ _RS2 = <<{}, {}>>
-/\ locWorst = <<FALSE, TRUE>>
-/\ _COM2 = <<[PC |-> [pc |-> 0, type |-> "empty"]], [PC |-> [pc |-> 0, type |-> "empty"]]>>
+/\ locWorst = <<TRUE, FALSE>>
+/\ _COM2 = << [PC |-> [pc |-> 4, type |-> {1}, lat |-> {3}, dep |-> {2, 3}]],
+   [PC |-> [pc |-> 0, type |-> "empty"]] >>
 /\ _ID = <<[PC |-> [pc |-> 0, type |-> "empty"]], [PC |-> [pc |-> 0, type |-> "empty"]]>>
 /\ _IF = << [PC |-> [pc |-> 0, type |-> "empty"], currLat |-> 1, baseLat |-> 1],
    [PC |-> [pc |-> 0, type |-> "empty"], currLat |-> 1, baseLat |-> 1] >>
-/\ FUTmpLat = <<<<<<1, 3>>, 3>>, 3>>
-/\ _FU2 = << [ PC |-> [pc |-> 4, type |-> {1}, lat |-> {3}, dep |-> {3}],
-     currLat |-> 3,
-     usage |-> 6,
-     baseLat |-> 3 ],
-   [ PC |-> [pc |-> 2, type |-> {2}, lat |-> {3}, dep |-> {1}],
-     currLat |-> 3,
-     usage |-> 6,
-     baseLat |-> 3 ] >>
+/\ FUTmpLat = <<<<<<3, 1>>, 1>>, 3>>
+/\ _FU2 = << [ PC |-> [pc |-> 0, type |-> "empty"],
+     currLat |-> 1,
+     usage |-> 4,
+     baseLat |-> 1 ],
+   [ PC |-> [pc |-> 0, type |-> "empty"],
+     currLat |-> 1,
+     usage |-> 2,
+     baseLat |-> 1 ] >>
 /\ FUTmp = <<<<<<1, 2>>, 2>>, 1>>
 /\ _COM = <<[PC |-> [pc |-> 0, type |-> "empty"]], [PC |-> [pc |-> 0, type |-> "empty"]]>>
 /\ _ID2 = <<[PC |-> [pc |-> 0, type |-> "empty"]], [PC |-> [pc |-> 0, type |-> "empty"]]>>
@@ -1011,92 +982,91 @@ The behavior up to this point is:
    [PC |-> [pc |-> 0, type |-> "empty"], currLat |-> 1, baseLat |-> 1] >>
 /\ iMissTmp2 = <<<<<<FALSE, FALSE>>, FALSE>>, FALSE>>
 /\ iMiss = <<FALSE, FALSE, FALSE, FALSE>>
-/\ _RS = <<{[pc |-> 4, type |-> {1}, lat |-> {3}, dep |-> {3}]}, {}>>
+/\ _RS = <<{}, {}>>
 /\ commonPre = FALSE
 /\ currCycle = 9
 /\ iMissTmp = <<<<<<FALSE, FALSE>>, FALSE>>, FALSE>>
-/\ FULat = <<1, 3, 3, 3>>
+/\ FULat = <<3, 1, 1, 3>>
 /\ FUTmp2 = <<<<<<1, 2>>, 2>>, 1>>
 /\ prog = [ rest |-> <<>>,
-  exec |->
-      << [ PC |-> [pc |-> 1, type |-> {1}, lat |-> {1, 3}, dep |-> {}],
-           done |-> TRUE,
-           comTime |-> 4,
-           executed |-> TRUE,
-           exStartTime |-> 2 ],
-         [ PC |-> [pc |-> 2, type |-> {2}, lat |-> {3}, dep |-> {1}],
-           done |-> TRUE,
-           comTime |-> 7,
-           executed |-> TRUE,
-           exStartTime |-> 3 ],
-         [ PC |-> [pc |-> 3, type |-> {2}, lat |-> {3}, dep |-> {}],
-           done |-> FALSE,
-           comTime |-> 0,
-           executed |-> FALSE,
-           exStartTime |-> 6 ],
-         [ PC |-> [pc |-> 4, type |-> {1}, lat |-> {3}, dep |-> {3}],
-           done |-> FALSE,
-           comTime |-> 0,
-           executed |-> FALSE,
-           exStartTime |-> 0 ] >> ]
-/\ depProg = <<>>
-/\ FUTmpLat2 = <<<<<<3, 3>>, 3>>, 3>>
-/\ depProgTmp = <<>>
-/\ prog2 = [ rest |-> <<>>,
   exec |->
       << [ PC |-> [pc |-> 1, type |-> {1}, lat |-> {1, 3}, dep |-> {}],
            done |-> TRUE,
            comTime |-> 6,
            executed |-> TRUE,
            exStartTime |-> 2 ],
-         [ PC |-> [pc |-> 2, type |-> {2}, lat |-> {3}, dep |-> {1}],
-           done |-> FALSE,
-           comTime |-> 0,
-           executed |-> FALSE,
-           exStartTime |-> 6 ],
-         [ PC |-> [pc |-> 3, type |-> {2}, lat |-> {3}, dep |-> {}],
-           done |-> FALSE,
-           comTime |-> 0,
+         [ PC |-> [pc |-> 2, type |-> {2}, lat |-> {1}, dep |-> {1}],
+           done |-> TRUE,
+           comTime |-> 7,
+           executed |-> TRUE,
+           exStartTime |-> 5 ],
+         [ PC |-> [pc |-> 3, type |-> {2}, lat |-> {1}, dep |-> {}],
+           done |-> TRUE,
+           comTime |-> 7,
            executed |-> TRUE,
            exStartTime |-> 3 ],
-         [ PC |-> [pc |-> 4, type |-> {1}, lat |-> {3}, dep |-> {3}],
+         [ PC |-> [pc |-> 4, type |-> {1}, lat |-> {3}, dep |-> {2, 3}],
            done |-> FALSE,
            comTime |-> 0,
            executed |-> FALSE,
            exStartTime |-> 6 ] >> ]
+/\ depProg = <<>>
+/\ FUTmpLat2 = <<<<<<1, 1>>, 1>>, 3>>
+/\ depProgTmp = <<>>
+/\ prog2 = [ rest |-> <<>>,
+  exec |->
+      << [ PC |-> [pc |-> 1, type |-> {1}, lat |-> {1, 3}, dep |-> {}],
+           done |-> TRUE,
+           comTime |-> 4,
+           executed |-> TRUE,
+           exStartTime |-> 2 ],
+         [ PC |-> [pc |-> 2, type |-> {2}, lat |-> {1}, dep |-> {1}],
+           done |-> TRUE,
+           comTime |-> 5,
+           executed |-> TRUE,
+           exStartTime |-> 3 ],
+         [ PC |-> [pc |-> 3, type |-> {2}, lat |-> {1}, dep |-> {}],
+           done |-> TRUE,
+           comTime |-> 6,
+           executed |-> TRUE,
+           exStartTime |-> 4 ],
+         [ PC |-> [pc |-> 4, type |-> {1}, lat |-> {3}, dep |-> {2, 3}],
+           done |-> FALSE,
+           comTime |-> 0,
+           executed |-> TRUE,
+           exStartTime |-> 5 ] >> ]
 /\ FU = <<1, 2, 2, 1>>
-/\ _FU = << [ PC |-> [pc |-> 0, type |-> "empty"],
-     currLat |-> 1,
-     usage |-> 1,
-     baseLat |-> 1 ],
-   [ PC |-> [pc |-> 3, type |-> {2}, lat |-> {3}, dep |-> {}],
+/\ _FU = << [ PC |-> [pc |-> 4, type |-> {1}, lat |-> {3}, dep |-> {2, 3}],
      currLat |-> 3,
      usage |-> 6,
-     baseLat |-> 3 ] >>
+     baseLat |-> 3 ],
+   [ PC |-> [pc |-> 0, type |-> "empty"],
+     currLat |-> 1,
+     usage |-> 2,
+     baseLat |-> 1 ] >>
 
 @!@!@ENDMSG 2217 @!@!@
 @!@!@STARTMSG 2217:4 @!@!@
 11: <Next line 78, col 9 to line 104, col 103 of module pipeline_ooo>
-/\ FULat2 = <<3, 3, 3, 3>>
+/\ FULat2 = <<1, 1, 1, 3>>
 /\ iMiss2 = <<FALSE, FALSE, FALSE, FALSE>>
 /\ _RS2 = <<{}, {}>>
-/\ locWorst = <<FALSE, TRUE>>
-/\ _COM2 = << [PC |-> [pc |-> 2, type |-> {2}, lat |-> {3}, dep |-> {1}]],
-   [PC |-> [pc |-> 3, type |-> {2}, lat |-> {3}, dep |-> {}]] >>
+/\ locWorst = <<TRUE, FALSE>>
+/\ _COM2 = <<[PC |-> [pc |-> 0, type |-> "empty"]], [PC |-> [pc |-> 0, type |-> "empty"]]>>
 /\ _ID = <<[PC |-> [pc |-> 0, type |-> "empty"]], [PC |-> [pc |-> 0, type |-> "empty"]]>>
 /\ _IF = << [PC |-> [pc |-> 0, type |-> "empty"], currLat |-> 1, baseLat |-> 1],
    [PC |-> [pc |-> 0, type |-> "empty"], currLat |-> 1, baseLat |-> 1] >>
-/\ FUTmpLat = <<<<<<1, 3>>, 3>>, 3>>
+/\ FUTmpLat = <<<<<<3, 1>>, 1>>, 3>>
 /\ _FU2 = << [ PC |-> [pc |-> 0, type |-> "empty"],
      currLat |-> 1,
-     usage |-> 6,
+     usage |-> 4,
      baseLat |-> 1 ],
    [ PC |-> [pc |-> 0, type |-> "empty"],
      currLat |-> 1,
-     usage |-> 6,
+     usage |-> 2,
      baseLat |-> 1 ] >>
 /\ FUTmp = <<<<<<1, 2>>, 2>>, 1>>
-/\ _COM = << [PC |-> [pc |-> 3, type |-> {2}, lat |-> {3}, dep |-> {}]],
+/\ _COM = << [PC |-> [pc |-> 4, type |-> {1}, lat |-> {3}, dep |-> {2, 3}]],
    [PC |-> [pc |-> 0, type |-> "empty"]] >>
 /\ _ID2 = <<[PC |-> [pc |-> 0, type |-> "empty"]], [PC |-> [pc |-> 0, type |-> "empty"]]>>
 /\ currCycle2 = 10
@@ -1109,90 +1079,89 @@ The behavior up to this point is:
 /\ commonPre = FALSE
 /\ currCycle = 10
 /\ iMissTmp = <<<<<<FALSE, FALSE>>, FALSE>>, FALSE>>
-/\ FULat = <<1, 3, 3, 3>>
+/\ FULat = <<3, 1, 1, 3>>
 /\ FUTmp2 = <<<<<<1, 2>>, 2>>, 1>>
 /\ prog = [ rest |-> <<>>,
-  exec |->
-      << [ PC |-> [pc |-> 1, type |-> {1}, lat |-> {1, 3}, dep |-> {}],
-           done |-> TRUE,
-           comTime |-> 4,
-           executed |-> TRUE,
-           exStartTime |-> 2 ],
-         [ PC |-> [pc |-> 2, type |-> {2}, lat |-> {3}, dep |-> {1}],
-           done |-> TRUE,
-           comTime |-> 7,
-           executed |-> TRUE,
-           exStartTime |-> 3 ],
-         [ PC |-> [pc |-> 3, type |-> {2}, lat |-> {3}, dep |-> {}],
-           done |-> FALSE,
-           comTime |-> 0,
-           executed |-> TRUE,
-           exStartTime |-> 6 ],
-         [ PC |-> [pc |-> 4, type |-> {1}, lat |-> {3}, dep |-> {3}],
-           done |-> FALSE,
-           comTime |-> 0,
-           executed |-> FALSE,
-           exStartTime |-> 9 ] >> ]
-/\ depProg = <<>>
-/\ FUTmpLat2 = <<<<<<3, 3>>, 3>>, 3>>
-/\ depProgTmp = <<>>
-/\ prog2 = [ rest |-> <<>>,
   exec |->
       << [ PC |-> [pc |-> 1, type |-> {1}, lat |-> {1, 3}, dep |-> {}],
            done |-> TRUE,
            comTime |-> 6,
            executed |-> TRUE,
            exStartTime |-> 2 ],
-         [ PC |-> [pc |-> 2, type |-> {2}, lat |-> {3}, dep |-> {1}],
-           done |-> FALSE,
-           comTime |-> 0,
+         [ PC |-> [pc |-> 2, type |-> {2}, lat |-> {1}, dep |-> {1}],
+           done |-> TRUE,
+           comTime |-> 7,
            executed |-> TRUE,
-           exStartTime |-> 6 ],
-         [ PC |-> [pc |-> 3, type |-> {2}, lat |-> {3}, dep |-> {}],
-           done |-> FALSE,
-           comTime |-> 0,
+           exStartTime |-> 5 ],
+         [ PC |-> [pc |-> 3, type |-> {2}, lat |-> {1}, dep |-> {}],
+           done |-> TRUE,
+           comTime |-> 7,
            executed |-> TRUE,
            exStartTime |-> 3 ],
-         [ PC |-> [pc |-> 4, type |-> {1}, lat |-> {3}, dep |-> {3}],
+         [ PC |-> [pc |-> 4, type |-> {1}, lat |-> {3}, dep |-> {2, 3}],
            done |-> FALSE,
            comTime |-> 0,
            executed |-> TRUE,
            exStartTime |-> 6 ] >> ]
+/\ depProg = <<>>
+/\ FUTmpLat2 = <<<<<<1, 1>>, 1>>, 3>>
+/\ depProgTmp = <<>>
+/\ prog2 = [ rest |-> <<>>,
+  exec |->
+      << [ PC |-> [pc |-> 1, type |-> {1}, lat |-> {1, 3}, dep |-> {}],
+           done |-> TRUE,
+           comTime |-> 4,
+           executed |-> TRUE,
+           exStartTime |-> 2 ],
+         [ PC |-> [pc |-> 2, type |-> {2}, lat |-> {1}, dep |-> {1}],
+           done |-> TRUE,
+           comTime |-> 5,
+           executed |-> TRUE,
+           exStartTime |-> 3 ],
+         [ PC |-> [pc |-> 3, type |-> {2}, lat |-> {1}, dep |-> {}],
+           done |-> TRUE,
+           comTime |-> 6,
+           executed |-> TRUE,
+           exStartTime |-> 4 ],
+         [ PC |-> [pc |-> 4, type |-> {1}, lat |-> {3}, dep |-> {2, 3}],
+           done |-> TRUE,
+           comTime |-> 9,
+           executed |-> TRUE,
+           exStartTime |-> 5 ] >> ]
 /\ FU = <<1, 2, 2, 1>>
-/\ _FU = << [ PC |-> [pc |-> 4, type |-> {1}, lat |-> {3}, dep |-> {3}],
-     currLat |-> 1,
-     usage |-> 2,
-     baseLat |-> 3 ],
-   [ PC |-> [pc |-> 0, type |-> "empty"],
-     currLat |-> 1,
-     usage |-> 6,
-     baseLat |-> 1 ] >>
-
-@!@!@ENDMSG 2217 @!@!@
-@!@!@STARTMSG 2217:4 @!@!@
-12: <Next line 78, col 9 to line 104, col 103 of module pipeline_ooo>
-/\ FULat2 = <<3, 3, 3, 3>>
-/\ iMiss2 = <<FALSE, FALSE, FALSE, FALSE>>
-/\ _RS2 = <<{}, {}>>
-/\ locWorst = <<FALSE, TRUE>>
-/\ _COM2 = << [PC |-> [pc |-> 4, type |-> {1}, lat |-> {3}, dep |-> {3}]],
-   [PC |-> [pc |-> 0, type |-> "empty"]] >>
-/\ _ID = <<[PC |-> [pc |-> 0, type |-> "empty"]], [PC |-> [pc |-> 0, type |-> "empty"]]>>
-/\ _IF = << [PC |-> [pc |-> 0, type |-> "empty"], currLat |-> 1, baseLat |-> 1],
-   [PC |-> [pc |-> 0, type |-> "empty"], currLat |-> 1, baseLat |-> 1] >>
-/\ FUTmpLat = <<<<<<1, 3>>, 3>>, 3>>
-/\ _FU2 = << [ PC |-> [pc |-> 0, type |-> "empty"],
+/\ _FU = << [ PC |-> [pc |-> 0, type |-> "empty"],
      currLat |-> 1,
      usage |-> 6,
      baseLat |-> 1 ],
    [ PC |-> [pc |-> 0, type |-> "empty"],
      currLat |-> 1,
-     usage |-> 6,
+     usage |-> 2,
+     baseLat |-> 1 ] >>
+
+@!@!@ENDMSG 2217 @!@!@
+@!@!@STARTMSG 2217:4 @!@!@
+12: <Next line 78, col 9 to line 104, col 103 of module pipeline_ooo>
+/\ FULat2 = <<1, 1, 1, 3>>
+/\ iMiss2 = <<FALSE, FALSE, FALSE, FALSE>>
+/\ _RS2 = <<{}, {}>>
+/\ locWorst = <<TRUE, FALSE>>
+/\ _COM2 = <<[PC |-> [pc |-> 0, type |-> "empty"]], [PC |-> [pc |-> 0, type |-> "empty"]]>>
+/\ _ID = <<[PC |-> [pc |-> 0, type |-> "empty"]], [PC |-> [pc |-> 0, type |-> "empty"]]>>
+/\ _IF = << [PC |-> [pc |-> 0, type |-> "empty"], currLat |-> 1, baseLat |-> 1],
+   [PC |-> [pc |-> 0, type |-> "empty"], currLat |-> 1, baseLat |-> 1] >>
+/\ FUTmpLat = <<<<<<3, 1>>, 1>>, 3>>
+/\ _FU2 = << [ PC |-> [pc |-> 0, type |-> "empty"],
+     currLat |-> 1,
+     usage |-> 4,
+     baseLat |-> 1 ],
+   [ PC |-> [pc |-> 0, type |-> "empty"],
+     currLat |-> 1,
+     usage |-> 2,
      baseLat |-> 1 ] >>
 /\ FUTmp = <<<<<<1, 2>>, 2>>, 1>>
 /\ _COM = <<[PC |-> [pc |-> 0, type |-> "empty"]], [PC |-> [pc |-> 0, type |-> "empty"]]>>
 /\ _ID2 = <<[PC |-> [pc |-> 0, type |-> "empty"]], [PC |-> [pc |-> 0, type |-> "empty"]]>>
-/\ currCycle2 = 11
+/\ currCycle2 = 10
 /\ FU2 = <<1, 2, 2, 1>>
 /\ _IF2 = << [PC |-> [pc |-> 0, type |-> "empty"], currLat |-> 1, baseLat |-> 1],
    [PC |-> [pc |-> 0, type |-> "empty"], currLat |-> 1, baseLat |-> 1] >>
@@ -1202,345 +1171,68 @@ The behavior up to this point is:
 /\ commonPre = FALSE
 /\ currCycle = 11
 /\ iMissTmp = <<<<<<FALSE, FALSE>>, FALSE>>, FALSE>>
-/\ FULat = <<1, 3, 3, 3>>
+/\ FULat = <<3, 1, 1, 3>>
 /\ FUTmp2 = <<<<<<1, 2>>, 2>>, 1>>
 /\ prog = [ rest |-> <<>>,
-  exec |->
-      << [ PC |-> [pc |-> 1, type |-> {1}, lat |-> {1, 3}, dep |-> {}],
-           done |-> TRUE,
-           comTime |-> 4,
-           executed |-> TRUE,
-           exStartTime |-> 2 ],
-         [ PC |-> [pc |-> 2, type |-> {2}, lat |-> {3}, dep |-> {1}],
-           done |-> TRUE,
-           comTime |-> 7,
-           executed |-> TRUE,
-           exStartTime |-> 3 ],
-         [ PC |-> [pc |-> 3, type |-> {2}, lat |-> {3}, dep |-> {}],
-           done |-> TRUE,
-           comTime |-> 10,
-           executed |-> TRUE,
-           exStartTime |-> 6 ],
-         [ PC |-> [pc |-> 4, type |-> {1}, lat |-> {3}, dep |-> {3}],
-           done |-> FALSE,
-           comTime |-> 0,
-           executed |-> FALSE,
-           exStartTime |-> 9 ] >> ]
-/\ depProg = <<>>
-/\ FUTmpLat2 = <<<<<<3, 3>>, 3>>, 3>>
-/\ depProgTmp = <<>>
-/\ prog2 = [ rest |-> <<>>,
   exec |->
       << [ PC |-> [pc |-> 1, type |-> {1}, lat |-> {1, 3}, dep |-> {}],
            done |-> TRUE,
            comTime |-> 6,
            executed |-> TRUE,
            exStartTime |-> 2 ],
-         [ PC |-> [pc |-> 2, type |-> {2}, lat |-> {3}, dep |-> {1}],
+         [ PC |-> [pc |-> 2, type |-> {2}, lat |-> {1}, dep |-> {1}],
            done |-> TRUE,
-           comTime |-> 10,
+           comTime |-> 7,
            executed |-> TRUE,
-           exStartTime |-> 6 ],
-         [ PC |-> [pc |-> 3, type |-> {2}, lat |-> {3}, dep |-> {}],
+           exStartTime |-> 5 ],
+         [ PC |-> [pc |-> 3, type |-> {2}, lat |-> {1}, dep |-> {}],
            done |-> TRUE,
-           comTime |-> 10,
+           comTime |-> 7,
            executed |-> TRUE,
            exStartTime |-> 3 ],
-         [ PC |-> [pc |-> 4, type |-> {1}, lat |-> {3}, dep |-> {3}],
-           done |-> FALSE,
-           comTime |-> 0,
+         [ PC |-> [pc |-> 4, type |-> {1}, lat |-> {3}, dep |-> {2, 3}],
+           done |-> TRUE,
+           comTime |-> 10,
            executed |-> TRUE,
            exStartTime |-> 6 ] >> ]
-/\ FU = <<1, 2, 2, 1>>
-/\ _FU = << [ PC |-> [pc |-> 4, type |-> {1}, lat |-> {3}, dep |-> {3}],
-     currLat |-> 2,
-     usage |-> 3,
-     baseLat |-> 3 ],
-   [ PC |-> [pc |-> 0, type |-> "empty"],
-     currLat |-> 1,
-     usage |-> 6,
-     baseLat |-> 1 ] >>
-
-@!@!@ENDMSG 2217 @!@!@
-@!@!@STARTMSG 2217:4 @!@!@
-13: <Next line 78, col 9 to line 104, col 103 of module pipeline_ooo>
-/\ FULat2 = <<3, 3, 3, 3>>
-/\ iMiss2 = <<FALSE, FALSE, FALSE, FALSE>>
-/\ _RS2 = <<{}, {}>>
-/\ locWorst = <<FALSE, TRUE>>
-/\ _COM2 = <<[PC |-> [pc |-> 0, type |-> "empty"]], [PC |-> [pc |-> 0, type |-> "empty"]]>>
-/\ _ID = <<[PC |-> [pc |-> 0, type |-> "empty"]], [PC |-> [pc |-> 0, type |-> "empty"]]>>
-/\ _IF = << [PC |-> [pc |-> 0, type |-> "empty"], currLat |-> 1, baseLat |-> 1],
-   [PC |-> [pc |-> 0, type |-> "empty"], currLat |-> 1, baseLat |-> 1] >>
-/\ FUTmpLat = <<<<<<1, 3>>, 3>>, 3>>
-/\ _FU2 = << [ PC |-> [pc |-> 0, type |-> "empty"],
-     currLat |-> 1,
-     usage |-> 6,
-     baseLat |-> 1 ],
-   [ PC |-> [pc |-> 0, type |-> "empty"],
-     currLat |-> 1,
-     usage |-> 6,
-     baseLat |-> 1 ] >>
-/\ FUTmp = <<<<<<1, 2>>, 2>>, 1>>
-/\ _COM = <<[PC |-> [pc |-> 0, type |-> "empty"]], [PC |-> [pc |-> 0, type |-> "empty"]]>>
-/\ _ID2 = <<[PC |-> [pc |-> 0, type |-> "empty"]], [PC |-> [pc |-> 0, type |-> "empty"]]>>
-/\ currCycle2 = 12
-/\ FU2 = <<1, 2, 2, 1>>
-/\ _IF2 = << [PC |-> [pc |-> 0, type |-> "empty"], currLat |-> 1, baseLat |-> 1],
-   [PC |-> [pc |-> 0, type |-> "empty"], currLat |-> 1, baseLat |-> 1] >>
-/\ iMissTmp2 = <<<<<<FALSE, FALSE>>, FALSE>>, FALSE>>
-/\ iMiss = <<FALSE, FALSE, FALSE, FALSE>>
-/\ _RS = <<{}, {}>>
-/\ commonPre = FALSE
-/\ currCycle = 12
-/\ iMissTmp = <<<<<<FALSE, FALSE>>, FALSE>>, FALSE>>
-/\ FULat = <<1, 3, 3, 3>>
-/\ FUTmp2 = <<<<<<1, 2>>, 2>>, 1>>
-/\ prog = [ rest |-> <<>>,
+/\ depProg = <<>>
+/\ FUTmpLat2 = <<<<<<1, 1>>, 1>>, 3>>
+/\ depProgTmp = <<>>
+/\ prog2 = [ rest |-> <<>>,
   exec |->
       << [ PC |-> [pc |-> 1, type |-> {1}, lat |-> {1, 3}, dep |-> {}],
            done |-> TRUE,
            comTime |-> 4,
            executed |-> TRUE,
            exStartTime |-> 2 ],
-         [ PC |-> [pc |-> 2, type |-> {2}, lat |-> {3}, dep |-> {1}],
+         [ PC |-> [pc |-> 2, type |-> {2}, lat |-> {1}, dep |-> {1}],
            done |-> TRUE,
-           comTime |-> 7,
+           comTime |-> 5,
            executed |-> TRUE,
            exStartTime |-> 3 ],
-         [ PC |-> [pc |-> 3, type |-> {2}, lat |-> {3}, dep |-> {}],
-           done |-> TRUE,
-           comTime |-> 10,
-           executed |-> TRUE,
-           exStartTime |-> 6 ],
-         [ PC |-> [pc |-> 4, type |-> {1}, lat |-> {3}, dep |-> {3}],
-           done |-> FALSE,
-           comTime |-> 0,
-           executed |-> FALSE,
-           exStartTime |-> 9 ] >> ]
-/\ depProg = <<>>
-/\ FUTmpLat2 = <<<<<<3, 3>>, 3>>, 3>>
-/\ depProgTmp = <<>>
-/\ prog2 = [ rest |-> <<>>,
-  exec |->
-      << [ PC |-> [pc |-> 1, type |-> {1}, lat |-> {1, 3}, dep |-> {}],
+         [ PC |-> [pc |-> 3, type |-> {2}, lat |-> {1}, dep |-> {}],
            done |-> TRUE,
            comTime |-> 6,
            executed |-> TRUE,
-           exStartTime |-> 2 ],
-         [ PC |-> [pc |-> 2, type |-> {2}, lat |-> {3}, dep |-> {1}],
+           exStartTime |-> 4 ],
+         [ PC |-> [pc |-> 4, type |-> {1}, lat |-> {3}, dep |-> {2, 3}],
            done |-> TRUE,
-           comTime |-> 10,
+           comTime |-> 9,
            executed |-> TRUE,
-           exStartTime |-> 6 ],
-         [ PC |-> [pc |-> 3, type |-> {2}, lat |-> {3}, dep |-> {}],
-           done |-> TRUE,
-           comTime |-> 10,
-           executed |-> TRUE,
-           exStartTime |-> 3 ],
-         [ PC |-> [pc |-> 4, type |-> {1}, lat |-> {3}, dep |-> {3}],
-           done |-> TRUE,
-           comTime |-> 11,
-           executed |-> TRUE,
-           exStartTime |-> 6 ] >> ]
-/\ FU = <<1, 2, 2, 1>>
-/\ _FU = << [ PC |-> [pc |-> 4, type |-> {1}, lat |-> {3}, dep |-> {3}],
-     currLat |-> 3,
-     usage |-> 4,
-     baseLat |-> 3 ],
-   [ PC |-> [pc |-> 0, type |-> "empty"],
-     currLat |-> 1,
-     usage |-> 6,
-     baseLat |-> 1 ] >>
-
-@!@!@ENDMSG 2217 @!@!@
-@!@!@STARTMSG 2217:4 @!@!@
-14: <Next line 78, col 9 to line 104, col 103 of module pipeline_ooo>
-/\ FULat2 = <<3, 3, 3, 3>>
-/\ iMiss2 = <<FALSE, FALSE, FALSE, FALSE>>
-/\ _RS2 = <<{}, {}>>
-/\ locWorst = <<FALSE, TRUE>>
-/\ _COM2 = <<[PC |-> [pc |-> 0, type |-> "empty"]], [PC |-> [pc |-> 0, type |-> "empty"]]>>
-/\ _ID = <<[PC |-> [pc |-> 0, type |-> "empty"]], [PC |-> [pc |-> 0, type |-> "empty"]]>>
-/\ _IF = << [PC |-> [pc |-> 0, type |-> "empty"], currLat |-> 1, baseLat |-> 1],
-   [PC |-> [pc |-> 0, type |-> "empty"], currLat |-> 1, baseLat |-> 1] >>
-/\ FUTmpLat = <<<<<<1, 3>>, 3>>, 3>>
-/\ _FU2 = << [ PC |-> [pc |-> 0, type |-> "empty"],
-     currLat |-> 1,
-     usage |-> 6,
-     baseLat |-> 1 ],
-   [ PC |-> [pc |-> 0, type |-> "empty"],
-     currLat |-> 1,
-     usage |-> 6,
-     baseLat |-> 1 ] >>
-/\ FUTmp = <<<<<<1, 2>>, 2>>, 1>>
-/\ _COM = << [PC |-> [pc |-> 4, type |-> {1}, lat |-> {3}, dep |-> {3}]],
-   [PC |-> [pc |-> 0, type |-> "empty"]] >>
-/\ _ID2 = <<[PC |-> [pc |-> 0, type |-> "empty"]], [PC |-> [pc |-> 0, type |-> "empty"]]>>
-/\ currCycle2 = 12
-/\ FU2 = <<1, 2, 2, 1>>
-/\ _IF2 = << [PC |-> [pc |-> 0, type |-> "empty"], currLat |-> 1, baseLat |-> 1],
-   [PC |-> [pc |-> 0, type |-> "empty"], currLat |-> 1, baseLat |-> 1] >>
-/\ iMissTmp2 = <<<<<<FALSE, FALSE>>, FALSE>>, FALSE>>
-/\ iMiss = <<FALSE, FALSE, FALSE, FALSE>>
-/\ _RS = <<{}, {}>>
-/\ commonPre = FALSE
-/\ currCycle = 13
-/\ iMissTmp = <<<<<<FALSE, FALSE>>, FALSE>>, FALSE>>
-/\ FULat = <<1, 3, 3, 3>>
-/\ FUTmp2 = <<<<<<1, 2>>, 2>>, 1>>
-/\ prog = [ rest |-> <<>>,
-  exec |->
-      << [ PC |-> [pc |-> 1, type |-> {1}, lat |-> {1, 3}, dep |-> {}],
-           done |-> TRUE,
-           comTime |-> 4,
-           executed |-> TRUE,
-           exStartTime |-> 2 ],
-         [ PC |-> [pc |-> 2, type |-> {2}, lat |-> {3}, dep |-> {1}],
-           done |-> TRUE,
-           comTime |-> 7,
-           executed |-> TRUE,
-           exStartTime |-> 3 ],
-         [ PC |-> [pc |-> 3, type |-> {2}, lat |-> {3}, dep |-> {}],
-           done |-> TRUE,
-           comTime |-> 10,
-           executed |-> TRUE,
-           exStartTime |-> 6 ],
-         [ PC |-> [pc |-> 4, type |-> {1}, lat |-> {3}, dep |-> {3}],
-           done |-> FALSE,
-           comTime |-> 0,
-           executed |-> TRUE,
-           exStartTime |-> 9 ] >> ]
-/\ depProg = <<>>
-/\ FUTmpLat2 = <<<<<<3, 3>>, 3>>, 3>>
-/\ depProgTmp = <<>>
-/\ prog2 = [ rest |-> <<>>,
-  exec |->
-      << [ PC |-> [pc |-> 1, type |-> {1}, lat |-> {1, 3}, dep |-> {}],
-           done |-> TRUE,
-           comTime |-> 6,
-           executed |-> TRUE,
-           exStartTime |-> 2 ],
-         [ PC |-> [pc |-> 2, type |-> {2}, lat |-> {3}, dep |-> {1}],
-           done |-> TRUE,
-           comTime |-> 10,
-           executed |-> TRUE,
-           exStartTime |-> 6 ],
-         [ PC |-> [pc |-> 3, type |-> {2}, lat |-> {3}, dep |-> {}],
-           done |-> TRUE,
-           comTime |-> 10,
-           executed |-> TRUE,
-           exStartTime |-> 3 ],
-         [ PC |-> [pc |-> 4, type |-> {1}, lat |-> {3}, dep |-> {3}],
-           done |-> TRUE,
-           comTime |-> 11,
-           executed |-> TRUE,
-           exStartTime |-> 6 ] >> ]
+           exStartTime |-> 5 ] >> ]
 /\ FU = <<1, 2, 2, 1>>
 /\ _FU = << [ PC |-> [pc |-> 0, type |-> "empty"],
      currLat |-> 1,
-     usage |-> 4,
-     baseLat |-> 1 ],
-   [ PC |-> [pc |-> 0, type |-> "empty"],
-     currLat |-> 1,
-     usage |-> 6,
-     baseLat |-> 1 ] >>
-
-@!@!@ENDMSG 2217 @!@!@
-@!@!@STARTMSG 2217:4 @!@!@
-15: <Next line 78, col 9 to line 104, col 103 of module pipeline_ooo>
-/\ FULat2 = <<3, 3, 3, 3>>
-/\ iMiss2 = <<FALSE, FALSE, FALSE, FALSE>>
-/\ _RS2 = <<{}, {}>>
-/\ locWorst = <<FALSE, TRUE>>
-/\ _COM2 = <<[PC |-> [pc |-> 0, type |-> "empty"]], [PC |-> [pc |-> 0, type |-> "empty"]]>>
-/\ _ID = <<[PC |-> [pc |-> 0, type |-> "empty"]], [PC |-> [pc |-> 0, type |-> "empty"]]>>
-/\ _IF = << [PC |-> [pc |-> 0, type |-> "empty"], currLat |-> 1, baseLat |-> 1],
-   [PC |-> [pc |-> 0, type |-> "empty"], currLat |-> 1, baseLat |-> 1] >>
-/\ FUTmpLat = <<<<<<1, 3>>, 3>>, 3>>
-/\ _FU2 = << [ PC |-> [pc |-> 0, type |-> "empty"],
-     currLat |-> 1,
      usage |-> 6,
      baseLat |-> 1 ],
    [ PC |-> [pc |-> 0, type |-> "empty"],
      currLat |-> 1,
-     usage |-> 6,
-     baseLat |-> 1 ] >>
-/\ FUTmp = <<<<<<1, 2>>, 2>>, 1>>
-/\ _COM = <<[PC |-> [pc |-> 0, type |-> "empty"]], [PC |-> [pc |-> 0, type |-> "empty"]]>>
-/\ _ID2 = <<[PC |-> [pc |-> 0, type |-> "empty"]], [PC |-> [pc |-> 0, type |-> "empty"]]>>
-/\ currCycle2 = 12
-/\ FU2 = <<1, 2, 2, 1>>
-/\ _IF2 = << [PC |-> [pc |-> 0, type |-> "empty"], currLat |-> 1, baseLat |-> 1],
-   [PC |-> [pc |-> 0, type |-> "empty"], currLat |-> 1, baseLat |-> 1] >>
-/\ iMissTmp2 = <<<<<<FALSE, FALSE>>, FALSE>>, FALSE>>
-/\ iMiss = <<FALSE, FALSE, FALSE, FALSE>>
-/\ _RS = <<{}, {}>>
-/\ commonPre = FALSE
-/\ currCycle = 14
-/\ iMissTmp = <<<<<<FALSE, FALSE>>, FALSE>>, FALSE>>
-/\ FULat = <<1, 3, 3, 3>>
-/\ FUTmp2 = <<<<<<1, 2>>, 2>>, 1>>
-/\ prog = [ rest |-> <<>>,
-  exec |->
-      << [ PC |-> [pc |-> 1, type |-> {1}, lat |-> {1, 3}, dep |-> {}],
-           done |-> TRUE,
-           comTime |-> 4,
-           executed |-> TRUE,
-           exStartTime |-> 2 ],
-         [ PC |-> [pc |-> 2, type |-> {2}, lat |-> {3}, dep |-> {1}],
-           done |-> TRUE,
-           comTime |-> 7,
-           executed |-> TRUE,
-           exStartTime |-> 3 ],
-         [ PC |-> [pc |-> 3, type |-> {2}, lat |-> {3}, dep |-> {}],
-           done |-> TRUE,
-           comTime |-> 10,
-           executed |-> TRUE,
-           exStartTime |-> 6 ],
-         [ PC |-> [pc |-> 4, type |-> {1}, lat |-> {3}, dep |-> {3}],
-           done |-> TRUE,
-           comTime |-> 13,
-           executed |-> TRUE,
-           exStartTime |-> 9 ] >> ]
-/\ depProg = <<>>
-/\ FUTmpLat2 = <<<<<<3, 3>>, 3>>, 3>>
-/\ depProgTmp = <<>>
-/\ prog2 = [ rest |-> <<>>,
-  exec |->
-      << [ PC |-> [pc |-> 1, type |-> {1}, lat |-> {1, 3}, dep |-> {}],
-           done |-> TRUE,
-           comTime |-> 6,
-           executed |-> TRUE,
-           exStartTime |-> 2 ],
-         [ PC |-> [pc |-> 2, type |-> {2}, lat |-> {3}, dep |-> {1}],
-           done |-> TRUE,
-           comTime |-> 10,
-           executed |-> TRUE,
-           exStartTime |-> 6 ],
-         [ PC |-> [pc |-> 3, type |-> {2}, lat |-> {3}, dep |-> {}],
-           done |-> TRUE,
-           comTime |-> 10,
-           executed |-> TRUE,
-           exStartTime |-> 3 ],
-         [ PC |-> [pc |-> 4, type |-> {1}, lat |-> {3}, dep |-> {3}],
-           done |-> TRUE,
-           comTime |-> 11,
-           executed |-> TRUE,
-           exStartTime |-> 6 ] >> ]
-/\ FU = <<1, 2, 2, 1>>
-/\ _FU = << [ PC |-> [pc |-> 0, type |-> "empty"],
-     currLat |-> 1,
-     usage |-> 4,
-     baseLat |-> 1 ],
-   [ PC |-> [pc |-> 0, type |-> "empty"],
-     currLat |-> 1,
-     usage |-> 6,
+     usage |-> 2,
      baseLat |-> 1 ] >>
 
 @!@!@ENDMSG 2217 @!@!@
 @!@!@STARTMSG 2201:0 @!@!@
-The coverage statistics at 2021-05-31 19:42:36
+The coverage statistics at 2021-05-31 19:48:13
 @!@!@ENDMSG 2201 @!@!@
 @!@!@STARTMSG 2773:0 @!@!@
 <Init line 54, col 1 to line 54, col 4 of module pipeline_ooo>: 8:8
@@ -1879,989 +1571,803 @@ The coverage statistics at 2021-05-31 19:42:36
   ||line 76, col 40 to line 76, col 48 of module pipeline_ooo: 8
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2772:0 @!@!@
-<Next line 78, col 1 to line 78, col 4 of module pipeline_ooo>: 54:71
+<Next line 78, col 1 to line 78, col 4 of module pipeline_ooo>: 43:57
 @!@!@ENDMSG 2772 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
   line 41, col 1 to line 41, col 35 of module pipeline_ooo: 20
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  line 41, col 1 to line 41, col 35 of module pipeline_ooo: 606
+  line 41, col 1 to line 41, col 35 of module pipeline_ooo: 594
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  line 41, col 1 to line 41, col 35 of module pipeline_ooo: 106
+  line 41, col 1 to line 41, col 35 of module pipeline_ooo: 93
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  line 41, col 1 to line 41, col 35 of module pipeline_ooo: 3947
+  line 41, col 1 to line 41, col 35 of module pipeline_ooo: 3290
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  line 41, col 1 to line 41, col 35 of module pipeline_ooo: 3479
+  line 41, col 1 to line 41, col 35 of module pipeline_ooo: 2755
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  line 41, col 1 to line 41, col 35 of module pipeline_ooo: 3674
+  line 41, col 1 to line 41, col 35 of module pipeline_ooo: 3356
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  line 41, col 1 to line 41, col 35 of module pipeline_ooo: 2334
+  line 41, col 1 to line 41, col 35 of module pipeline_ooo: 2034
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  line 41, col 1 to line 41, col 35 of module pipeline_ooo: 7809
+  line 41, col 1 to line 41, col 35 of module pipeline_ooo: 6647
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  line 41, col 1 to line 41, col 35 of module pipeline_ooo: 1651
+  line 41, col 1 to line 41, col 35 of module pipeline_ooo: 1433
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
   line 41, col 1 to line 41, col 35 of module pipeline_ooo: 20
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  line 41, col 1 to line 41, col 35 of module pipeline_ooo: 3917
+  line 41, col 1 to line 41, col 35 of module pipeline_ooo: 3049
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  line 41, col 1 to line 41, col 35 of module pipeline_ooo: 13858
+  line 41, col 1 to line 41, col 35 of module pipeline_ooo: 11745
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  line 63, col 18 to line 63, col 59 of module pipeline_exec_ooo: 70
-@!@!@ENDMSG 2221 @!@!@
-@!@!@STARTMSG 2775:0 @!@!@
-  |line 63, col 25 to line 63, col 59 of module pipeline_exec_ooo: 71:142
-@!@!@ENDMSG 2775 @!@!@
-@!@!@STARTMSG 2221:0 @!@!@
-  line 67, col 15 to line 67, col 69 of module pipeline_exec_ooo: 70
+  line 63, col 18 to line 63, col 59 of module pipeline_exec_ooo: 56
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2775:0 @!@!@
-  |line 67, col 22 to line 67, col 69 of module pipeline_exec_ooo: 71:142
+  |line 63, col 25 to line 63, col 59 of module pipeline_exec_ooo: 57:114
 @!@!@ENDMSG 2775 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  line 70, col 15 to line 72, col 59 of module pipeline_exec_ooo: 70
+  line 67, col 15 to line 67, col 69 of module pipeline_exec_ooo: 56
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2775:0 @!@!@
-  |line 70, col 22 to line 72, col 59 of module pipeline_exec_ooo: 71:142
+  |line 67, col 22 to line 67, col 69 of module pipeline_exec_ooo: 57:114
 @!@!@ENDMSG 2775 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  line 81, col 18 to line 81, col 54 of module pipeline_exec_ooo: 70
+  line 70, col 15 to line 72, col 59 of module pipeline_exec_ooo: 56
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2775:0 @!@!@
-  |line 81, col 25 to line 81, col 54 of module pipeline_exec_ooo: 71:142
+  |line 70, col 22 to line 72, col 59 of module pipeline_exec_ooo: 57:114
 @!@!@ENDMSG 2775 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  line 95, col 16 to line 95, col 69 of module pipeline_exec_ooo: 70
+  line 81, col 18 to line 81, col 54 of module pipeline_exec_ooo: 56
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2775:0 @!@!@
-  |line 95, col 24 to line 95, col 69 of module pipeline_exec_ooo: 71:142
+  |line 81, col 25 to line 81, col 54 of module pipeline_exec_ooo: 57:114
 @!@!@ENDMSG 2775 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  line 122, col 20 to line 122, col 61 of module pipeline_exec_ooo: 70
+  line 95, col 16 to line 95, col 69 of module pipeline_exec_ooo: 56
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2775:0 @!@!@
+  |line 95, col 24 to line 95, col 69 of module pipeline_exec_ooo: 57:114
+@!@!@ENDMSG 2775 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 122, col 20 to line 122, col 61 of module pipeline_exec_ooo: 56
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  |line 122, col 28 to line 122, col 61 of module pipeline_exec_ooo: 71
+  |line 122, col 28 to line 122, col 61 of module pipeline_exec_ooo: 57
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  ||line 122, col 39 to line 122, col 43 of module pipeline_exec_ooo: 71
+  ||line 122, col 39 to line 122, col 43 of module pipeline_exec_ooo: 57
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  |||line 106, col 30 to line 106, col 95 of module pipeline_exec_ooo: 71
+  |||line 106, col 30 to line 106, col 95 of module pipeline_exec_ooo: 57
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  ||||line 106, col 33 to line 106, col 42 of module pipeline_exec_ooo: 71
+  ||||line 106, col 33 to line 106, col 42 of module pipeline_exec_ooo: 57
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  |||||line 106, col 34 to line 106, col 42 of module pipeline_exec_ooo: 71
+  |||||line 106, col 34 to line 106, col 42 of module pipeline_exec_ooo: 57
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  ||||||line 18, col 14 to line 18, col 67 of module pipeline_exec_ooo: 71
+  ||||||line 18, col 14 to line 18, col 67 of module pipeline_exec_ooo: 57
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  |||||||line 18, col 37 to line 18, col 67 of module pipeline_exec_ooo: 142
+  |||||||line 18, col 37 to line 18, col 67 of module pipeline_exec_ooo: 114
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  |||||||line 18, col 23 to line 18, col 34 of module pipeline_exec_ooo: 71
+  |||||||line 18, col 23 to line 18, col 34 of module pipeline_exec_ooo: 57
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  ||||line 106, col 49 to line 106, col 80 of module pipeline_exec_ooo: 71
+  ||||line 106, col 49 to line 106, col 80 of module pipeline_exec_ooo: 57
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  |||||line 13, col 21 to line 15, col 49 of module instructions_ooo: 142
+  |||||line 13, col 21 to line 15, col 49 of module instructions_ooo: 114
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  ||||||line 13, col 24 to line 13, col 28 of module instructions_ooo: 142
+  ||||||line 13, col 24 to line 13, col 28 of module instructions_ooo: 114
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  ||||||line 14, col 26 to line 14, col 32 of module instructions_ooo: 71
+  ||||||line 14, col 26 to line 14, col 32 of module instructions_ooo: 57
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  |||||||line 12, col 36 to line 12, col 72 of module instructions_ooo: 71
+  |||||||line 12, col 36 to line 12, col 72 of module instructions_ooo: 57
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  ||||||||line 12, col 39 to line 12, col 48 of module instructions_ooo: 71
+  ||||||||line 12, col 39 to line 12, col 48 of module instructions_ooo: 57
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
   ||||||||line 12, col 55 to line 12, col 61 of module instructions_ooo: 10
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  ||||||||line 12, col 68 to line 12, col 72 of module instructions_ooo: 61
+  ||||||||line 12, col 68 to line 12, col 72 of module instructions_ooo: 47
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  |||||||line 14, col 31 to line 14, col 31 of module instructions_ooo: 71
+  |||||||line 14, col 31 to line 14, col 31 of module instructions_ooo: 57
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  ||||||line 15, col 26 to line 15, col 49 of module instructions_ooo: 71
+  ||||||line 15, col 26 to line 15, col 49 of module instructions_ooo: 57
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  |||||||line 15, col 37 to line 15, col 43 of module instructions_ooo: 71
+  |||||||line 15, col 37 to line 15, col 43 of module instructions_ooo: 57
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  ||||||||line 12, col 36 to line 12, col 72 of module instructions_ooo: 71
+  ||||||||line 12, col 36 to line 12, col 72 of module instructions_ooo: 57
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  |||||||||line 12, col 39 to line 12, col 48 of module instructions_ooo: 71
+  |||||||||line 12, col 39 to line 12, col 48 of module instructions_ooo: 57
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
   |||||||||line 12, col 55 to line 12, col 61 of module instructions_ooo: 10
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  |||||||||line 12, col 68 to line 12, col 72 of module instructions_ooo: 61
+  |||||||||line 12, col 68 to line 12, col 72 of module instructions_ooo: 47
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  ||||||||line 15, col 42 to line 15, col 42 of module instructions_ooo: 71
+  ||||||||line 15, col 42 to line 15, col 42 of module instructions_ooo: 57
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  |||||||line 15, col 46 to line 15, col 48 of module instructions_ooo: 71
+  |||||||line 15, col 46 to line 15, col 48 of module instructions_ooo: 57
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  |||||line 106, col 60 to line 106, col 68 of module pipeline_exec_ooo: 71
+  |||||line 106, col 60 to line 106, col 68 of module pipeline_exec_ooo: 57
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  |||||line 106, col 71 to line 106, col 79 of module pipeline_exec_ooo: 71
+  |||||line 106, col 71 to line 106, col 79 of module pipeline_exec_ooo: 57
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  ||line 122, col 55 to line 122, col 59 of module pipeline_exec_ooo: 71
+  ||line 122, col 55 to line 122, col 59 of module pipeline_exec_ooo: 57
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2775:0 @!@!@
-  |||line 109, col 30 to line 121, col 30 of module pipeline_exec_ooo: 71:9158
+  |||line 109, col 30 to line 121, col 30 of module pipeline_exec_ooo: 57:7318
 @!@!@ENDMSG 2775 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  ||||line 109, col 38 to line 109, col 51 of module pipeline_exec_ooo: 71
+  ||||line 109, col 38 to line 109, col 51 of module pipeline_exec_ooo: 57
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  |||||line 109, col 41 to line 109, col 51 of module pipeline_exec_ooo: 71
+  |||||line 109, col 41 to line 109, col 51 of module pipeline_exec_ooo: 57
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  ||||||line 109, col 45 to line 109, col 50 of module pipeline_exec_ooo: 71
+  ||||||line 109, col 45 to line 109, col 50 of module pipeline_exec_ooo: 57
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  |||||||line 108, col 31 to line 108, col 83 of module pipeline_exec_ooo: 71
+  |||||||line 108, col 31 to line 108, col 83 of module pipeline_exec_ooo: 57
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  ||||||||line 108, col 34 to line 108, col 43 of module pipeline_exec_ooo: 71
+  ||||||||line 108, col 34 to line 108, col 43 of module pipeline_exec_ooo: 57
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  |||||||||line 108, col 35 to line 108, col 43 of module pipeline_exec_ooo: 71
+  |||||||||line 108, col 35 to line 108, col 43 of module pipeline_exec_ooo: 57
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  ||||||||||line 18, col 14 to line 18, col 67 of module pipeline_exec_ooo: 71
+  ||||||||||line 18, col 14 to line 18, col 67 of module pipeline_exec_ooo: 57
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  |||||||||||line 18, col 37 to line 18, col 67 of module pipeline_exec_ooo: 142
+  |||||||||||line 18, col 37 to line 18, col 67 of module pipeline_exec_ooo: 114
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  |||||||||||line 18, col 23 to line 18, col 34 of module pipeline_exec_ooo: 71
+  |||||||||||line 18, col 23 to line 18, col 34 of module pipeline_exec_ooo: 57
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  ||||||||line 108, col 50 to line 108, col 68 of module pipeline_exec_ooo: 71
+  ||||||||line 108, col 50 to line 108, col 68 of module pipeline_exec_ooo: 57
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  |||||||||line 98, col 16 to line 100, col 152 of module pipeline_exec_ooo: 213
+  |||||||||line 98, col 16 to line 100, col 152 of module pipeline_exec_ooo: 171
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  ||||||||||line 98, col 19 to line 98, col 23 of module pipeline_exec_ooo: 213
+  ||||||||||line 98, col 19 to line 98, col 23 of module pipeline_exec_ooo: 171
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  ||||||||||line 99, col 21 to line 99, col 29 of module pipeline_exec_ooo: 71
+  ||||||||||line 99, col 21 to line 99, col 29 of module pipeline_exec_ooo: 57
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  ||||||||||line 100, col 21 to line 100, col 152 of module pipeline_exec_ooo: 142
+  ||||||||||line 100, col 21 to line 100, col 152 of module pipeline_exec_ooo: 114
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  |||||||||||line 17, col 22 to line 17, col 64 of module instructions_ooo: 142
+  |||||||||||line 17, col 22 to line 17, col 64 of module instructions_ooo: 114
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  ||||||||||||line 17, col 25 to line 17, col 38 of module instructions_ooo: 142
+  ||||||||||||line 17, col 25 to line 17, col 38 of module instructions_ooo: 114
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
   ||||||||||||line 17, col 45 to line 17, col 57 of module instructions_ooo: 20
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  ||||||||||||line 17, col 64 to line 17, col 64 of module instructions_ooo: 122
+  ||||||||||||line 17, col 64 to line 17, col 64 of module instructions_ooo: 94
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  |||||||||||line 100, col 32 to line 100, col 44 of module pipeline_exec_ooo: 142
+  |||||||||||line 100, col 32 to line 100, col 44 of module pipeline_exec_ooo: 114
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  |||||||||||line 100, col 47 to line 100, col 151 of module pipeline_exec_ooo: 142
+  |||||||||||line 100, col 47 to line 100, col 151 of module pipeline_exec_ooo: 114
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  ||||||||||||line 100, col 56 to line 100, col 79 of module pipeline_exec_ooo: 142
+  ||||||||||||line 100, col 56 to line 100, col 79 of module pipeline_exec_ooo: 114
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  |||||||||||||line 9, col 21 to line 9, col 56 of module instructions_ooo: 142
+  |||||||||||||line 9, col 21 to line 9, col 56 of module instructions_ooo: 114
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  ||||||||||||||line 9, col 24 to line 9, col 35 of module instructions_ooo: 142
+  ||||||||||||||line 9, col 24 to line 9, col 35 of module instructions_ooo: 114
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
   ||||||||||||||line 9, col 42 to line 9, col 45 of module instructions_ooo: 20
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  ||||||||||||||line 9, col 52 to line 9, col 56 of module instructions_ooo: 122
+  ||||||||||||||line 9, col 52 to line 9, col 56 of module instructions_ooo: 94
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  |||||||||||||line 100, col 67 to line 100, col 75 of module pipeline_exec_ooo: 142
+  |||||||||||||line 100, col 67 to line 100, col 75 of module pipeline_exec_ooo: 114
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  |||||||||||||line 100, col 78 to line 100, col 78 of module pipeline_exec_ooo: 142
+  |||||||||||||line 100, col 78 to line 100, col 78 of module pipeline_exec_ooo: 114
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  ||||||||||||line 100, col 82 to line 100, col 99 of module pipeline_exec_ooo: 142
+  ||||||||||||line 100, col 82 to line 100, col 99 of module pipeline_exec_ooo: 114
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  ||||||||||||line 100, col 102 to line 100, col 115 of module pipeline_exec_ooo: 142
+  ||||||||||||line 100, col 102 to line 100, col 115 of module pipeline_exec_ooo: 114
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  |||||||||line 108, col 59 to line 108, col 67 of module pipeline_exec_ooo: 71
+  |||||||||line 108, col 59 to line 108, col 67 of module pipeline_exec_ooo: 57
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  line 127, col 20 to line 128, col 50 of module pipeline_exec_ooo: 71
+  line 127, col 20 to line 128, col 50 of module pipeline_exec_ooo: 57
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  |line 128, col 26 to line 128, col 39 of module pipeline_exec_ooo: 466
+  |line 128, col 26 to line 128, col 39 of module pipeline_exec_ooo: 344
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  |line 128, col 44 to line 128, col 50 of module pipeline_exec_ooo: 233
+  |line 128, col 44 to line 128, col 50 of module pipeline_exec_ooo: 172
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  |line 127, col 29 to line 127, col 49 of module pipeline_exec_ooo: 71
+  |line 127, col 29 to line 127, col 49 of module pipeline_exec_ooo: 57
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  line 129, col 22 to line 129, col 47 of module pipeline_exec_ooo: 65
+  line 129, col 22 to line 129, col 47 of module pipeline_exec_ooo: 52
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  |line 129, col 35 to line 129, col 47 of module pipeline_exec_ooo: 66
+  |line 129, col 35 to line 129, col 47 of module pipeline_exec_ooo: 53
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  line 130, col 22 to line 130, col 46 of module pipeline_exec_ooo: 5
+  line 130, col 22 to line 130, col 46 of module pipeline_exec_ooo: 4
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  line 132, col 37 to line 132, col 68 of module pipeline_exec_ooo: 70
+  line 132, col 37 to line 132, col 68 of module pipeline_exec_ooo: 56
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
   line 50, col 24 to line 50, col 29 of module pipeline_ooo: 20
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  line 51, col 21 to line 51, col 23 of module pipeline_ooo: 594
+  line 51, col 21 to line 51, col 23 of module pipeline_ooo: 606
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  line 43, col 28 to line 43, col 37 of module pipeline_ooo: 104
+  line 43, col 28 to line 43, col 37 of module pipeline_ooo: 92
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  line 42, col 1 to line 52, col 29 of module pipeline_ooo: 3959
+  line 42, col 1 to line 52, col 29 of module pipeline_ooo: 3255
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  line 45, col 22 to line 45, col 25 of module pipeline_ooo: 3487
+  line 45, col 22 to line 45, col 25 of module pipeline_ooo: 2757
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  line 46, col 22 to line 46, col 25 of module pipeline_ooo: 3634
+  line 46, col 22 to line 46, col 25 of module pipeline_ooo: 3400
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  line 42, col 1 to line 52, col 29 of module pipeline_ooo: 2291
+  line 42, col 1 to line 52, col 29 of module pipeline_ooo: 1988
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  line 48, col 22 to line 48, col 25 of module pipeline_ooo: 7743
+  line 48, col 22 to line 48, col 25 of module pipeline_ooo: 6507
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  line 47, col 22 to line 47, col 25 of module pipeline_ooo: 1644
+  line 47, col 22 to line 47, col 25 of module pipeline_ooo: 1447
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
   line 52, col 24 to line 52, col 29 of module pipeline_ooo: 20
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  line 49, col 23 to line 49, col 27 of module pipeline_ooo: 3987
+  line 49, col 23 to line 49, col 27 of module pipeline_ooo: 2949
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  line 44, col 23 to line 44, col 27 of module pipeline_ooo: 13753
+  line 44, col 23 to line 44, col 27 of module pipeline_ooo: 11512
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  line 63, col 18 to line 63, col 59 of module pipeline_exec_ooo: 70
-@!@!@ENDMSG 2221 @!@!@
-@!@!@STARTMSG 2775:0 @!@!@
-  |line 63, col 25 to line 63, col 59 of module pipeline_exec_ooo: 71:142
-@!@!@ENDMSG 2775 @!@!@
-@!@!@STARTMSG 2221:0 @!@!@
-  line 67, col 15 to line 67, col 69 of module pipeline_exec_ooo: 70
+  line 63, col 18 to line 63, col 59 of module pipeline_exec_ooo: 56
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2775:0 @!@!@
-  |line 67, col 22 to line 67, col 69 of module pipeline_exec_ooo: 71:142
+  |line 63, col 25 to line 63, col 59 of module pipeline_exec_ooo: 57:114
 @!@!@ENDMSG 2775 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  line 70, col 15 to line 72, col 59 of module pipeline_exec_ooo: 70
+  line 67, col 15 to line 67, col 69 of module pipeline_exec_ooo: 56
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2775:0 @!@!@
-  |line 70, col 22 to line 72, col 59 of module pipeline_exec_ooo: 71:142
+  |line 67, col 22 to line 67, col 69 of module pipeline_exec_ooo: 57:114
 @!@!@ENDMSG 2775 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  line 81, col 18 to line 81, col 54 of module pipeline_exec_ooo: 70
+  line 70, col 15 to line 72, col 59 of module pipeline_exec_ooo: 56
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2775:0 @!@!@
-  |line 81, col 25 to line 81, col 54 of module pipeline_exec_ooo: 71:142
+  |line 70, col 22 to line 72, col 59 of module pipeline_exec_ooo: 57:114
 @!@!@ENDMSG 2775 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  line 95, col 16 to line 95, col 69 of module pipeline_exec_ooo: 70
+  line 81, col 18 to line 81, col 54 of module pipeline_exec_ooo: 56
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2775:0 @!@!@
-  |line 95, col 24 to line 95, col 69 of module pipeline_exec_ooo: 71:142
+  |line 81, col 25 to line 81, col 54 of module pipeline_exec_ooo: 57:114
 @!@!@ENDMSG 2775 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  line 122, col 20 to line 122, col 61 of module pipeline_exec_ooo: 70
+  line 95, col 16 to line 95, col 69 of module pipeline_exec_ooo: 56
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2775:0 @!@!@
+  |line 95, col 24 to line 95, col 69 of module pipeline_exec_ooo: 57:114
+@!@!@ENDMSG 2775 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 122, col 20 to line 122, col 61 of module pipeline_exec_ooo: 56
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  |line 122, col 28 to line 122, col 61 of module pipeline_exec_ooo: 71
+  |line 122, col 28 to line 122, col 61 of module pipeline_exec_ooo: 57
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  ||line 122, col 39 to line 122, col 43 of module pipeline_exec_ooo: 71
+  ||line 122, col 39 to line 122, col 43 of module pipeline_exec_ooo: 57
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  |||line 106, col 30 to line 106, col 95 of module pipeline_exec_ooo: 71
+  |||line 106, col 30 to line 106, col 95 of module pipeline_exec_ooo: 57
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  ||||line 106, col 33 to line 106, col 42 of module pipeline_exec_ooo: 71
+  ||||line 106, col 33 to line 106, col 42 of module pipeline_exec_ooo: 57
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  |||||line 106, col 34 to line 106, col 42 of module pipeline_exec_ooo: 71
+  |||||line 106, col 34 to line 106, col 42 of module pipeline_exec_ooo: 57
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  ||||||line 18, col 14 to line 18, col 67 of module pipeline_exec_ooo: 71
+  ||||||line 18, col 14 to line 18, col 67 of module pipeline_exec_ooo: 57
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  |||||||line 18, col 37 to line 18, col 67 of module pipeline_exec_ooo: 142
+  |||||||line 18, col 37 to line 18, col 67 of module pipeline_exec_ooo: 114
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  |||||||line 18, col 23 to line 18, col 34 of module pipeline_exec_ooo: 71
+  |||||||line 18, col 23 to line 18, col 34 of module pipeline_exec_ooo: 57
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  ||||line 106, col 49 to line 106, col 80 of module pipeline_exec_ooo: 71
+  ||||line 106, col 49 to line 106, col 80 of module pipeline_exec_ooo: 57
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  |||||line 13, col 21 to line 15, col 49 of module instructions_ooo: 142
+  |||||line 13, col 21 to line 15, col 49 of module instructions_ooo: 114
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  ||||||line 13, col 24 to line 13, col 28 of module instructions_ooo: 142
+  ||||||line 13, col 24 to line 13, col 28 of module instructions_ooo: 114
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  ||||||line 14, col 26 to line 14, col 32 of module instructions_ooo: 71
+  ||||||line 14, col 26 to line 14, col 32 of module instructions_ooo: 57
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  |||||||line 12, col 36 to line 12, col 72 of module instructions_ooo: 71
+  |||||||line 12, col 36 to line 12, col 72 of module instructions_ooo: 57
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  ||||||||line 12, col 39 to line 12, col 48 of module instructions_ooo: 71
+  ||||||||line 12, col 39 to line 12, col 48 of module instructions_ooo: 57
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
   ||||||||line 12, col 55 to line 12, col 61 of module instructions_ooo: 10
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  ||||||||line 12, col 68 to line 12, col 72 of module instructions_ooo: 61
+  ||||||||line 12, col 68 to line 12, col 72 of module instructions_ooo: 47
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  |||||||line 14, col 31 to line 14, col 31 of module instructions_ooo: 71
+  |||||||line 14, col 31 to line 14, col 31 of module instructions_ooo: 57
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  ||||||line 15, col 26 to line 15, col 49 of module instructions_ooo: 71
+  ||||||line 15, col 26 to line 15, col 49 of module instructions_ooo: 57
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  |||||||line 15, col 37 to line 15, col 43 of module instructions_ooo: 71
+  |||||||line 15, col 37 to line 15, col 43 of module instructions_ooo: 57
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  ||||||||line 12, col 36 to line 12, col 72 of module instructions_ooo: 71
+  ||||||||line 12, col 36 to line 12, col 72 of module instructions_ooo: 57
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  |||||||||line 12, col 39 to line 12, col 48 of module instructions_ooo: 71
+  |||||||||line 12, col 39 to line 12, col 48 of module instructions_ooo: 57
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
   |||||||||line 12, col 55 to line 12, col 61 of module instructions_ooo: 10
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  |||||||||line 12, col 68 to line 12, col 72 of module instructions_ooo: 61
+  |||||||||line 12, col 68 to line 12, col 72 of module instructions_ooo: 47
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  ||||||||line 15, col 42 to line 15, col 42 of module instructions_ooo: 71
+  ||||||||line 15, col 42 to line 15, col 42 of module instructions_ooo: 57
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  |||||||line 15, col 46 to line 15, col 48 of module instructions_ooo: 71
+  |||||||line 15, col 46 to line 15, col 48 of module instructions_ooo: 57
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  |||||line 106, col 60 to line 106, col 68 of module pipeline_exec_ooo: 71
+  |||||line 106, col 60 to line 106, col 68 of module pipeline_exec_ooo: 57
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  |||||line 106, col 71 to line 106, col 79 of module pipeline_exec_ooo: 71
+  |||||line 106, col 71 to line 106, col 79 of module pipeline_exec_ooo: 57
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  ||line 122, col 55 to line 122, col 59 of module pipeline_exec_ooo: 71
+  ||line 122, col 55 to line 122, col 59 of module pipeline_exec_ooo: 57
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2775:0 @!@!@
-  |||line 109, col 30 to line 121, col 30 of module pipeline_exec_ooo: 71:6514
+  |||line 109, col 30 to line 121, col 30 of module pipeline_exec_ooo: 57:5554
 @!@!@ENDMSG 2775 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  ||||line 109, col 38 to line 109, col 51 of module pipeline_exec_ooo: 71
+  ||||line 109, col 38 to line 109, col 51 of module pipeline_exec_ooo: 57
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  |||||line 109, col 41 to line 109, col 51 of module pipeline_exec_ooo: 71
+  |||||line 109, col 41 to line 109, col 51 of module pipeline_exec_ooo: 57
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  ||||||line 109, col 45 to line 109, col 50 of module pipeline_exec_ooo: 71
+  ||||||line 109, col 45 to line 109, col 50 of module pipeline_exec_ooo: 57
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  |||||||line 108, col 31 to line 108, col 83 of module pipeline_exec_ooo: 71
+  |||||||line 108, col 31 to line 108, col 83 of module pipeline_exec_ooo: 57
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  ||||||||line 108, col 34 to line 108, col 43 of module pipeline_exec_ooo: 71
+  ||||||||line 108, col 34 to line 108, col 43 of module pipeline_exec_ooo: 57
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  |||||||||line 108, col 35 to line 108, col 43 of module pipeline_exec_ooo: 71
+  |||||||||line 108, col 35 to line 108, col 43 of module pipeline_exec_ooo: 57
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  ||||||||||line 18, col 14 to line 18, col 67 of module pipeline_exec_ooo: 71
+  ||||||||||line 18, col 14 to line 18, col 67 of module pipeline_exec_ooo: 57
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  |||||||||||line 18, col 37 to line 18, col 67 of module pipeline_exec_ooo: 142
+  |||||||||||line 18, col 37 to line 18, col 67 of module pipeline_exec_ooo: 114
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  |||||||||||line 18, col 23 to line 18, col 34 of module pipeline_exec_ooo: 71
+  |||||||||||line 18, col 23 to line 18, col 34 of module pipeline_exec_ooo: 57
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  ||||||||line 108, col 50 to line 108, col 68 of module pipeline_exec_ooo: 71
+  ||||||||line 108, col 50 to line 108, col 68 of module pipeline_exec_ooo: 57
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  |||||||||line 98, col 16 to line 100, col 152 of module pipeline_exec_ooo: 213
+  |||||||||line 98, col 16 to line 100, col 152 of module pipeline_exec_ooo: 171
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  ||||||||||line 98, col 19 to line 98, col 23 of module pipeline_exec_ooo: 213
+  ||||||||||line 98, col 19 to line 98, col 23 of module pipeline_exec_ooo: 171
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  ||||||||||line 99, col 21 to line 99, col 29 of module pipeline_exec_ooo: 71
+  ||||||||||line 99, col 21 to line 99, col 29 of module pipeline_exec_ooo: 57
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  ||||||||||line 100, col 21 to line 100, col 152 of module pipeline_exec_ooo: 142
+  ||||||||||line 100, col 21 to line 100, col 152 of module pipeline_exec_ooo: 114
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  |||||||||||line 17, col 22 to line 17, col 64 of module instructions_ooo: 142
+  |||||||||||line 17, col 22 to line 17, col 64 of module instructions_ooo: 114
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  ||||||||||||line 17, col 25 to line 17, col 38 of module instructions_ooo: 142
+  ||||||||||||line 17, col 25 to line 17, col 38 of module instructions_ooo: 114
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
   ||||||||||||line 17, col 45 to line 17, col 57 of module instructions_ooo: 20
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  ||||||||||||line 17, col 64 to line 17, col 64 of module instructions_ooo: 122
+  ||||||||||||line 17, col 64 to line 17, col 64 of module instructions_ooo: 94
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  |||||||||||line 100, col 32 to line 100, col 44 of module pipeline_exec_ooo: 142
+  |||||||||||line 100, col 32 to line 100, col 44 of module pipeline_exec_ooo: 114
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  |||||||||||line 100, col 47 to line 100, col 151 of module pipeline_exec_ooo: 142
+  |||||||||||line 100, col 47 to line 100, col 151 of module pipeline_exec_ooo: 114
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  ||||||||||||line 100, col 56 to line 100, col 79 of module pipeline_exec_ooo: 142
+  ||||||||||||line 100, col 56 to line 100, col 79 of module pipeline_exec_ooo: 114
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  |||||||||||||line 9, col 21 to line 9, col 56 of module instructions_ooo: 142
+  |||||||||||||line 9, col 21 to line 9, col 56 of module instructions_ooo: 114
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  ||||||||||||||line 9, col 24 to line 9, col 35 of module instructions_ooo: 142
+  ||||||||||||||line 9, col 24 to line 9, col 35 of module instructions_ooo: 114
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
   ||||||||||||||line 9, col 42 to line 9, col 45 of module instructions_ooo: 20
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  ||||||||||||||line 9, col 52 to line 9, col 56 of module instructions_ooo: 122
+  ||||||||||||||line 9, col 52 to line 9, col 56 of module instructions_ooo: 94
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  |||||||||||||line 100, col 67 to line 100, col 75 of module pipeline_exec_ooo: 142
+  |||||||||||||line 100, col 67 to line 100, col 75 of module pipeline_exec_ooo: 114
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  |||||||||||||line 100, col 78 to line 100, col 78 of module pipeline_exec_ooo: 142
+  |||||||||||||line 100, col 78 to line 100, col 78 of module pipeline_exec_ooo: 114
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  ||||||||||||line 100, col 82 to line 100, col 99 of module pipeline_exec_ooo: 142
+  ||||||||||||line 100, col 82 to line 100, col 99 of module pipeline_exec_ooo: 114
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  ||||||||||||line 100, col 102 to line 100, col 115 of module pipeline_exec_ooo: 142
+  ||||||||||||line 100, col 102 to line 100, col 115 of module pipeline_exec_ooo: 114
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  |||||||||line 108, col 59 to line 108, col 67 of module pipeline_exec_ooo: 71
+  |||||||||line 108, col 59 to line 108, col 67 of module pipeline_exec_ooo: 57
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  line 127, col 20 to line 128, col 50 of module pipeline_exec_ooo: 71
+  line 127, col 20 to line 128, col 50 of module pipeline_exec_ooo: 57
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  |line 128, col 26 to line 128, col 39 of module pipeline_exec_ooo: 474
+  |line 128, col 26 to line 128, col 39 of module pipeline_exec_ooo: 346
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  |line 128, col 44 to line 128, col 50 of module pipeline_exec_ooo: 237
+  |line 128, col 44 to line 128, col 50 of module pipeline_exec_ooo: 173
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  |line 127, col 29 to line 127, col 49 of module pipeline_exec_ooo: 71
+  |line 127, col 29 to line 127, col 49 of module pipeline_exec_ooo: 57
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  line 129, col 22 to line 129, col 47 of module pipeline_exec_ooo: 64
+  line 129, col 22 to line 129, col 47 of module pipeline_exec_ooo: 52
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  line 130, col 22 to line 130, col 46 of module pipeline_exec_ooo: 6
+  line 130, col 22 to line 130, col 46 of module pipeline_exec_ooo: 4
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  line 132, col 37 to line 132, col 68 of module pipeline_exec_ooo: 70
+  line 132, col 37 to line 132, col 68 of module pipeline_exec_ooo: 56
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  line 80, col 12 to line 89, col 101 of module pipeline_ooo: 70
+  line 80, col 12 to line 89, col 101 of module pipeline_ooo: 56
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  |line 80, col 25 to line 89, col 101 of module pipeline_ooo: 71
+  |line 80, col 25 to line 89, col 101 of module pipeline_ooo: 57
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  ||line 80, col 28 to line 80, col 36 of module pipeline_ooo: 71
+  ||line 80, col 28 to line 80, col 36 of module pipeline_ooo: 57
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  ||line 82, col 28 to line 85, col 101 of module pipeline_ooo: 40
+  ||line 82, col 28 to line 85, col 101 of module pipeline_ooo: 35
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  |||line 82, col 44 to line 85, col 101 of module pipeline_ooo: 80
+  |||line 82, col 44 to line 85, col 101 of module pipeline_ooo: 70
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  ||||line 82, col 67 to line 85, col 101 of module pipeline_ooo: 160
+  ||||line 82, col 67 to line 85, col 101 of module pipeline_ooo: 140
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  |||||line 83, col 29 to line 85, col 101 of module pipeline_ooo: 180
+  |||||line 83, col 29 to line 85, col 101 of module pipeline_ooo: 160
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  ||||||line 83, col 32 to line 83, col 63 of module pipeline_ooo: 180
+  ||||||line 83, col 32 to line 83, col 63 of module pipeline_ooo: 160
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  ||||||line 85, col 32 to line 85, col 101 of module pipeline_ooo: 160
+  ||||||line 85, col 32 to line 85, col 101 of module pipeline_ooo: 140
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  |||||||line 85, col 32 to line 85, col 61 of module pipeline_ooo: 160
+  |||||||line 85, col 32 to line 85, col 61 of module pipeline_ooo: 140
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  |||||||line 85, col 66 to line 85, col 101 of module pipeline_ooo: 100
+  |||||||line 85, col 66 to line 85, col 101 of module pipeline_ooo: 80
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  |||||line 82, col 77 to line 82, col 88 of module pipeline_ooo: 160
+  |||||line 82, col 77 to line 82, col 88 of module pipeline_ooo: 140
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  ||||line 82, col 53 to line 82, col 64 of module pipeline_ooo: 80
+  ||||line 82, col 53 to line 82, col 64 of module pipeline_ooo: 70
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  |||line 82, col 38 to line 82, col 41 of module pipeline_ooo: 40
+  |||line 82, col 38 to line 82, col 41 of module pipeline_ooo: 35
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  ||line 87, col 28 to line 89, col 101 of module pipeline_ooo: 40
+  ||line 87, col 28 to line 89, col 101 of module pipeline_ooo: 35
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  |||line 87, col 44 to line 89, col 101 of module pipeline_ooo: 79
+  |||line 87, col 44 to line 89, col 101 of module pipeline_ooo: 68
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  ||||line 87, col 62 to line 89, col 101 of module pipeline_ooo: 155
+  ||||line 87, col 62 to line 89, col 101 of module pipeline_ooo: 133
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  |||||line 88, col 29 to line 89, col 101 of module pipeline_ooo: 204
+  |||||line 88, col 29 to line 89, col 101 of module pipeline_ooo: 173
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  ||||||line 88, col 32 to line 88, col 63 of module pipeline_ooo: 204
+  ||||||line 88, col 32 to line 88, col 63 of module pipeline_ooo: 173
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  ||||||line 89, col 32 to line 89, col 101 of module pipeline_ooo: 165
+  ||||||line 89, col 32 to line 89, col 101 of module pipeline_ooo: 143
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  |||||||line 89, col 32 to line 89, col 61 of module pipeline_ooo: 165
+  |||||||line 89, col 32 to line 89, col 61 of module pipeline_ooo: 143
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  |||||||line 89, col 66 to line 89, col 101 of module pipeline_ooo: 127
+  |||||||line 89, col 66 to line 89, col 101 of module pipeline_ooo: 105
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  |||||line 87, col 72 to line 87, col 78 of module pipeline_ooo: 155
+  |||||line 87, col 72 to line 87, col 78 of module pipeline_ooo: 133
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  ||||line 87, col 53 to line 87, col 59 of module pipeline_ooo: 79
+  ||||line 87, col 53 to line 87, col 59 of module pipeline_ooo: 68
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  |||line 87, col 38 to line 87, col 41 of module pipeline_ooo: 40
+  |||line 87, col 38 to line 87, col 41 of module pipeline_ooo: 35
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  line 90, col 12 to line 103, col 22 of module pipeline_ooo: 70
+  line 90, col 12 to line 103, col 22 of module pipeline_ooo: 56
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2775:0 @!@!@
-  |line 90, col 24 to line 103, col 22 of module pipeline_ooo: 71:142
+  |line 90, col 24 to line 103, col 22 of module pipeline_ooo: 57:114
 @!@!@ENDMSG 2775 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  line 104, col 12 to line 104, col 103 of module pipeline_ooo: 70
+  line 104, col 12 to line 104, col 103 of module pipeline_ooo: 56
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2774:0 @!@!@
-<NoTAInter line 126, col 1 to line 126, col 9 of module pipeline_ooo>
+<inv_1622483290754234000 line 50, col 1 to line 50, col 23 of module MC>
 @!@!@ENDMSG 2774 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  line 126, col 14 to line 131, col 188 of module pipeline_ooo: 58
+  line 51, col 1 to line 51, col 22 of module MC: 47
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  |line 126, col 37 to line 131, col 188 of module pipeline_ooo: 172
+  |line 51, col 1 to line 51, col 9 of module MC: 47
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  ||line 127, col 13 to line 131, col 188 of module pipeline_ooo: 345
+  ||line 126, col 14 to line 131, col 188 of module pipeline_ooo: 47
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  |||line 127, col 16 to line 129, col 46 of module pipeline_ooo: 345
+  |||line 126, col 37 to line 131, col 188 of module pipeline_ooo: 141
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  ||||line 127, col 16 to line 128, col 45 of module pipeline_ooo: 345
+  ||||line 127, col 13 to line 131, col 188 of module pipeline_ooo: 282
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  |||||line 127, col 19 to line 127, col 29 of module pipeline_ooo: 345
+  |||||line 127, col 16 to line 129, col 46 of module pipeline_ooo: 282
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  ||||||line 112, col 16 to line 112, col 119 of module pipeline_ooo: 345
+  ||||||line 127, col 16 to line 128, col 45 of module pipeline_ooo: 282
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  |||||||line 112, col 31 to line 112, col 119 of module pipeline_ooo: 378
+  |||||||line 127, col 19 to line 127, col 29 of module pipeline_ooo: 282
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  ||||||||line 112, col 63 to line 112, col 119 of module pipeline_ooo: 1368
+  ||||||||line 112, col 16 to line 112, col 119 of module pipeline_ooo: 282
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  |||||||||line 112, col 63 to line 112, col 94 of module pipeline_ooo: 1368
+  |||||||||line 112, col 31 to line 112, col 119 of module pipeline_ooo: 312
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  |||||||||line 112, col 99 to line 112, col 119 of module pipeline_ooo: 330
+  ||||||||||line 112, col 63 to line 112, col 119 of module pipeline_ooo: 1104
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  ||||||||line 112, col 40 to line 112, col 60 of module pipeline_ooo: 378
+  |||||||||||line 112, col 63 to line 112, col 94 of module pipeline_ooo: 1104
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  |||||||line 112, col 25 to line 112, col 28 of module pipeline_ooo: 345
+  |||||||||||line 112, col 99 to line 112, col 119 of module pipeline_ooo: 264
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  |||||line 128, col 19 to line 128, col 45 of module pipeline_ooo: 21
+  ||||||||||line 112, col 40 to line 112, col 60 of module pipeline_ooo: 312
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  ||||line 129, col 19 to line 129, col 46 of module pipeline_ooo: 3
+  |||||||||line 112, col 25 to line 112, col 28 of module pipeline_ooo: 282
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  |||line 130, col 18 to line 130, col 21 of module pipeline_ooo: 344
+  |||||||line 128, col 19 to line 128, col 45 of module pipeline_ooo: 24
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  |||line 131, col 18 to line 131, col 188 of module pipeline_ooo: 1
+  ||||||line 129, col 19 to line 129, col 46 of module pipeline_ooo: 6
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  ||line 126, col 46 to line 126, col 57 of module pipeline_ooo: 172
+  |||||line 130, col 18 to line 130, col 21 of module pipeline_ooo: 282
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  |line 126, col 23 to line 126, col 34 of module pipeline_ooo: 58
+  ||||line 126, col 46 to line 126, col 57 of module pipeline_ooo: 141
 @!@!@ENDMSG 2221 @!@!@
-@!@!@STARTMSG 2774:0 @!@!@
-<NoTASteps line 118, col 1 to line 118, col 9 of module pipeline_ooo>
-@!@!@ENDMSG 2774 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  line 118, col 14 to line 123, col 209 of module pipeline_ooo: 57
+  |||line 126, col 23 to line 126, col 34 of module pipeline_ooo: 47
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  |line 118, col 37 to line 123, col 209 of module pipeline_ooo: 171
+  |line 51, col 14 to line 51, col 22 of module MC: 47
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  ||line 119, col 14 to line 123, col 209 of module pipeline_ooo: 342
+  ||line 118, col 14 to line 123, col 209 of module pipeline_ooo: 47
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  |||line 119, col 17 to line 121, col 47 of module pipeline_ooo: 342
+  |||line 118, col 37 to line 123, col 209 of module pipeline_ooo: 141
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  ||||line 119, col 17 to line 120, col 52 of module pipeline_ooo: 342
+  ||||line 119, col 14 to line 123, col 209 of module pipeline_ooo: 282
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  |||||line 119, col 20 to line 119, col 30 of module pipeline_ooo: 342
+  |||||line 119, col 17 to line 121, col 47 of module pipeline_ooo: 282
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  ||||||line 112, col 16 to line 112, col 119 of module pipeline_ooo: 342
+  ||||||line 119, col 17 to line 120, col 52 of module pipeline_ooo: 282
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  |||||||line 112, col 31 to line 112, col 119 of module pipeline_ooo: 372
+  |||||||line 119, col 20 to line 119, col 30 of module pipeline_ooo: 282
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  ||||||||line 112, col 63 to line 112, col 119 of module pipeline_ooo: 1344
+  ||||||||line 112, col 16 to line 112, col 119 of module pipeline_ooo: 282
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  |||||||||line 112, col 63 to line 112, col 94 of module pipeline_ooo: 1344
+  |||||||||line 112, col 31 to line 112, col 119 of module pipeline_ooo: 312
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  |||||||||line 112, col 99 to line 112, col 119 of module pipeline_ooo: 324
+  ||||||||||line 112, col 63 to line 112, col 119 of module pipeline_ooo: 1104
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  ||||||||line 112, col 40 to line 112, col 60 of module pipeline_ooo: 372
+  |||||||||||line 112, col 63 to line 112, col 94 of module pipeline_ooo: 1104
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  |||||||line 112, col 25 to line 112, col 28 of module pipeline_ooo: 342
+  |||||||||||line 112, col 99 to line 112, col 119 of module pipeline_ooo: 264
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  |||||line 120, col 20 to line 120, col 52 of module pipeline_ooo: 18
+  ||||||||||line 112, col 40 to line 112, col 60 of module pipeline_ooo: 312
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  ||||||line 120, col 20 to line 120, col 34 of module pipeline_ooo: 18
+  |||||||||line 112, col 25 to line 112, col 28 of module pipeline_ooo: 282
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  |||||||line 117, col 21 to line 117, col 82 of module pipeline_ooo: 18
+  |||||||line 120, col 20 to line 120, col 52 of module pipeline_ooo: 24
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  ||||||||line 117, col 24 to line 117, col 28 of module pipeline_ooo: 18
+  ||||||||line 120, col 20 to line 120, col 34 of module pipeline_ooo: 24
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  ||||||||line 117, col 35 to line 117, col 47 of module pipeline_ooo: 9
+  |||||||||line 117, col 21 to line 117, col 82 of module pipeline_ooo: 24
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  ||||||||line 117, col 54 to line 117, col 82 of module pipeline_ooo: 9
+  ||||||||||line 117, col 24 to line 117, col 28 of module pipeline_ooo: 24
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  |||||||line 120, col 33 to line 120, col 33 of module pipeline_ooo: 18
+  ||||||||||line 117, col 35 to line 117, col 47 of module pipeline_ooo: 12
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  ||||||line 120, col 38 to line 120, col 52 of module pipeline_ooo: 18
+  ||||||||||line 117, col 54 to line 117, col 82 of module pipeline_ooo: 12
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  |||||||line 117, col 21 to line 117, col 82 of module pipeline_ooo: 18
+  |||||||||line 120, col 33 to line 120, col 33 of module pipeline_ooo: 24
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  ||||||||line 117, col 24 to line 117, col 28 of module pipeline_ooo: 18
+  ||||||||line 120, col 38 to line 120, col 52 of module pipeline_ooo: 24
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  ||||||||line 117, col 35 to line 117, col 47 of module pipeline_ooo: 9
+  |||||||||line 117, col 21 to line 117, col 82 of module pipeline_ooo: 24
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  ||||||||line 117, col 54 to line 117, col 82 of module pipeline_ooo: 9
+  ||||||||||line 117, col 24 to line 117, col 28 of module pipeline_ooo: 24
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  |||||||line 120, col 51 to line 120, col 51 of module pipeline_ooo: 18
+  ||||||||||line 117, col 35 to line 117, col 47 of module pipeline_ooo: 12
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  ||||line 121, col 20 to line 121, col 47 of module pipeline_ooo: 1
+  ||||||||||line 117, col 54 to line 117, col 82 of module pipeline_ooo: 12
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  |||line 122, col 19 to line 122, col 22 of module pipeline_ooo: 342
+  |||||||||line 120, col 51 to line 120, col 51 of module pipeline_ooo: 24
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  ||line 118, col 46 to line 118, col 57 of module pipeline_ooo: 171
+  ||||||line 121, col 20 to line 121, col 47 of module pipeline_ooo: 4
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  |line 118, col 23 to line 118, col 34 of module pipeline_ooo: 57
+  |||||line 122, col 19 to line 122, col 22 of module pipeline_ooo: 281
 @!@!@ENDMSG 2221 @!@!@
-@!@!@STARTMSG 2774:0 @!@!@
-<NoTALoc line 135, col 1 to line 135, col 7 of module pipeline_ooo>
-@!@!@ENDMSG 2774 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  line 136, col 12 to line 140, col 142 of module pipeline_ooo: 57
+  |||||line 123, col 19 to line 123, col 209 of module pipeline_ooo: 1
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  |line 136, col 15 to line 138, col 60 of module pipeline_ooo: 57
+  ||||line 118, col 46 to line 118, col 57 of module pipeline_ooo: 141
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  ||line 136, col 15 to line 137, col 29 of module pipeline_ooo: 57
-@!@!@ENDMSG 2221 @!@!@
-@!@!@STARTMSG 2221:0 @!@!@
-  |||line 136, col 18 to line 136, col 28 of module pipeline_ooo: 57
-@!@!@ENDMSG 2221 @!@!@
-@!@!@STARTMSG 2221:0 @!@!@
-  ||||line 112, col 16 to line 112, col 119 of module pipeline_ooo: 57
-@!@!@ENDMSG 2221 @!@!@
-@!@!@STARTMSG 2221:0 @!@!@
-  |||||line 112, col 31 to line 112, col 119 of module pipeline_ooo: 62
-@!@!@ENDMSG 2221 @!@!@
-@!@!@STARTMSG 2221:0 @!@!@
-  ||||||line 112, col 63 to line 112, col 119 of module pipeline_ooo: 224
-@!@!@ENDMSG 2221 @!@!@
-@!@!@STARTMSG 2221:0 @!@!@
-  |||||||line 112, col 63 to line 112, col 94 of module pipeline_ooo: 224
-@!@!@ENDMSG 2221 @!@!@
-@!@!@STARTMSG 2221:0 @!@!@
-  |||||||line 112, col 99 to line 112, col 119 of module pipeline_ooo: 54
-@!@!@ENDMSG 2221 @!@!@
-@!@!@STARTMSG 2221:0 @!@!@
-  ||||||line 112, col 40 to line 112, col 60 of module pipeline_ooo: 62
-@!@!@ENDMSG 2221 @!@!@
-@!@!@STARTMSG 2221:0 @!@!@
-  |||||line 112, col 25 to line 112, col 28 of module pipeline_ooo: 57
-@!@!@ENDMSG 2221 @!@!@
-@!@!@STARTMSG 2221:0 @!@!@
-  |||line 137, col 18 to line 137, col 29 of module pipeline_ooo: 3
-@!@!@ENDMSG 2221 @!@!@
-@!@!@STARTMSG 2221:0 @!@!@
-  |line 139, col 17 to line 139, col 20 of module pipeline_ooo: 57
-@!@!@ENDMSG 2221 @!@!@
-@!@!@STARTMSG 2774:0 @!@!@
-<NoTAComp line 143, col 1 to line 143, col 8 of module pipeline_ooo>
-@!@!@ENDMSG 2774 @!@!@
-@!@!@STARTMSG 2221:0 @!@!@
-  line 146, col 13 to line 150, col 169 of module pipeline_ooo: 57
-@!@!@ENDMSG 2221 @!@!@
-@!@!@STARTMSG 2221:0 @!@!@
-  |line 146, col 16 to line 148, col 46 of module pipeline_ooo: 57
-@!@!@ENDMSG 2221 @!@!@
-@!@!@STARTMSG 2221:0 @!@!@
-  ||line 146, col 16 to line 147, col 37 of module pipeline_ooo: 57
-@!@!@ENDMSG 2221 @!@!@
-@!@!@STARTMSG 2221:0 @!@!@
-  |||line 146, col 19 to line 146, col 29 of module pipeline_ooo: 57
-@!@!@ENDMSG 2221 @!@!@
-@!@!@STARTMSG 2221:0 @!@!@
-  ||||line 112, col 16 to line 112, col 119 of module pipeline_ooo: 57
-@!@!@ENDMSG 2221 @!@!@
-@!@!@STARTMSG 2221:0 @!@!@
-  |||||line 112, col 31 to line 112, col 119 of module pipeline_ooo: 62
-@!@!@ENDMSG 2221 @!@!@
-@!@!@STARTMSG 2221:0 @!@!@
-  ||||||line 112, col 63 to line 112, col 119 of module pipeline_ooo: 224
-@!@!@ENDMSG 2221 @!@!@
-@!@!@STARTMSG 2221:0 @!@!@
-  |||||||line 112, col 63 to line 112, col 94 of module pipeline_ooo: 224
-@!@!@ENDMSG 2221 @!@!@
-@!@!@STARTMSG 2221:0 @!@!@
-  |||||||line 112, col 99 to line 112, col 119 of module pipeline_ooo: 54
-@!@!@ENDMSG 2221 @!@!@
-@!@!@STARTMSG 2221:0 @!@!@
-  ||||||line 112, col 40 to line 112, col 60 of module pipeline_ooo: 62
-@!@!@ENDMSG 2221 @!@!@
-@!@!@STARTMSG 2221:0 @!@!@
-  |||||line 112, col 25 to line 112, col 28 of module pipeline_ooo: 57
-@!@!@ENDMSG 2221 @!@!@
-@!@!@STARTMSG 2221:0 @!@!@
-  |||line 147, col 19 to line 147, col 37 of module pipeline_ooo: 3
-@!@!@ENDMSG 2221 @!@!@
-@!@!@STARTMSG 2221:0 @!@!@
-  ||||line 147, col 19 to line 147, col 26 of module pipeline_ooo: 3
-@!@!@ENDMSG 2221 @!@!@
-@!@!@STARTMSG 2221:0 @!@!@
-  |||||line 145, col 30 to line 145, col 89 of module pipeline_ooo: 3
-@!@!@ENDMSG 2221 @!@!@
-@!@!@STARTMSG 2221:0 @!@!@
-  ||||||line 28, col 14 to line 28, col 44 of module pipeline_ooo: 3
-@!@!@ENDMSG 2221 @!@!@
-@!@!@STARTMSG 2221:0 @!@!@
-  |||||||line 23, col 34 to line 26, col 81 of module pipeline_ooo: 9
-@!@!@ENDMSG 2221 @!@!@
-@!@!@STARTMSG 2221:0 @!@!@
-  ||||||||line 23, col 37 to line 23, col 42 of module pipeline_ooo: 9
-@!@!@ENDMSG 2221 @!@!@
-@!@!@STARTMSG 2221:0 @!@!@
-  ||||||||line 24, col 39 to line 24, col 47 of module pipeline_ooo: 3
-@!@!@ENDMSG 2221 @!@!@
-@!@!@STARTMSG 2221:0 @!@!@
-  ||||||||line 25, col 48 to line 25, col 67 of module pipeline_ooo: 6
-@!@!@ENDMSG 2221 @!@!@
-@!@!@STARTMSG 2221:0 @!@!@
-  ||||||||line 26, col 34 to line 26, col 81 of module pipeline_ooo: 6
-@!@!@ENDMSG 2221 @!@!@
-@!@!@STARTMSG 2221:0 @!@!@
-  |||||||||line 26, col 48 to line 26, col 54 of module pipeline_ooo: 6
-@!@!@ENDMSG 2221 @!@!@
-@!@!@STARTMSG 2221:0 @!@!@
-  |||||||||line 26, col 57 to line 26, col 80 of module pipeline_ooo: 6
-@!@!@ENDMSG 2221 @!@!@
-@!@!@STARTMSG 2221:0 @!@!@
-  ||||||||||line 26, col 67 to line 26, col 78 of module pipeline_ooo: 36
-@!@!@ENDMSG 2221 @!@!@
-@!@!@STARTMSG 2221:0 @!@!@
-  |||||||||||line 26, col 70 to line 26, col 70 of module pipeline_ooo: 6
-@!@!@ENDMSG 2221 @!@!@
-@!@!@STARTMSG 2221:0 @!@!@
-  |||||||||||line 26, col 73 to line 26, col 77 of module pipeline_ooo: 6
-@!@!@ENDMSG 2221 @!@!@
-@!@!@STARTMSG 2221:0 @!@!@
-  |||||||line 28, col 28 to line 28, col 28 of module pipeline_ooo: 3
-@!@!@ENDMSG 2221 @!@!@
-@!@!@STARTMSG 2221:0 @!@!@
-  |||||||line 28, col 31 to line 28, col 43 of module pipeline_ooo: 3
-@!@!@ENDMSG 2221 @!@!@
-@!@!@STARTMSG 2775:0 @!@!@
-  ||||||line 145, col 34 to line 145, col 88 of module pipeline_ooo: 3:6
-@!@!@ENDMSG 2775 @!@!@
-@!@!@STARTMSG 2221:0 @!@!@
-  |||||||line 145, col 36 to line 145, col 72 of module pipeline_ooo: 6
-@!@!@ENDMSG 2221 @!@!@
-@!@!@STARTMSG 2221:0 @!@!@
-  |||||||line 145, col 82 to line 145, col 86 of module pipeline_ooo: 3
-@!@!@ENDMSG 2221 @!@!@
-@!@!@STARTMSG 2221:0 @!@!@
-  ||||line 147, col 30 to line 147, col 37 of module pipeline_ooo: 3
-@!@!@ENDMSG 2221 @!@!@
-@!@!@STARTMSG 2221:0 @!@!@
-  |||||line 145, col 30 to line 145, col 89 of module pipeline_ooo: 3
-@!@!@ENDMSG 2221 @!@!@
-@!@!@STARTMSG 2221:0 @!@!@
-  ||||||line 28, col 14 to line 28, col 44 of module pipeline_ooo: 3
-@!@!@ENDMSG 2221 @!@!@
-@!@!@STARTMSG 2221:0 @!@!@
-  |||||||line 23, col 34 to line 26, col 81 of module pipeline_ooo: 9
-@!@!@ENDMSG 2221 @!@!@
-@!@!@STARTMSG 2221:0 @!@!@
-  ||||||||line 23, col 37 to line 23, col 42 of module pipeline_ooo: 9
-@!@!@ENDMSG 2221 @!@!@
-@!@!@STARTMSG 2221:0 @!@!@
-  ||||||||line 24, col 39 to line 24, col 47 of module pipeline_ooo: 3
-@!@!@ENDMSG 2221 @!@!@
-@!@!@STARTMSG 2221:0 @!@!@
-  ||||||||line 25, col 48 to line 25, col 67 of module pipeline_ooo: 6
-@!@!@ENDMSG 2221 @!@!@
-@!@!@STARTMSG 2221:0 @!@!@
-  ||||||||line 26, col 34 to line 26, col 81 of module pipeline_ooo: 6
-@!@!@ENDMSG 2221 @!@!@
-@!@!@STARTMSG 2221:0 @!@!@
-  |||||||||line 26, col 48 to line 26, col 54 of module pipeline_ooo: 6
-@!@!@ENDMSG 2221 @!@!@
-@!@!@STARTMSG 2221:0 @!@!@
-  |||||||||line 26, col 57 to line 26, col 80 of module pipeline_ooo: 6
-@!@!@ENDMSG 2221 @!@!@
-@!@!@STARTMSG 2221:0 @!@!@
-  ||||||||||line 26, col 67 to line 26, col 78 of module pipeline_ooo: 36
-@!@!@ENDMSG 2221 @!@!@
-@!@!@STARTMSG 2221:0 @!@!@
-  |||||||||||line 26, col 70 to line 26, col 70 of module pipeline_ooo: 6
-@!@!@ENDMSG 2221 @!@!@
-@!@!@STARTMSG 2221:0 @!@!@
-  |||||||||||line 26, col 73 to line 26, col 77 of module pipeline_ooo: 6
-@!@!@ENDMSG 2221 @!@!@
-@!@!@STARTMSG 2221:0 @!@!@
-  |||||||line 28, col 28 to line 28, col 28 of module pipeline_ooo: 3
-@!@!@ENDMSG 2221 @!@!@
-@!@!@STARTMSG 2221:0 @!@!@
-  |||||||line 28, col 31 to line 28, col 43 of module pipeline_ooo: 3
-@!@!@ENDMSG 2221 @!@!@
-@!@!@STARTMSG 2775:0 @!@!@
-  ||||||line 145, col 34 to line 145, col 88 of module pipeline_ooo: 3:6
-@!@!@ENDMSG 2775 @!@!@
-@!@!@STARTMSG 2221:0 @!@!@
-  |||||||line 145, col 36 to line 145, col 72 of module pipeline_ooo: 6
-@!@!@ENDMSG 2221 @!@!@
-@!@!@STARTMSG 2221:0 @!@!@
-  |||||||line 145, col 82 to line 145, col 86 of module pipeline_ooo: 3
-@!@!@ENDMSG 2221 @!@!@
-@!@!@STARTMSG 2221:0 @!@!@
-  |line 149, col 18 to line 149, col 21 of module pipeline_ooo: 57
+  |||line 118, col 23 to line 118, col 34 of module pipeline_ooo: 47
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2202:0 @!@!@
 End of statistics.
 @!@!@ENDMSG 2202 @!@!@
 @!@!@STARTMSG 2200:0 @!@!@
-Progress(15) at 2021-05-31 19:42:36: 61 states generated (1 487 s/min), 58 distinct states found (1 414 ds/min), 0 states left on queue.
+Progress(12) at 2021-05-31 19:48:13: 50 states generated (1 027 s/min), 47 distinct states found (965 ds/min), 0 states left on queue.
 @!@!@ENDMSG 2200 @!@!@
 @!@!@STARTMSG 2199:0 @!@!@
-61 states generated, 58 distinct states found, 0 states left on queue.
+50 states generated, 47 distinct states found, 0 states left on queue.
 @!@!@ENDMSG 2199 @!@!@
 @!@!@STARTMSG 2194:0 @!@!@
-The depth of the complete state graph search is 15.
+The depth of the complete state graph search is 12.
 @!@!@ENDMSG 2194 @!@!@
 @!@!@STARTMSG 2268:0 @!@!@
 The average outdegree of the complete state graph is 1 (minimum is 0, the maximum 1 and the 95th percentile is 1).
 @!@!@ENDMSG 2268 @!@!@
 @!@!@STARTMSG 2186:0 @!@!@
-Finished in 2472ms at (2021-05-31 19:42:36)
+Finished in 2934ms at (2021-05-31 19:48:13)
 @!@!@ENDMSG 2186 @!@!@
