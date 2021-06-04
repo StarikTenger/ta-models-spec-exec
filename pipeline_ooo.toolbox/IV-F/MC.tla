@@ -2,12 +2,12 @@
 EXTENDS pipeline_ooo, TLC
 
 \* CONSTANT definitions @modelParameterConstants:0varIF
-const_162255364314062000 == 
+const_1622725492149103000 == 
 FALSE
 ----
 
 \* CONSTANT definitions @modelParameterConstants:1Program
-const_162255364314063000 == 
+const_1622725492150104000 == 
 << [ pc |-> 1, type |-> {1}, lat |-> {1}, dep |-> {}, imiss |-> {FALSE} ],
    [ pc |-> 2, type |-> {1}, lat |-> {1,3}, dep |-> {}, imiss |-> {FALSE} ],
    [ pc |-> 3, type |-> {2}, lat |-> {1,3}, dep |-> {2}, imiss |-> FALSE ],
@@ -16,39 +16,43 @@ const_162255364314063000 ==
 ----
 
 \* CONSTANT definitions @modelParameterConstants:2superscal
-const_162255364314064000 == 
+const_1622725492150105000 == 
 2
 ----
 
 \* CONSTANT definitions @modelParameterConstants:3N_FU
-const_162255364314065000 == 
+const_1622725492150106000 == 
 2
 ----
 
 \* CONSTANT definitions @modelParameterConstants:4missLat
-const_162255364314066000 == 
+const_1622725492150107000 == 
 3
 ----
 
 \* CONSTANT definitions @modelParameterConstants:5locFU
-const_162255364314067000 == 
+const_1622725492150108000 == 
 {1}
 ----
 
 \* CONSTANT definitions @modelParameterConstants:6Lat
-const_162255364314068000 == 
+const_1622725492150109000 == 
 {}
 ----
 
 \* CONSTANT definitions @modelParameterConstants:7modeLen
-const_162255364314069000 == 
+const_1622725492150110000 == 
 -1
 ----
 
 \* INVARIANT definition @modelCorrectnessInvariants:0
-inv_162255364314070000 ==
+inv_1622725492150111000 ==
+NoTAComp /\ NoTALoc
+----
+\* INVARIANT definition @modelCorrectnessInvariants:1
+inv_1622725492150112000 ==
 ~(ProgDone(ProgLen) /\ NoTAComp /\ NoTALoc /\ NoTAInter /\ \E i \in 3..ProgLen: FULat[i]/=FULat2[i])
 ----
 =============================================================================
 \* Modification History
-\* Created Tue Jun 01 15:20:43 CEST 2021 by benjaminbinder
+\* Created Thu Jun 03 15:04:52 CEST 2021 by benjaminbinder
