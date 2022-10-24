@@ -1,0 +1,99 @@
+@!@!@STARTMSG 2262:0 @!@!@
+TLC2 Version 2.16 of 31 December 2020 (rev: cdddf55)
+@!@!@ENDMSG 2262 @!@!@
+@!@!@STARTMSG 2187:0 @!@!@
+Running breadth-first search Model-Checking with fp 103 and seed -5976445884317535133 with 4 workers on 4 cores with 2274MB heap and 5113MB offheap memory [pid: 6887] (Linux 5.4.0-109-generic amd64, AdoptOpenJDK 14.0.1 x86_64, OffHeapDiskFPSet, DiskStateQueue).
+@!@!@ENDMSG 2187 @!@!@
+@!@!@STARTMSG 2220:0 @!@!@
+Starting SANY...
+@!@!@ENDMSG 2220 @!@!@
+Parsing file /home/benjaminbinder/Documents/timing-anomalies/tla/OoO/pipeline_ooo.toolbox/bench_cubic/MC.tla
+Parsing file /home/benjaminbinder/Documents/timing-anomalies/tla/OoO/pipeline_ooo.toolbox/bench_cubic/pipeline_ooo.tla
+Parsing file /usr/tla_toolbox/plugins/org.lamport.tlatools_1.0.0.202012311918/tla2sany/StandardModules/TLC.tla
+Parsing file /usr/tla_toolbox/plugins/org.lamport.tlatools_1.0.0.202012311918/tla2sany/StandardModules/Sequences.tla
+Parsing file /home/benjaminbinder/Documents/timing-anomalies/tla/OoO/pipeline_ooo.toolbox/bench_cubic/instructions_ooo.tla
+Parsing file /usr/tla_toolbox/plugins/org.lamport.tlatools_1.0.0.202012311918/tla2sany/StandardModules/Integers.tla
+Parsing file /usr/tla_toolbox/plugins/org.lamport.tlatools_1.0.0.202012311918/tla2sany/StandardModules/FiniteSets.tla
+Parsing file /home/benjaminbinder/Documents/timing-anomalies/tla/lib/TAExpl.tla
+Parsing file /usr/tla_toolbox/plugins/org.lamport.tlatools_1.0.0.202012311918/tla2sany/StandardModules/Naturals.tla
+Parsing file /home/benjaminbinder/Documents/timing-anomalies/tla/OoO/pipeline_ooo.toolbox/bench_cubic/pipeline_exec_ooo.tla
+Semantic processing of module Naturals
+Semantic processing of module Sequences
+Semantic processing of module Integers
+Semantic processing of module FiniteSets
+Semantic processing of module instructions_ooo
+Semantic processing of module TLC
+Semantic processing of module TAExpl
+Semantic processing of module pipeline_exec_ooo
+Semantic processing of module pipeline_ooo
+Semantic processing of module MC
+@!@!@STARTMSG 2219:0 @!@!@
+SANY finished.
+@!@!@ENDMSG 2219 @!@!@
+@!@!@STARTMSG 2185:0 @!@!@
+Starting... (2022-05-20 17:22:48)
+@!@!@ENDMSG 2185 @!@!@
+@!@!@STARTMSG 2168:0 @!@!@
+Loading InitOutputFile operator override from file:/home/benjaminbinder/Documents/timing-anomalies/tla/lib/TAExpl.class with signature: <Java Method: public static tlc2.value.impl.Value TAExpl.InitOutputFile(tlc2.value.impl.Value,tlc2.value.impl.Value,tlc2.value.impl.Value,tlc2.value.impl.Value,tlc2.value.impl.Value,tlc2.value.impl.Value,tlc2.value.impl.Value) throws java.io.IOException,java.lang.InterruptedException>.
+@!@!@ENDMSG 2168 @!@!@
+@!@!@STARTMSG 2168:0 @!@!@
+Loading HasTA operator override from file:/home/benjaminbinder/Documents/timing-anomalies/tla/lib/TAExpl.class with signature: <Java Method: public static tlc2.value.impl.Value TAExpl.HasTA(tlc2.value.impl.Value,tlc2.value.impl.Value,tlc2.value.impl.Value,tlc2.value.impl.BoolValue) throws java.io.IOException,java.lang.InterruptedException>.
+@!@!@ENDMSG 2168 @!@!@
+<<"$!@$!@$!@$!@$!", 100>>
+@!@!@STARTMSG 2189:0 @!@!@
+Computing initial states...
+@!@!@ENDMSG 2189 @!@!@
+@!@!@STARTMSG 2190:0 @!@!@
+Finished computing initial states: 1 distinct state generated at 2022-05-20 17:22:50.
+@!@!@ENDMSG 2190 @!@!@
+@!@!@STARTMSG 2200:0 @!@!@
+Progress(27) at 2022-05-20 17:22:53: 119 states generated (119 s/min), 119 distinct states found (119 ds/min), 32 states left on queue.
+@!@!@ENDMSG 2200 @!@!@
+@!@!@STARTMSG 2200:0 @!@!@
+Progress(37) at 2022-05-20 17:23:53: 2 549 states generated (2 430 s/min), 2 549 distinct states found (2 430 ds/min), 734 states left on queue.
+@!@!@ENDMSG 2200 @!@!@
+@!@!@STARTMSG 2200:0 @!@!@
+Progress(38) at 2022-05-20 17:24:53: 4 528 states generated (1 979 s/min), 4 528 distinct states found (1 979 ds/min), 1 379 states left on queue.
+@!@!@ENDMSG 2200 @!@!@
+@!@!@STARTMSG 2200:0 @!@!@
+Progress(39) at 2022-05-20 17:25:53: 6 951 states generated (2 423 s/min), 6 951 distinct states found (2 423 ds/min), 2 116 states left on queue.
+@!@!@ENDMSG 2200 @!@!@
+@!@!@STARTMSG 2200:0 @!@!@
+Progress(40) at 2022-05-20 17:26:53: 9 009 states generated (2 058 s/min), 9 008 distinct states found (2 057 ds/min), 2 728 states left on queue.
+@!@!@ENDMSG 2200 @!@!@
+@!@!@STARTMSG 2200:0 @!@!@
+Progress(41) at 2022-05-20 17:27:53: 11 266 states generated (2 257 s/min), 11 266 distinct states found (2 258 ds/min), 3 374 states left on queue.
+@!@!@ENDMSG 2200 @!@!@
+@!@!@STARTMSG 2200:0 @!@!@
+Progress(41) at 2022-05-20 17:28:53: 14 234 states generated (2 968 s/min), 14 234 distinct states found (2 968 ds/min), 4 279 states left on queue.
+@!@!@ENDMSG 2200 @!@!@
+@!@!@STARTMSG 2200:0 @!@!@
+Progress(42) at 2022-05-20 17:29:53: 17 247 states generated (3 013 s/min), 17 247 distinct states found (3 013 ds/min), 5 125 states left on queue.
+@!@!@ENDMSG 2200 @!@!@
+@!@!@STARTMSG 2200:0 @!@!@
+Progress(42) at 2022-05-20 17:30:53: 20 488 states generated (3 241 s/min), 20 488 distinct states found (3 241 ds/min), 5 984 states left on queue.
+@!@!@ENDMSG 2200 @!@!@
+@!@!@STARTMSG 2200:0 @!@!@
+Progress(43) at 2022-05-20 17:31:53: 23 923 states generated (3 435 s/min), 23 923 distinct states found (3 435 ds/min), 6 979 states left on queue.
+@!@!@ENDMSG 2200 @!@!@
+@!@!@STARTMSG 2200:0 @!@!@
+Progress(43) at 2022-05-20 17:32:53: 27 187 states generated (3 264 s/min), 27 187 distinct states found (3 264 ds/min), 7 866 states left on queue.
+@!@!@ENDMSG 2200 @!@!@
+@!@!@STARTMSG 2200:0 @!@!@
+Progress(44) at 2022-05-20 17:33:53: 30 377 states generated (3 190 s/min), 30 377 distinct states found (3 190 ds/min), 8 594 states left on queue.
+@!@!@ENDMSG 2200 @!@!@
+@!@!@STARTMSG 2200:0 @!@!@
+Progress(44) at 2022-05-20 17:34:53: 33 945 states generated (3 568 s/min), 33 945 distinct states found (3 568 ds/min), 9 627 states left on queue.
+@!@!@ENDMSG 2200 @!@!@
+@!@!@STARTMSG 2200:0 @!@!@
+Progress(44) at 2022-05-20 17:35:53: 37 245 states generated (3 300 s/min), 37 245 distinct states found (3 300 ds/min), 10 484 states left on queue.
+@!@!@ENDMSG 2200 @!@!@
+@!@!@STARTMSG 2200:0 @!@!@
+Progress(44) at 2022-05-20 17:36:53: 40 118 states generated (2 873 s/min), 40 118 distinct states found (2 873 ds/min), 11 162 states left on queue.
+@!@!@ENDMSG 2200 @!@!@
+@!@!@STARTMSG 2200:0 @!@!@
+Progress(45) at 2022-05-20 17:37:53: 43 025 states generated (2 907 s/min), 43 025 distinct states found (2 907 ds/min), 11 791 states left on queue.
+@!@!@ENDMSG 2200 @!@!@
+@!@!@STARTMSG 2200:0 @!@!@
+Progress(45) at 2022-05-20 17:38:53: 45 815 states generated (2 790 s/min), 45 815 distinct states found (2 790 ds/min), 12 098 states left on queue.
+@!@!@ENDMSG 2200 @!@!@

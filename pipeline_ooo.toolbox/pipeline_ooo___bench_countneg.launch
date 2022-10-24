@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<launchConfiguration type="org.lamport.tla.toolbox.tool.tlc.modelCheck">
+    <stringAttribute key="TLCCmdLineParameters" value=""/>
+    <intAttribute key="collectCoverage" value="0"/>
+    <stringAttribute key="configurationName" value="bench_countneg"/>
+    <booleanAttribute key="deferLiveness" value="false"/>
+    <intAttribute key="dfidDepth" value="100"/>
+    <booleanAttribute key="dfidMode" value="false"/>
+    <intAttribute key="distributedFPSetCount" value="0"/>
+    <stringAttribute key="distributedNetworkInterface" value="192.168.0.27"/>
+    <intAttribute key="distributedNodesCount" value="1"/>
+    <stringAttribute key="distributedTLC" value="off"/>
+    <stringAttribute key="distributedTLCVMArgs" value=""/>
+    <intAttribute key="fpBits" value="1"/>
+    <intAttribute key="fpIndex" value="14"/>
+    <booleanAttribute key="fpIndexRandom" value="true"/>
+    <intAttribute key="maxHeapSize" value="49"/>
+    <intAttribute key="maxSetSize" value="1000000"/>
+    <booleanAttribute key="mcMode" value="true"/>
+    <stringAttribute key="modelBehaviorInit" value=""/>
+    <stringAttribute key="modelBehaviorNext" value=""/>
+    <stringAttribute key="modelBehaviorSpec" value="Spec"/>
+    <intAttribute key="modelBehaviorSpecType" value="1"/>
+    <stringAttribute key="modelBehaviorVars" value="_RS2, _COM2, _ID, _IF, _FU2, _COM, exec_inst2, _ID2, graph, currCycle2, _IF2, lastBound, graph2, pc2, robHead, rob, _RS, currCycle, exec_inst, robHead2, pc, rob2, _FU"/>
+    <stringAttribute key="modelComments" value=""/>
+    <booleanAttribute key="modelCorrectnessCheckDeadlock" value="true"/>
+    <listAttribute key="modelCorrectnessInvariants">
+        <listEntry value="0currCycle &lt; 20 \/ graph = graph2"/>
+        <listEntry value="0\A i \in 2..Len(rob): rob[i].executed =&gt; rob[i-1].executed"/>
+        <listEntry value="0\E r \in {rob,rob2} : Len(r) /= Len(program) \/ \E i \in DOMAIN r: ~r[i].done \/ graph = graph2"/>
+        <listEntry value="0~HasTA(graph, graph2, currCycle, FALSE)"/>
+        <listEntry value="1NoTA(FALSE)"/>
+        <listEntry value="0currCycle &lt; 20"/>
+        <listEntry value="0TRUE"/>
+    </listAttribute>
+    <listAttribute key="modelCorrectnessProperties"/>
+    <intAttribute key="modelEditorOpenTabs" value="12"/>
+    <stringAttribute key="modelExpressionEval" value="Len(program)"/>
+    <listAttribute key="modelParameterConstants">
+        <listEntry value="missLat;;10;0;0"/>
+        <listEntry value="mayDMiss;;{&#10;23626,&#10;23649, &#10;23653, &#10;23661&#10;};0;0"/>
+        <listEntry value="N_FU;;4;0;0"/>
+        <listEntry value="superscal;;4;0;0"/>
+        <listEntry value="mayIMiss;;{};0;0"/>
+        <listEntry value="RSsize;;12;0;0"/>
+        <listEntry value="program;;&lt;&lt;&#10;[ ind |-&gt; 23616, type |-&gt; &quot;IntAlu&quot;, r0 |-&gt; &quot;sp&quot;, r1 |-&gt; &quot;&quot;, r2 |-&gt; &quot;&quot;, addr |-&gt; &quot;0x1065e&quot; ],&#10;[ ind |-&gt; 23617, type |-&gt; &quot;MemWrite&quot;, r0 |-&gt; &quot;ra&quot;, r1 |-&gt; &quot;&quot;, r2 |-&gt; &quot;&quot;, addr |-&gt; &quot;0x10660&quot; ],&#10;[ ind |-&gt; 23618, type |-&gt; &quot;MemWrite&quot;, r0 |-&gt; &quot;s0&quot;, r1 |-&gt; &quot;&quot;, r2 |-&gt; &quot;&quot;, addr |-&gt; &quot;0x10662&quot; ],&#10;[ ind |-&gt; 23619, type |-&gt; &quot;IntAlu&quot;, r0 |-&gt; &quot;s0&quot;, r1 |-&gt; &quot;sp&quot;, r2 |-&gt; &quot;&quot;, addr |-&gt; &quot;0x10664&quot; ],&#10;[ ind |-&gt; 23620, type |-&gt; &quot;IntAlu&quot;, r0 |-&gt; &quot;a5&quot;, r1 |-&gt; &quot;&quot;, r2 |-&gt; &quot;&quot;, addr |-&gt; &quot;0x10666&quot; ],&#10;[ ind |-&gt; 23621, type |-&gt; &quot;IntAlu&quot;, r0 |-&gt; &quot;a0&quot;, r1 |-&gt; &quot;a5&quot;, r2 |-&gt; &quot;&quot;, addr |-&gt; &quot;0x1066a&quot; ],&#10;[ ind |-&gt; 23622, type |-&gt; &quot;IntAlu&quot;, r0 |-&gt; &quot;ra&quot;, r1 |-&gt; &quot;&quot;, r2 |-&gt; &quot;&quot;, addr |-&gt; &quot;0x1066e&quot; ],&#10;[ ind |-&gt; 23623, type |-&gt; &quot;IntAlu&quot;, r0 |-&gt; &quot;sp&quot;, r1 |-&gt; &quot;&quot;, r2 |-&gt; &quot;&quot;, addr |-&gt; &quot;0x10560&quot; ],&#10;[ ind |-&gt; 23624, type |-&gt; &quot;MemWrite&quot;, r0 |-&gt; &quot;s0&quot;, r1 |-&gt; &quot;&quot;, r2 |-&gt; &quot;&quot;, addr |-&gt; &quot;0x10562&quot; ],&#10;[ ind |-&gt; 23625, type |-&gt; &quot;MemWrite&quot;, r0 |-&gt; &quot;s1&quot;, r1 |-&gt; &quot;&quot;, r2 |-&gt; &quot;&quot;, addr |-&gt; &quot;0x10564&quot; ],&#10;[ ind |-&gt; 23626, type |-&gt; &quot;MemWrite&quot;, r0 |-&gt; &quot;s2&quot;, r1 |-&gt; &quot;&quot;, r2 |-&gt; &quot;&quot;, addr |-&gt; &quot;0x10566&quot; ],&#10;[ ind |-&gt; 23627, type |-&gt; &quot;IntAlu&quot;, r0 |-&gt; &quot;s0&quot;, r1 |-&gt; &quot;sp&quot;, r2 |-&gt; &quot;&quot;, addr |-&gt; &quot;0x10568&quot; ],&#10;[ ind |-&gt; 23628, type |-&gt; &quot;MemWrite&quot;, r0 |-&gt; &quot;a0&quot;, r1 |-&gt; &quot;&quot;, r2 |-&gt; &quot;&quot;, addr |-&gt; &quot;0x1056a&quot; ],&#10;[ ind |-&gt; 23629, type |-&gt; &quot;MemWrite&quot;, r0 |-&gt; &quot;zero&quot;, r1 |-&gt; &quot;&quot;, r2 |-&gt; &quot;&quot;, addr |-&gt; &quot;0x1056e&quot; ],&#10;[ ind |-&gt; 23630, type |-&gt; &quot;MemWrite&quot;, r0 |-&gt; &quot;zero&quot;, r1 |-&gt; &quot;&quot;, r2 |-&gt; &quot;&quot;, addr |-&gt; &quot;0x10572&quot; ],&#10;[ ind |-&gt; 23631, type |-&gt; &quot;MemWrite&quot;, r0 |-&gt; &quot;zero&quot;, r1 |-&gt; &quot;&quot;, r2 |-&gt; &quot;&quot;, addr |-&gt; &quot;0x10576&quot; ],&#10;[ ind |-&gt; 23632, type |-&gt; &quot;MemWrite&quot;, r0 |-&gt; &quot;zero&quot;, r1 |-&gt; &quot;&quot;, r2 |-&gt; &quot;&quot;, addr |-&gt; &quot;0x1057a&quot; ],&#10;[ ind |-&gt; 23633, type |-&gt; &quot;IntAlu&quot;, r0 |-&gt; &quot;s2&quot;, r1 |-&gt; &quot;&quot;, r2 |-&gt; &quot;&quot;, addr |-&gt; &quot;0x1057e&quot; ],&#10;[ ind |-&gt; 23634, type |-&gt; &quot;IntAlu&quot;, r0 |-&gt; &quot;&quot;, r1 |-&gt; &quot;&quot;, r2 |-&gt; &quot;&quot;, addr |-&gt; &quot;0x10580&quot; ],&#10;[ ind |-&gt; 23635, type |-&gt; &quot;IntAlu&quot;, r0 |-&gt; &quot;a4&quot;, r1 |-&gt; &quot;s2&quot;, r2 |-&gt; &quot;&quot;, addr |-&gt; &quot;0x1061a&quot; ],&#10;[ ind |-&gt; 23636, type |-&gt; &quot;IntAlu&quot;, r0 |-&gt; &quot;a5&quot;, r1 |-&gt; &quot;&quot;, r2 |-&gt; &quot;&quot;, addr |-&gt; &quot;0x1061c&quot; ],&#10;[ ind |-&gt; 23637, type |-&gt; &quot;IntAlu&quot;, r0 |-&gt; &quot;a5&quot;, r1 |-&gt; &quot;a4&quot;, r2 |-&gt; &quot;&quot;, addr |-&gt; &quot;0x1061e&quot; ],&#10;[ ind |-&gt; 23638, type |-&gt; &quot;IntAlu&quot;, r0 |-&gt; &quot;s1&quot;, r1 |-&gt; &quot;&quot;, r2 |-&gt; &quot;&quot;, addr |-&gt; &quot;0x10582&quot; ],&#10;[ ind |-&gt; 23639, type |-&gt; &quot;IntAlu&quot;, r0 |-&gt; &quot;&quot;, r1 |-&gt; &quot;&quot;, r2 |-&gt; &quot;&quot;, addr |-&gt; &quot;0x10584&quot; ],&#10;[ ind |-&gt; 23640, type |-&gt; &quot;IntAlu&quot;, r0 |-&gt; &quot;a4&quot;, r1 |-&gt; &quot;s1&quot;, r2 |-&gt; &quot;&quot;, addr |-&gt; &quot;0x1060a&quot; ],&#10;[ ind |-&gt; 23641, type |-&gt; &quot;IntAlu&quot;, r0 |-&gt; &quot;a5&quot;, r1 |-&gt; &quot;&quot;, r2 |-&gt; &quot;&quot;, addr |-&gt; &quot;0x1060c&quot; ],&#10;[ ind |-&gt; 23642, type |-&gt; &quot;IntAlu&quot;, r0 |-&gt; &quot;a5&quot;, r1 |-&gt; &quot;a4&quot;, r2 |-&gt; &quot;&quot;, addr |-&gt; &quot;0x1060e&quot; ],&#10;[ ind |-&gt; 23643, type |-&gt; &quot;IntAlu&quot;, r0 |-&gt; &quot;a4&quot;, r1 |-&gt; &quot;s2&quot;, r2 |-&gt; &quot;&quot;, addr |-&gt; &quot;0x10586&quot; ],&#10;[ ind |-&gt; 23644, type |-&gt; &quot;IntAlu&quot;, r0 |-&gt; &quot;a5&quot;, r1 |-&gt; &quot;a4&quot;, r2 |-&gt; &quot;&quot;, addr |-&gt; &quot;0x10588&quot; ],&#10;[ ind |-&gt; 23645, type |-&gt; &quot;IntAlu&quot;, r0 |-&gt; &quot;a5&quot;, r1 |-&gt; &quot;&quot;, r2 |-&gt; &quot;&quot;, addr |-&gt; &quot;0x1058a&quot; ],&#10;[ ind |-&gt; 23646, type |-&gt; &quot;IntAlu&quot;, r0 |-&gt; &quot;a5&quot;, r1 |-&gt; &quot;a4&quot;, r2 |-&gt; &quot;&quot;, addr |-&gt; &quot;0x1058c&quot; ],&#10;[ ind |-&gt; 23647, type |-&gt; &quot;IntAlu&quot;, r0 |-&gt; &quot;a5&quot;, r1 |-&gt; &quot;&quot;, r2 |-&gt; &quot;&quot;, addr |-&gt; &quot;0x1058e&quot; ],&#10;[ ind |-&gt; 23648, type |-&gt; &quot;IntAlu&quot;, r0 |-&gt; &quot;a4&quot;, r1 |-&gt; &quot;a5&quot;, r2 |-&gt; &quot;&quot;, addr |-&gt; &quot;0x10590&quot; ],&#10;[ ind |-&gt; 23649, type |-&gt; &quot;MemRead&quot;, r0 |-&gt; &quot;a5&quot;, r1 |-&gt; &quot;&quot;, r2 |-&gt; &quot;&quot;, addr |-&gt; &quot;0x10592&quot; ],&#10;[ ind |-&gt; 23650, type |-&gt; &quot;IntAlu&quot;, r0 |-&gt; &quot;a4&quot;, r1 |-&gt; &quot;a5&quot;, r2 |-&gt; &quot;&quot;, addr |-&gt; &quot;0x10596&quot; ],&#10;[ ind |-&gt; 23651, type |-&gt; &quot;IntAlu&quot;, r0 |-&gt; &quot;a5&quot;, r1 |-&gt; &quot;s1&quot;, r2 |-&gt; &quot;&quot;, addr |-&gt; &quot;0x10598&quot; ],&#10;[ ind |-&gt; 23652, type |-&gt; &quot;IntAlu&quot;, r0 |-&gt; &quot;a5&quot;, r1 |-&gt; &quot;a4&quot;, r2 |-&gt; &quot;&quot;, addr |-&gt; &quot;0x1059c&quot; ],&#10;[ ind |-&gt; 23653, type |-&gt; &quot;MemRead&quot;, r0 |-&gt; &quot;a5&quot;, r1 |-&gt; &quot;&quot;, r2 |-&gt; &quot;&quot;, addr |-&gt; &quot;0x1059e&quot; ],&#10;[ ind |-&gt; 23654, type |-&gt; &quot;IntAlu&quot;, r0 |-&gt; &quot;a5&quot;, r1 |-&gt; &quot;zero&quot;, r2 |-&gt; &quot;&quot;, addr |-&gt; &quot;0x105a0&quot; ],&#10;[ ind |-&gt; 23655, type |-&gt; &quot;IntAlu&quot;, r0 |-&gt; &quot;a4&quot;, r1 |-&gt; &quot;s2&quot;, r2 |-&gt; &quot;&quot;, addr |-&gt; &quot;0x105a4&quot; ],&#10;[ ind |-&gt; 23656, type |-&gt; &quot;IntAlu&quot;, r0 |-&gt; &quot;a5&quot;, r1 |-&gt; &quot;a4&quot;, r2 |-&gt; &quot;&quot;, addr |-&gt; &quot;0x105a6&quot; ],&#10;[ ind |-&gt; 23657, type |-&gt; &quot;IntAlu&quot;, r0 |-&gt; &quot;a5&quot;, r1 |-&gt; &quot;&quot;, r2 |-&gt; &quot;&quot;, addr |-&gt; &quot;0x105a8&quot; ],&#10;[ ind |-&gt; 23658, type |-&gt; &quot;IntAlu&quot;, r0 |-&gt; &quot;a5&quot;, r1 |-&gt; &quot;a4&quot;, r2 |-&gt; &quot;&quot;, addr |-&gt; &quot;0x105aa&quot; ],&#10;[ ind |-&gt; 23659, type |-&gt; &quot;IntAlu&quot;, r0 |-&gt; &quot;a5&quot;, r1 |-&gt; &quot;&quot;, r2 |-&gt; &quot;&quot;, addr |-&gt; &quot;0x105ac&quot; ],&#10;[ ind |-&gt; 23660, type |-&gt; &quot;IntAlu&quot;, r0 |-&gt; &quot;a4&quot;, r1 |-&gt; &quot;a5&quot;, r2 |-&gt; &quot;&quot;, addr |-&gt; &quot;0x105ae&quot; ],&#10;[ ind |-&gt; 23661, type |-&gt; &quot;MemRead&quot;, r0 |-&gt; &quot;a5&quot;, r1 |-&gt; &quot;&quot;, r2 |-&gt; &quot;&quot;, addr |-&gt; &quot;0x105b0&quot; ],&#10;[ ind |-&gt; 23662, type |-&gt; &quot;IntAlu&quot;, r0 |-&gt; &quot;a4&quot;, r1 |-&gt; &quot;a5&quot;, r2 |-&gt; &quot;&quot;, addr |-&gt; &quot;0x105b4&quot; ],&#10;[ ind |-&gt; 23663, type |-&gt; &quot;IntAlu&quot;, r0 |-&gt; &quot;a5&quot;, r1 |-&gt; &quot;s1&quot;, r2 |-&gt; &quot;&quot;, addr |-&gt; &quot;0x105b6&quot; ],&#10;[ ind |-&gt; 23664, type |-&gt; &quot;IntAlu&quot;, r0 |-&gt; &quot;a5&quot;, r1 |-&gt; &quot;a4&quot;, r2 |-&gt; &quot;&quot;, addr |-&gt; &quot;0x105ba&quot; ],&#10;[ ind |-&gt; 23665, type |-&gt; &quot;MemRead&quot;, r0 |-&gt; &quot;a5&quot;, r1 |-&gt; &quot;&quot;, r2 |-&gt; &quot;&quot;, addr |-&gt; &quot;0x105bc&quot; ]&#10;&gt;&gt;;0;0"/>
+        <listEntry value="robSize;;12;0;0"/>
+        <listEntry value="name;;&quot;countneg-s4-final-only&quot;;0;0"/>
+        <listEntry value="lat;;[ IntAlu |-&gt; 1, MemRead |-&gt; 1, MemWrite |-&gt; 1, IntDiv |-&gt; 4, IntMult |-&gt; 4 ];0;0"/>
+    </listAttribute>
+    <intAttribute key="modelVersion" value="20191005"/>
+    <intAttribute key="numberOfWorkers" value="4"/>
+    <booleanAttribute key="recover" value="false"/>
+    <stringAttribute key="result.mail.address" value=""/>
+    <intAttribute key="simuAril" value="-1"/>
+    <intAttribute key="simuDepth" value="100"/>
+    <intAttribute key="simuSeed" value="-1"/>
+    <stringAttribute key="specName" value="pipeline_ooo"/>
+    <stringAttribute key="tlcResourcesProfile" value="local custom"/>
+    <listAttribute key="traceExploreExpressions">
+        <listEntry value="0Exec1!Done"/>
+        <listEntry value="0Exec1!NxtFU(1)"/>
+        <listEntry value="1Exec1!StallID"/>
+        <listEntry value="1Exec1!NxtFullRob"/>
+    </listAttribute>
+    <stringAttribute key="view" value=""/>
+    <booleanAttribute key="visualizeStateGraph" value="false"/>
+</launchConfiguration>

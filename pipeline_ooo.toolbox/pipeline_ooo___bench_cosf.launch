@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<launchConfiguration type="org.lamport.tla.toolbox.tool.tlc.modelCheck">
+    <stringAttribute key="TLCCmdLineParameters" value=""/>
+    <intAttribute key="collectCoverage" value="0"/>
+    <stringAttribute key="configurationName" value="bench_cosf"/>
+    <booleanAttribute key="deferLiveness" value="false"/>
+    <intAttribute key="dfidDepth" value="100"/>
+    <booleanAttribute key="dfidMode" value="false"/>
+    <intAttribute key="distributedFPSetCount" value="0"/>
+    <stringAttribute key="distributedNetworkInterface" value="192.168.0.27"/>
+    <intAttribute key="distributedNodesCount" value="1"/>
+    <stringAttribute key="distributedTLC" value="off"/>
+    <stringAttribute key="distributedTLCVMArgs" value=""/>
+    <intAttribute key="fpBits" value="1"/>
+    <intAttribute key="fpIndex" value="49"/>
+    <booleanAttribute key="fpIndexRandom" value="true"/>
+    <intAttribute key="maxHeapSize" value="49"/>
+    <intAttribute key="maxSetSize" value="1000000"/>
+    <booleanAttribute key="mcMode" value="true"/>
+    <stringAttribute key="modelBehaviorInit" value=""/>
+    <stringAttribute key="modelBehaviorNext" value=""/>
+    <stringAttribute key="modelBehaviorSpec" value="Spec"/>
+    <intAttribute key="modelBehaviorSpecType" value="1"/>
+    <stringAttribute key="modelBehaviorVars" value="_RS2, _COM2, _ID, _IF, _FU2, _COM, exec_inst2, _ID2, graph, currCycle2, _IF2, lastBound, graph2, pc2, robHead, rob, _RS, currCycle, exec_inst, robHead2, pc, rob2, _FU"/>
+    <stringAttribute key="modelComments" value=""/>
+    <booleanAttribute key="modelCorrectnessCheckDeadlock" value="true"/>
+    <listAttribute key="modelCorrectnessInvariants">
+        <listEntry value="0currCycle &lt; 20 \/ graph = graph2"/>
+        <listEntry value="0\A i \in 2..Len(rob): rob[i].executed =&gt; rob[i-1].executed"/>
+        <listEntry value="0\E r \in {rob,rob2} : Len(r) /= Len(program) \/ \E i \in DOMAIN r: ~r[i].done \/ graph = graph2"/>
+        <listEntry value="0\* NoTA&#10;Variation =&gt; ~HasTA(graph, graph2, currCycle)"/>
+        <listEntry value="1NoTA(FALSE)"/>
+        <listEntry value="0currCycle &lt; 20"/>
+    </listAttribute>
+    <listAttribute key="modelCorrectnessProperties"/>
+    <intAttribute key="modelEditorOpenTabs" value="12"/>
+    <stringAttribute key="modelExpressionEval" value="Len(program)"/>
+    <listAttribute key="modelParameterConstants">
+        <listEntry value="missLat;;10;0;0"/>
+        <listEntry value="mayDMiss;;{&#10;4170, &#10;4172, &#10;4185, &#10;4186, &#10;4187, &#10;4191, &#10;4192&#10;};0;0"/>
+        <listEntry value="N_FU;;5;0;0"/>
+        <listEntry value="superscal;;2;0;0"/>
+        <listEntry value="mayIMiss;;{};0;0"/>
+        <listEntry value="RSsize;;12;0;0"/>
+        <listEntry value="program;;&lt;&lt;&#10;[ ind |-&gt; 4164, type |-&gt; &quot;IntAlu&quot;, r0 |-&gt; &quot;sp&quot;, r1 |-&gt; &quot;&quot;, r2 |-&gt; &quot;&quot;, addr |-&gt; &quot;0x10454&quot; ],&#10;[ ind |-&gt; 4165, type |-&gt; &quot;MemWrite&quot;, r0 |-&gt; &quot;ra&quot;, r1 |-&gt; &quot;&quot;, r2 |-&gt; &quot;&quot;, addr |-&gt; &quot;0x10456&quot; ],&#10;[ ind |-&gt; 4166, type |-&gt; &quot;MemWrite&quot;, r0 |-&gt; &quot;s0&quot;, r1 |-&gt; &quot;&quot;, r2 |-&gt; &quot;&quot;, addr |-&gt; &quot;0x10458&quot; ],&#10;[ ind |-&gt; 4167, type |-&gt; &quot;IntAlu&quot;, r0 |-&gt; &quot;s0&quot;, r1 |-&gt; &quot;sp&quot;, r2 |-&gt; &quot;&quot;, addr |-&gt; &quot;0x1045a&quot; ],&#10;[ ind |-&gt; 4168, type |-&gt; &quot;MemWrite&quot;, r0 |-&gt; &quot;zero&quot;, r1 |-&gt; &quot;&quot;, r2 |-&gt; &quot;&quot;, addr |-&gt; &quot;0x1045c&quot; ],&#10;[ ind |-&gt; 4169, type |-&gt; &quot;IntAlu&quot;, r0 |-&gt; &quot;&quot;, r1 |-&gt; &quot;&quot;, r2 |-&gt; &quot;&quot;, addr |-&gt; &quot;0x10460&quot; ],&#10;[ ind |-&gt; 4170, type |-&gt; &quot;FloatMemRead&quot;, r0 |-&gt; &quot;fa4&quot;, r1 |-&gt; &quot;&quot;, r2 |-&gt; &quot;&quot;, addr |-&gt; &quot;0x10496&quot; ],&#10;[ ind |-&gt; 4171, type |-&gt; &quot;IntAlu&quot;, r0 |-&gt; &quot;a5&quot;, r1 |-&gt; &quot;&quot;, r2 |-&gt; &quot;&quot;, addr |-&gt; &quot;0x1049a&quot; ],&#10;[ ind |-&gt; 4172, type |-&gt; &quot;FloatMemRead&quot;, r0 |-&gt; &quot;fa5&quot;, r1 |-&gt; &quot;&quot;, r2 |-&gt; &quot;&quot;, addr |-&gt; &quot;0x1049e&quot; ],&#10;[ ind |-&gt; 4173, type |-&gt; &quot;FloatCmp&quot;, r0 |-&gt; &quot;a5&quot;, r1 |-&gt; &quot;fa4&quot;, r2 |-&gt; &quot;fa5&quot;, addr |-&gt; &quot;0x104a2&quot; ],&#10;[ ind |-&gt; 4174, type |-&gt; &quot;IntAlu&quot;, r0 |-&gt; &quot;a5&quot;, r1 |-&gt; &quot;&quot;, r2 |-&gt; &quot;&quot;, addr |-&gt; &quot;0x104a6&quot; ],&#10;[ ind |-&gt; 4175, type |-&gt; &quot;FloatMemRead&quot;, r0 |-&gt; &quot;fa0&quot;, r1 |-&gt; &quot;&quot;, r2 |-&gt; &quot;&quot;, addr |-&gt; &quot;0x10462&quot; ],&#10;[ ind |-&gt; 4176, type |-&gt; &quot;IntAlu&quot;, r0 |-&gt; &quot;ra&quot;, r1 |-&gt; &quot;&quot;, r2 |-&gt; &quot;&quot;, addr |-&gt; &quot;0x10466&quot; ],&#10;[ ind |-&gt; 4177, type |-&gt; &quot;IntAlu&quot;, r0 |-&gt; &quot;sp&quot;, r1 |-&gt; &quot;&quot;, r2 |-&gt; &quot;&quot;, addr |-&gt; &quot;0x12288&quot; ],&#10;[ ind |-&gt; 4178, type |-&gt; &quot;MemWrite&quot;, r0 |-&gt; &quot;ra&quot;, r1 |-&gt; &quot;&quot;, r2 |-&gt; &quot;&quot;, addr |-&gt; &quot;0x1228a&quot; ],&#10;[ ind |-&gt; 4179, type |-&gt; &quot;MemWrite&quot;, r0 |-&gt; &quot;s0&quot;, r1 |-&gt; &quot;&quot;, r2 |-&gt; &quot;&quot;, addr |-&gt; &quot;0x1228c&quot; ],&#10;[ ind |-&gt; 4180, type |-&gt; &quot;IntAlu&quot;, r0 |-&gt; &quot;s0&quot;, r1 |-&gt; &quot;sp&quot;, r2 |-&gt; &quot;&quot;, addr |-&gt; &quot;0x1228e&quot; ],&#10;[ ind |-&gt; 4181, type |-&gt; &quot;FloatMemWrite&quot;, r0 |-&gt; &quot;fa0&quot;, r1 |-&gt; &quot;&quot;, r2 |-&gt; &quot;&quot;, addr |-&gt; &quot;0x12290&quot; ],&#10;[ ind |-&gt; 4182, type |-&gt; &quot;MemWrite&quot;, r0 |-&gt; &quot;zero&quot;, r1 |-&gt; &quot;&quot;, r2 |-&gt; &quot;&quot;, addr |-&gt; &quot;0x12294&quot; ],&#10;[ ind |-&gt; 4183, type |-&gt; &quot;FloatMemRead&quot;, r0 |-&gt; &quot;fa5&quot;, r1 |-&gt; &quot;&quot;, r2 |-&gt; &quot;&quot;, addr |-&gt; &quot;0x12298&quot; ],&#10;[ ind |-&gt; 4184, type |-&gt; &quot;FloatMemWrite&quot;, r0 |-&gt; &quot;fa5&quot;, r1 |-&gt; &quot;&quot;, r2 |-&gt; &quot;&quot;, addr |-&gt; &quot;0x1229c&quot; ],&#10;[ ind |-&gt; 4185, type |-&gt; &quot;MemRead&quot;, r0 |-&gt; &quot;a5&quot;, r1 |-&gt; &quot;&quot;, r2 |-&gt; &quot;&quot;, addr |-&gt; &quot;0x122a0&quot; ],&#10;[ ind |-&gt; 4186, type |-&gt; &quot;MemWrite&quot;, r0 |-&gt; &quot;a5&quot;, r1 |-&gt; &quot;&quot;, r2 |-&gt; &quot;&quot;, addr |-&gt; &quot;0x122a4&quot; ],&#10;[ ind |-&gt; 4187, type |-&gt; &quot;MemRead&quot;, r0 |-&gt; &quot;a4&quot;, r1 |-&gt; &quot;&quot;, r2 |-&gt; &quot;&quot;, addr |-&gt; &quot;0x122a8&quot; ],&#10;[ ind |-&gt; 4188, type |-&gt; &quot;IntAlu&quot;, r0 |-&gt; &quot;a5&quot;, r1 |-&gt; &quot;&quot;, r2 |-&gt; &quot;&quot;, addr |-&gt; &quot;0x122ac&quot; ],&#10;[ ind |-&gt; 4189, type |-&gt; &quot;IntAlu&quot;, r0 |-&gt; &quot;a5&quot;, r1 |-&gt; &quot;a5&quot;, r2 |-&gt; &quot;&quot;, addr |-&gt; &quot;0x122b0&quot; ],&#10;[ ind |-&gt; 4190, type |-&gt; &quot;IntAlu&quot;, r0 |-&gt; &quot;a5&quot;, r1 |-&gt; &quot;a4&quot;, r2 |-&gt; &quot;&quot;, addr |-&gt; &quot;0x122b4&quot; ],&#10;[ ind |-&gt; 4191, type |-&gt; &quot;MemWrite&quot;, r0 |-&gt; &quot;a5&quot;, r1 |-&gt; &quot;&quot;, r2 |-&gt; &quot;&quot;, addr |-&gt; &quot;0x122b6&quot; ],&#10;[ ind |-&gt; 4192, type |-&gt; &quot;MemRead&quot;, r0 |-&gt; &quot;a5&quot;, r1 |-&gt; &quot;&quot;, r2 |-&gt; &quot;&quot;, addr |-&gt; &quot;0x122ba&quot; ],&#10;[ ind |-&gt; 4193, type |-&gt; &quot;IntAlu&quot;, r0 |-&gt; &quot;a4&quot;, r1 |-&gt; &quot;a5&quot;, r2 |-&gt; &quot;&quot;, addr |-&gt; &quot;0x122be&quot; ]&#10;&gt;&gt;;0;0"/>
+        <listEntry value="robSize;;12;0;0"/>
+        <listEntry value="name;;&quot;cosf-30-rev-s2&quot;;0;0"/>
+        <listEntry value="lat;;[ IntAlu |-&gt; 1, MemRead |-&gt; 1, MemWrite |-&gt; 1, IntDiv |-&gt; 4, IntMult |-&gt; 4, FloatMemRead |-&gt; 1, FloatMemWrite |-&gt; 1, FloatMult |-&gt; 5, FloatAdd |-&gt; 2, FloatMisc |-&gt; 1, FloatCvt |-&gt; 1, FloatCmp |-&gt; 1 ];0;0"/>
+    </listAttribute>
+    <intAttribute key="modelVersion" value="20191005"/>
+    <intAttribute key="numberOfWorkers" value="4"/>
+    <booleanAttribute key="recover" value="false"/>
+    <stringAttribute key="result.mail.address" value=""/>
+    <intAttribute key="simuAril" value="-1"/>
+    <intAttribute key="simuDepth" value="100"/>
+    <intAttribute key="simuSeed" value="-1"/>
+    <stringAttribute key="specName" value="pipeline_ooo"/>
+    <stringAttribute key="tlcResourcesProfile" value="local custom"/>
+    <listAttribute key="traceExploreExpressions">
+        <listEntry value="0Exec1!Done"/>
+        <listEntry value="0Exec1!NxtFU(1)"/>
+        <listEntry value="1Exec1!StallID"/>
+        <listEntry value="1Exec1!NxtFullRob"/>
+    </listAttribute>
+    <stringAttribute key="view" value=""/>
+    <booleanAttribute key="visualizeStateGraph" value="false"/>
+</launchConfiguration>
