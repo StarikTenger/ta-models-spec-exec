@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<launchConfiguration type="org.lamport.tla.toolbox.tool.tlc.modelCheck">
+    <stringAttribute key="TLCCmdLineParameters" value=""/>
+    <intAttribute key="collectCoverage" value="1"/>
+    <stringAttribute key="configurationName" value="background_same_inst"/>
+    <booleanAttribute key="deferLiveness" value="false"/>
+    <intAttribute key="dfidDepth" value="100"/>
+    <booleanAttribute key="dfidMode" value="false"/>
+    <intAttribute key="distributedFPSetCount" value="0"/>
+    <stringAttribute key="distributedNetworkInterface" value="192.168.1.58"/>
+    <intAttribute key="distributedNodesCount" value="1"/>
+    <stringAttribute key="distributedTLC" value="off"/>
+    <stringAttribute key="distributedTLCVMArgs" value=""/>
+    <intAttribute key="fpBits" value="1"/>
+    <intAttribute key="fpIndex" value="110"/>
+    <booleanAttribute key="fpIndexRandom" value="true"/>
+    <intAttribute key="maxHeapSize" value="25"/>
+    <intAttribute key="maxSetSize" value="1000000"/>
+    <booleanAttribute key="mcMode" value="true"/>
+    <stringAttribute key="modelBehaviorInit" value=""/>
+    <stringAttribute key="modelBehaviorNext" value=""/>
+    <stringAttribute key="modelBehaviorSpec" value="Spec"/>
+    <intAttribute key="modelBehaviorSpecType" value="1"/>
+    <stringAttribute key="modelBehaviorVars" value="FULat2, iMiss2, _RS2, locWorst, _COM2, _ID, _IF, FUTmpLat, _FU2, FUTmp, _COM, _ID2, graph, currCycle2, FU2, _IF2, iMissTmp2, iMiss, graph2, _RS, commonPre, currCycle, iMissTmp, FULat, FUTmp2, prog, depProg, FUTmpLat2, depProgTmp, prog2, FU, _FU"/>
+    <stringAttribute key="modelComments" value=""/>
+    <booleanAttribute key="modelCorrectnessCheckDeadlock" value="true"/>
+    <listAttribute key="modelCorrectnessInvariants">
+        <listEntry value="0NoTAInter"/>
+        <listEntry value="0NoTASteps"/>
+        <listEntry value="0NoTALoc"/>
+        <listEntry value="0NoTAComp"/>
+        <listEntry value="0~(ProgDone(ProgLen) /\ NoTALoc /\ ~NoTAInter /\ \E i \in 1..ProgLen: FULat[i] /= FULat2[i])"/>
+        <listEntry value="1~(ProgDone(ProgLen) /\ FULat[1] = 1 /\ FULat2[1] = 3 /\ iMiss[5] /\ ~iMiss2[5] /\ ~NoTALoc)"/>
+    </listAttribute>
+    <listAttribute key="modelCorrectnessProperties"/>
+    <intAttribute key="modelEditorOpenTabs" value="14"/>
+    <stringAttribute key="modelExpressionEval" value=""/>
+    <stringAttribute key="modelParameterActionConstraint" value=""/>
+    <listAttribute key="modelParameterConstants">
+        <listEntry value="varIF;;TRUE;0;0"/>
+        <listEntry value="Program;;&lt;&lt; [ pc |-&gt; 1, type |-&gt; {1}, lat |-&gt; {1,3}, dep |-&gt; {}, imiss |-&gt; {FALSE} ],&#10;   [ pc |-&gt; 2, type |-&gt; {1}, lat |-&gt; {1}, dep |-&gt; {}, imiss |-&gt; {FALSE} ],&#10;   [ pc |-&gt; 3, type |-&gt; {1}, lat |-&gt; {1}, dep |-&gt; {}, imiss |-&gt; {FALSE} ],&#10;   [ pc |-&gt; 4, type |-&gt; {2}, lat |-&gt; {3}, dep |-&gt; {3}, imiss |-&gt; {FALSE} ],&#10;   [ pc |-&gt; 5, type |-&gt; {2}, lat |-&gt; {3}, dep |-&gt; {}, imiss |-&gt; BOOLEAN ]&#10;   \*,   [ pc |-&gt; 6, type |-&gt; {1}, lat |-&gt; {3}, dep |-&gt; {5}, imiss |-&gt; {FALSE} ]&#10;   &gt;&gt;;0;0"/>
+        <listEntry value="superscal;;2;0;0"/>
+        <listEntry value="N_FU;;2;0;0"/>
+        <listEntry value="missLat;;3;0;0"/>
+        <listEntry value="locFU;;{1,2};0;0"/>
+        <listEntry value="Lat;;{};0;0"/>
+        <listEntry value="modeLen;;-1;0;0"/>
+    </listAttribute>
+    <stringAttribute key="modelParameterContraint" value=""/>
+    <listAttribute key="modelParameterDefinitions"/>
+    <stringAttribute key="modelParameterModelValues" value="{}"/>
+    <stringAttribute key="modelParameterNewDefinitions" value=""/>
+    <intAttribute key="modelVersion" value="20191005"/>
+    <intAttribute key="numberOfWorkers" value="2"/>
+    <booleanAttribute key="recover" value="false"/>
+    <stringAttribute key="result.mail.address" value=""/>
+    <intAttribute key="simuAril" value="-1"/>
+    <intAttribute key="simuDepth" value="100"/>
+    <intAttribute key="simuSeed" value="-1"/>
+    <stringAttribute key="specName" value="pipeline_ooo"/>
+    <stringAttribute key="tlcResourcesProfile" value="local custom"/>
+    <listAttribute key="traceExploreExpressions">
+        <listEntry value="1NoTALoc"/>
+    </listAttribute>
+    <stringAttribute key="view" value=""/>
+    <booleanAttribute key="visualizeStateGraph" value="false"/>
+</launchConfiguration>
