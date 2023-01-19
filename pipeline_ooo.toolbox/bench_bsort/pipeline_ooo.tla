@@ -2,7 +2,7 @@
 EXTENDS Sequences, instructions_ooo, Integers, TLC, FiniteSets, TAExpl
 VARIABLES currCycle, pc, _IF, _ID, _RS, _FU, _COM, rob, robHead, graph, exec_inst
 VARIABLES currCycle2, pc2, _IF2, _ID2, _RS2, _FU2, _COM2, rob2, robHead2, graph2, exec_inst2
-VARIABLE cpt \*lastBound
+VARIABLE lastBound
 
 ASSUME InitOutputFile(name, missLat, superscal, RSsize, robSize, lat, mayDMiss)
 -----------------------------------------------------------------------------
@@ -15,11 +15,6 @@ robs == << rob, rob2 >>
 -----------------------------------------------------------------------------
 
 GraphBound == Min({robHead, robHead2}) - 1
-
-\*Variation == [ i \in lastBound..GraphBound |-> graph.nodes[i] ] /= [ i \in lastBound..GraphBound |-> graph2.nodes[i] ]
-Variation == [ i \in 1..GraphBound |-> graph.nodes[i] ] /= [ i \in 1..GraphBound |-> graph2.nodes[i] ]
-
-\*SubGraph(g) == [ nodes |-> [ i \in lastBound..GraphBound |-> g.nodes[i] ], edges |-> g.edges ]
 -----------------------------------------------------------------------------
 
 \* 1st instance of the pipeline for one execution trace
@@ -37,32 +32,28 @@ Exec2 == INSTANCE pipeline_exec_ooo
               robHead <- robHead2,
               graph <- graph2,
               exec_inst <- exec_inst2
-              
------------------------------------------------------------------------------
-
-CheckTA == (*/\ Exec1!Exec \ Exec1!Done = {}
-           /\ Exec2!Exec \ Exec2!Done = {}*)
-           /\ Variation
-           \*/\ GraphBound > 0
-           
-\*NoTA(onlyCom) == CheckTA => ~HasTA(SubGraph(graph), SubGraph(graph2), currCycle, onlyCom)
-\*NoTA(onlyCom) == CheckTA => ~HasTA(graph, graph2, currCycle, onlyCom)
-NoTA(onlyCom) == ~HasTA(graph, graph2, currCycle, onlyCom)
+-----------------------------------------------------------------------------           
+CheckTA == \/ GraphBound-lastBound = robSize
+           \/ /\ Len(rob) > 0 /\ Len(rob2) > 0 \* for H_check (remove for H_check')
+              /\ rob[Len(rob)].instr = program[Len(program)] /\ rob[Len(rob)].done
+              /\ rob2[Len(rob2)].instr = program[Len(program)] /\ rob2[Len(rob2)].done
+              /\ graph.nodes[Len(graph.nodes)].COM /= 0
+              /\ graph2.nodes[Len(graph2.nodes)].COM /= 0
+             
+NoTA(onlyCom) == CheckTA => ~HasTA(graph, graph2, currCycle, onlyCom)
 -----------------------------------------------------------------------------
               
 Init == /\ Exec1!Init
         /\ Exec2!Init
         /\ exec_inst = 1
         /\ exec_inst2 = 2
-        \*/\ lastBound = 1
-        /\ cpt = 0
+        /\ lastBound = 0
 
 Next == /\ Exec1!Next
         /\ Exec2!Next
-        /\ (*IF /\ CheckTA 
+        /\ IF /\ CheckTA
               /\ vars' /= vars \/ vars2' /= vars2
-           THEN cpt' = cpt+1 /\ PrintT(cpt') \*lastBound' = GraphBound
-           ELSE*) UNCHANGED <<cpt>> \*lastBound
+           THEN lastBound' = GraphBound ELSE UNCHANGED lastBound
 
-Spec == Init /\ [][Next]_<< vars, vars2, cpt >>\*, lastBound >>
+Spec == Init /\ [][Next]_<< vars, vars2, lastBound >>
 =============================================================================

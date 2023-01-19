@@ -116,7 +116,7 @@ ProgressFU == LET FUp(i) == IF ~NxtFUBusy(i)
                             THEN LET latency == IF NxtFU(i) = Empty THEN 1
                                                 ELSE IF NxtFU(i).type \in DOMAIN lat THEN lat[NxtFU(i).type] ELSE PrintT(NxtFU(i).type) IN
                                  [ instr : {NxtFU(i)},
-                                   baseLat : IF /\ NxtFU(i).ind \in mayDMiss \*/\ NxtFU(i).type \in {"MemRead", "MemWrite"}
+                                   baseLat : IF /\ NxtFU(i).ind \in mayDMiss \*/\ NxtFU(i).type \in {"MemRead", "MemWrite", "FloatMemRead", "FloatMemWrite"}
                                                 /\ exec_inst = 2 => NxtFU(i).ind /= Min(mayDMiss) \* symmetry
                                                 \*/\ exec_inst = 2
                                              THEN {latency, missLat}

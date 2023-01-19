@@ -18,7 +18,7 @@ import tlc2.value.impl.ValueVec;
 import tlc2.value.impl.RecordValue;*/
 
 import tlc2.value.impl.Value;
-import tlc2.value.Values;
+//import tlc2.value.Values;
 import tlc2.value.impl.BoolValue;
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
@@ -30,6 +30,8 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public final class TAExpl {
+    private static String DETECTPATH = "/Users/benjaminbinder/Desktop/These/timing-anomalies/tla/OoO/detection_procedure/";
+
     private static String filebase;
     private static String outputFile;
     private static Object mutex = new Object();
@@ -46,8 +48,9 @@ public final class TAExpl {
             lat_str += "-"+m.group(0);
         } //(alu-read-write-div-mult)*/
         
-        filebase = "/home/benjaminbinder/Documents/timing-anomalies/tla/OoO/tlc_graphs/"+bench.toString().replace("\"", "");
+        filebase = DETECTPATH+"tlc_graphs/"+bench.toString().replace("\"", "");
         outputFile = filebase+".txt";
+        System.out.println(outputFile);
         File file = new File(outputFile);
         //file.delete();
         if (file.exists()) {
@@ -62,9 +65,9 @@ public final class TAExpl {
     }
     
 	public static Value HasTA(final Value g1, final Value g2, final Value cycle, final BoolValue onlyCom) throws IOException, InterruptedException {
-	    String prog = "/home/benjaminbinder/Documents/timing-anomalies/tla/OoO/graph_generator_tlc.py";
+            String prog = DETECTPATH+"graph_generator_tlc.py";
 	    if (onlyCom.val)
-	        prog = "/home/benjaminbinder/Documents/timing-anomalies/tla/OoO/graph_generator_tlc_only_com.py";
+                prog = DETECTPATH+"graph_generator_tlc_only_com.py";
 	        
 	    ProcessBuilder processBuilder = new ProcessBuilder("python", prog, g1.toString(), g2.toString(), filebase, cycle.toString());
         processBuilder.redirectErrorStream(true);
