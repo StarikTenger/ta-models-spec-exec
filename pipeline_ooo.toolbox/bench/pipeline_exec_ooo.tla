@@ -41,7 +41,7 @@ FullRob == Len(rob)-robHead+1 > robSize-superscal
 RobSelect(instr) == CHOOSE i \in robHead..Len(rob) : rob[i].instr = instr
 
 \* The decoded instructions to be executed in the i-th FU. There can be none or several per cycle.
-FURouting(i) == LET FUmap(instr) == CASE instr.type = "IntAlu" -> 1 [] instr.type \in {"MemRead", "MemWrite"} -> 2 [] instr.type = "IntDiv" -> 3 [] instr.type = "IntMult" -> 4 [] OTHER -> PrintT(instr.type) IN
+FURouting(i) == LET FUmap(instr) == CASE instr.type = "IntAlu" -> 1 [] instr.type \in {"MemRead", "MemWrite", "FloatMemRead", "FloatMemWrite"} -> 2 [] instr.type = "IntDiv" -> 3 [] instr.type = "IntMult" -> 4 [] instr.type \in {"FloatMult", "FloatDiv", "FloatAdd", "FloatCmp", "FloatCvt", "FloatMisc"} -> 5 [] OTHER -> PrintT(instr.type) IN
                 { _ID[j] : j \in { k \in 1..superscal : NotEmpty(_ID[k]) /\ FUmap(_ID[k]) = i } }
 
 FullRS(i) == Cardinality(_RS[i]) >= RSsize
@@ -116,9 +116,9 @@ ProgressFU == LET FUp(i) == IF ~NxtFUBusy(i)
                             THEN LET latency == IF NxtFU(i) = Empty THEN 1
                                                 ELSE IF NxtFU(i).type \in DOMAIN lat THEN lat[NxtFU(i).type] ELSE PrintT(NxtFU(i).type) IN
                                  [ instr : {NxtFU(i)},
-                                   baseLat : IF /\ NxtFU(i).ind \in mayDMiss
-                                                \*/\ exec_inst = 2 => NxtFU(i).ind /= Min(mayDMiss) \* symmetry
-                                                /\ exec_inst = 2
+                                   baseLat : IF /\ NxtFU(i).ind \in mayDMiss \*/\ NxtFU(i).type \in {"MemRead", "MemWrite", "FloatMemRead", "FloatMemWrite"}
+                                                /\ exec_inst = 2 => NxtFU(i).ind /= Min(mayDMiss) \* symmetry
+                                                \*/\ exec_inst = 2
                                              THEN {latency, missLat}
                                              ELSE {latency},
                                    currLat : {1} ]
@@ -161,10 +161,11 @@ ProgressRob == /\ rob' = [ i \in 1..robHead-1 |-> rob[i] ]
 
 RECURSIVE AppendRow(_)
 AppendRow(k) == LET evt == IF _IF[k].instr.ind /= 0 /\ _IF[k].currLat = 1
-                           THEN << [ i \in {"IFacq", "IFrel", "IDacq", "IDrel", "FUacq", "FUrel", "COM", "ROB", "RS", "FU", "ind"} |-> 
+                           THEN << [ i \in {"IFacq", "IFrel", "IDacq", "IDrel", "FUacq", "FUrel", "COM", "ROB", "RS", "FU", "ind", "addr"} |-> 
                                         CASE i = "IFacq" -> currCycle
                                           [] i = "IFrel" -> IF _IF[k].baseLat = _IF[k].currLat THEN currCycle+1 ELSE 0
                                           [] i = "ind" -> _IF[k].instr.ind
+                                          [] i = "addr" -> _IF[k].instr.addr
                                           [] OTHER -> 0 ] >>
                            ELSE <<>> IN
                 IF k = 1 THEN evt ELSE AppendRow(k-1) \o evt
@@ -175,7 +176,7 @@ ProgressGraph == graph' = [ graph EXCEPT
                                             LET i == robHead-1+j IN
                                             [ IFacq |-> graph.nodes[i].IFacq,
                                               IFrel |-> IF \E k \in (1..superscal): _IF[k].instr = program[i] /\ _IF[k].baseLat = _IF[k].currLat THEN currCycle+1 ELSE graph.nodes[i].IFrel,
-                                              IDacq |-> IF \E k \in (1..superscal): _ID[k] = program[i] /\ ~NxtStallID THEN currCycle ELSE graph.nodes[i].IDacq,
+                                              IDacq |-> IF \E k \in (1..superscal): _ID[k] = program[i] /\ graph.nodes[i].IDacq = 0 THEN currCycle ELSE graph.nodes[i].IDacq,
                                               IDrel |-> IF \E k \in (1..superscal): _ID[k] = program[i] /\ _ID'[k] /= program[i] THEN currCycle+1 ELSE graph.nodes[i].IDrel,
                                               FUacq |-> IF \E k \in (1..N_FU): _FU[k].instr = program[i] /\ _FU[k].currLat = 1 THEN currCycle ELSE graph.nodes[i].FUacq,
                                               FUrel |-> IF \E k \in (1..N_FU): _FU[k].instr = program[i] /\ _FU'[k].instr /= program[i] THEN currCycle+1 ELSE graph.nodes[i].FUrel,
@@ -183,7 +184,8 @@ ProgressGraph == graph' = [ graph EXCEPT
                                               ROB |-> IF \E k \in (1..superscal): _ID[k] = program[i] /\ ~FullRob THEN currCycle ELSE graph.nodes[i].ROB,
                                               RS |-> IF \E k \in (1..superscal): _ID[k] = program[i] /\ \A l \in 1..N_FU: ~FullRS(l) THEN currCycle ELSE graph.nodes[i].RS,
                                               FU |-> IF \E k \in (1..N_FU): _FU[k].instr = program[i] THEN CHOOSE k \in (1..N_FU): _FU[k].instr = program[i] ELSE graph.nodes[i].FU,
-                                              ind |-> graph.nodes[i].ind ] ]
+                                              ind |-> graph.nodes[i].ind,
+                                              addr |-> graph.nodes[i].addr ] ]
                                       \o AppendRow(superscal),
                             !.edges = LET dep(x) == { entry \in robHead..RobSelect(x)-1 : rob[entry].instr.r0 \in { x.r1, x.r2 } \ {""} } IN
                                       @ \*\union { [ type |-> "D", source |-> _FU[i].instr.ind, dest |-> _FU'[k].instr.ind ] :

@@ -1,5 +1,8 @@
 import os, sys, re
 
+BUFF_LEN = 12
+N_INSTR = 50
+
 if len(sys.argv) != 3:
     sys.exit("Wrong usage (filename main_addr).")
 filepath = sys.argv[1]
@@ -8,8 +11,6 @@ if not os.path.isfile(filepath):
     print("File path {} does not exist. Exiting...".format(filepath))
     sys.exit()
 
-BUFF_LEN = 12
-N_INSTR = 50
 instrs = []
 r0_buff = [None]*BUFF_LEN
 l_buff = [None]*BUFF_LEN

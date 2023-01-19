@@ -34,7 +34,7 @@ Exec2 == INSTANCE pipeline_exec_ooo
               exec_inst <- exec_inst2
 -----------------------------------------------------------------------------           
 CheckTA == \/ GraphBound-lastBound = robSize
-           \/ /\ Len(rob) > 0 /\ Len(rob2) > 0
+           \/ /\ Len(rob) > 0 /\ Len(rob2) > 0 \* for H_check (remove for H_check')
               /\ rob[Len(rob)].instr = program[Len(program)] /\ rob[Len(rob)].done
               /\ rob2[Len(rob2)].instr = program[Len(program)] /\ rob2[Len(rob2)].done
               /\ graph.nodes[Len(graph.nodes)].COM /= 0

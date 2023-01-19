@@ -1,7 +1,8 @@
 ---------------------------- MODULE instructions_ooo ----------------------------
-EXTENDS Integers, Sequences
+EXTENDS Integers, Sequences, FiniteSets
 CONSTANTS program, superscal, N_FU, mayIMiss, mayDMiss, lat, missLat, robSize, RSsize, name
 ASSUME robSize%superscal = 0
+ASSUME \A t \in {program[i].type: i \in DOMAIN program}: t \in DOMAIN lat
 ----------------------------------------------------------------------------
 
 Min(S) == IF S = {} THEN 0 ELSE CHOOSE x \in S : \A y \in S : y >= x
