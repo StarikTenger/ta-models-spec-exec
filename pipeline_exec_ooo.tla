@@ -18,17 +18,21 @@ Init == /\ currCycle = 0
 NxtIFBusy == \E i \in 1..superscal: _IF[i].currLat < _IF[i].baseLat \* A I-cache miss stalls each pipeline
 NxtFUBusy(i) == _FU[i].currLat < _FU[i].baseLat
 
-\* Set of (indexes of) instructions fully executed or about to finish execution
-Exec == { i \in 1..Len(prog.exec): \/ prog.exec[i].executed
-                                   \/ \E j \in 1..N_FU: prog.exec[i].PC = _FU[j].PC /\ ~NxtFUBusy(j) }
+\* Set of (indexes of) instructions fully executed or about to finish execution 
+Exec == { i \in 1..Len(prog.exec): 
+                                \/ prog.exec[i].executed
+                                \/ \E j \in 1..N_FU: prog.exec[i].PC = _FU[j].PC /\ ~NxtFUBusy(j) 
+        }
 \* Set of (indexes of) instructions committed or about to leave the pipeline
-Done == { i \in 1..Len(prog.exec): \/ prog.exec[i].done
-                                   \/ \E j \in 1..superscal: prog.exec[i].PC = _COM[j].PC }
+Done == { i \in 1..Len(prog.exec): 
+                                \/ prog.exec[i].done
+                                \/ \E j \in 1..superscal: prog.exec[i].PC = _COM[j].PC 
+        }
 
 \* The decoded instructions to be executed in the i-th FU. There can be none or several per cycle.
 FURouting(i) == { _ID[j].PC: j \in { k \in 1..superscal: _ID[k].PC /= empty /\ FU[_ID[k].PC.pc] = i } }
 
-\* The next instruction to be executed in the i-th FU (not necessarily on the next cycle)
+\* The next instruction to be executed in the i-th FU 
 NxtFU(i) == IF NxtFUBusy(i)
             THEN empty
             ELSE
@@ -95,7 +99,7 @@ nxtCOM(s) ==  IF s = 1
               ELSE
                 \* The instructions ready for in-order commit, taking into account parallel commit (in the same cycle)
                 ReadyCOM(Done \union UNION({ nxtCOM(j): j \in 1..s-1 }))
-              
+
 \* Superscalar commit: the oldest instruction (min. address) is selected among the ready instructions
 \* for each iteration of the multiple commit
 ProgressCOM == LET nxtPc(i) ==
@@ -133,7 +137,7 @@ ProgressProg == LET restp == IF ~NxtIFBusy THEN rest_instr(prog.rest, superscal)
                              ]
                 IN prog' = [ rest |-> restp, exec |-> execp ]
 -----------------------------------------------------------------------------
-                 
+
 Progress == ProgressIF /\ ProgressID /\ ProgressRS /\ ProgressFU /\ ProgressCOM /\ ProgressProg
 
 TimeProgress == IF \E i \in 1 .. Len(pipe_stages):

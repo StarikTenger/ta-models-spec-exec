@@ -141,7 +141,7 @@ NoTALoc == LET n == ProgLen IN
 NoTALocPart(m) == /\ ProgDone(m)
                   /\ ~locWorst[1]
                   => locWorst[2] /\ ComTime(2,m) >= ComTime(1,m)
-              
+
 \* Parallel inversion
 NoTAComp == LET n == ProgLen IN
             LET FUusage(ex,fu) == FUs[ex][fu].usage IN

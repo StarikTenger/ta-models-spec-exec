@@ -6,12 +6,14 @@ const_16225535479272000 ==
 FALSE
 ----
 
-\* CONSTANT definitions @modelParameterConstants:1Program
+\* CONSTANT definitions @modelParameterConstants:1Program 
 const_16225535479273000 == 
-<< [ pc |-> 1, type |-> {1}, lat |-> {1,3}, dep |-> {} ],
-   [ pc |-> 2, type |-> {2}, lat |-> {3}, dep |-> {1} ],
-   [ pc |-> 3, type |-> {2}, lat |-> {3}, dep |-> {} ],
-   [ pc |-> 4, type |-> {1}, lat |-> {3}, dep |-> {3} ] >>
+<< 
+    [ pc |-> 1, type |-> {1}, lat |-> {1,3}, dep |-> {} ],
+    [ pc |-> 2, type |-> {1,2}, lat |-> {3}, dep |-> {1} ],
+    [ pc |-> 3, type |-> {1,2}, lat |-> {3}, dep |-> {} ],
+    [ pc |-> 4, type |-> {1,2}, lat |-> {3}, dep |-> {3} ]
+>>
 ----
 
 \* CONSTANT definitions @modelParameterConstants:2superscal

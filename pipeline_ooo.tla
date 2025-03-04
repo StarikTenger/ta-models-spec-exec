@@ -35,7 +35,11 @@ DomDep(i) == {{}} \union {{j} : j \in 1..3} \*SUBSET(1..i-1)
 
 RECURSIVE CartProd(_,_)
 RECURSIVE Flatten(_,_)
+
+
 CartProd(dom(_), i) == IF i = 1 THEN dom(1) ELSE CartProd(dom, i-1) \X dom(i)
+
+\* Flatten(<<<<<<1, 2>>,3>>, 4>>, 3) -> <<1, 2, 3, 4>>
 Flatten(seq,i) == IF i = 1 THEN <<seq[1], seq[2]>> ELSE Append(Flatten(seq[1], i-1), seq[2])
 
 \* 1st instance of the pipeline for one execution trace
@@ -56,9 +60,17 @@ Exec2 == INSTANCE pipeline_exec_ooo
 Init == /\ IF modeLen /= -1 THEN /\ depProgTmp \in CartProd(DomDep, ProgLen)
                                  /\ depProg = Flatten(depProgTmp, ProgLen-1)
            ELSE depProgTmp = << >> /\ depProg = << >>
-        /\ LET p == IF modeLen /= -1 THEN [ i \in 1..ProgLen |-> [ pc |-> i, type |-> 1..N_FU,
-                    lat |-> Lat, dep |-> depProg[i], imiss |-> IF varIF THEN BOOLEAN ELSE {FALSE} ] ]
-                    ELSE Program
+        /\ LET p == IF modeLen /= -1 
+                    THEN 
+                        [ i \in 1..ProgLen |-> [ 
+                            pc |-> i, 
+                            type |-> 1..N_FU,
+                            lat |-> Lat, 
+                            dep |-> depProg[i], 
+                            imiss |-> IF varIF THEN BOOLEAN ELSE {FALSE} ] 
+                        ]
+                    ELSE 
+                        Program
            IN prog = [ rest |-> p, exec |-> << >> ]
         /\ prog2 = prog
         /\ Exec1!Init
@@ -126,7 +138,7 @@ NoTASteps == \A k \in 1..ProgLen-1: \A n \in k+1..ProgLen:
              ELSE PrintT(<< "TASteps encountered (<<First (loc) instr., Second (glob) instr., Delta_alpha, Delta_beta, Global end diff>>):",
                         k, n, StepHeight(1,k), StepHeight(2,k), ComTime(2,n)-ComTime(1,n) >>) /\ FALSE
 
-\* Intersection in plots
+\* Intersection in plota
 NoTAInter == \A k \in 1..ProgLen-1: \A n \in k+1..ProgLen:
             IF /\ ProgDone(n)
                /\ ComTime(1,k) < ComTime(2,k)
