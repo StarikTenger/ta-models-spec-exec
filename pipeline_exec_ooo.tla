@@ -41,8 +41,16 @@ FullRob == Len(rob)-robHead+1 > robSize-superscal
 RobSelect(instr) == CHOOSE i \in robHead..Len(rob) : rob[i].instr = instr
 
 \* The decoded instructions to be executed in the i-th FU. There can be none or several per cycle.
-FURouting(i) == LET FUmap(instr) == CASE instr.type = "IntAlu" -> 1 [] instr.type \in {"MemRead", "MemWrite", "FloatMemRead", "FloatMemWrite"} -> 2 [] instr.type = "IntDiv" -> 3 [] instr.type = "IntMult" -> 4 [] instr.type \in {"FloatMult", "FloatDiv", "FloatAdd", "FloatCmp", "FloatCvt", "FloatMisc"} -> 5 [] OTHER -> PrintT(instr.type) IN
-                { _ID[j] : j \in { k \in 1..superscal : NotEmpty(_ID[k]) /\ FUmap(_ID[k]) = i } }
+FURouting(i) == 
+    LET FUmap(instr) == 
+       CASE instr.type = "IntAlu" -> 1 
+         [] instr.type \in {"MemRead", "MemWrite", "FloatMemRead", "FloatMemWrite"} -> 2 
+         [] instr.type = "IntDiv" -> 3 
+         [] instr.type = "IntMult" -> 4 
+         [] instr.type \in {"FloatMult", "FloatDiv", "FloatAdd", "FloatCmp", "FloatCvt", "FloatMisc"} -> 5 
+         [] OTHER -> PrintT(instr.type) 
+    IN
+        { _ID[j] : j \in { k \in 1..superscal : NotEmpty(_ID[k]) /\ FUmap(_ID[k]) = i } }
 
 FullRS(i) == Cardinality(_RS[i]) >= RSsize
 
@@ -52,7 +60,7 @@ NxtStallID == \/ \E i \in 1..N_FU: FullRS(i)
 \* The next instruction to be executed in the i-th FU
 NxtFU(i) == IF NxtFUBusy(i)
             THEN Empty
-            ELSE
+            ELSE 
                 \* Oldest instruction (in program order) among the set of the waiting instructions in the corresponding
                 \* RS or still in ID, whose all dependencies are satisfied (executed) or about to be.
                 \* At most one instruction dispatched per cycle in each FU.
@@ -110,7 +118,7 @@ ProgressRS == IF ~NxtStallID
                         \* Instructions are erased when beginning execution and do not go to RSs if executable at once:
                                                 \ { NxtFU(i) } ]
               ELSE _RS' = [ i \in (1..N_FU) |-> _RS[i] \ { NxtFU(i) } ]
-                                           
+
 \* OoO execution
 ProgressFU == LET FUp(i) == IF ~NxtFUBusy(i)
                             THEN LET latency == IF NxtFU(i) = Empty THEN 1
@@ -190,8 +198,14 @@ ProgressGraph == graph' = [ graph EXCEPT
                             !.edges = LET dep(x) == { entry \in robHead..RobSelect(x)-1 : rob[entry].instr.r0 \in { x.r1, x.r2 } \ {""} } IN
                                       @ \*\union { [ type |-> "D", source |-> _FU[i].instr.ind, dest |-> _FU'[k].instr.ind ] :
                                         \*            i \in { k \in 1..superscal : _FU'[k].instr /= _FU[k].instr /\ _FU'[k].instr.r0 \in { _FU[k].instr.r1, _FU[k].instr.r2 } \ {""} } }
-                                        \union UNION({ { [ type |-> "D", source |-> rob[x].instr.ind, dest |-> _FU[k].instr.ind ] : x \in dep(_FU[k].instr) } :
-                                                            k \in { j \in 1..N_FU: NotEmpty(_FU[j].instr) /\ _FU[j].currLat = 1 } })
+                                        \union UNION({ { [ 
+                                                        type |-> "D", 
+                                                        source |-> rob[x].instr.ind, 
+                                                        dest |-> _FU[k].instr.ind 
+                                                    ] 
+                                                    : x \in dep(_FU[k].instr) 
+                                                } :
+                                                    k \in { j \in 1..N_FU: NotEmpty(_FU[j].instr) /\ _FU[j].currLat = 1 } })
                                         (*\union (UNION ({{[ type |-> "RS", source |-> _FU[i].instr.ind, dest |-> x.ind ] :
                                                             x \in { xx \in _RS[i] \union FURouting(i) : NotEmpty(_FU[i].instr)}} : i \in 1..N_FU}))
                                          \union { [ type |-> "ROB", source |-> _COM'[superscal].ind, dest |-> i ] :
