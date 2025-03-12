@@ -1,3 +1,5 @@
+> forked from https://bitbucket.org/benjaminbinder/ta-models/src/master/
+
 ### This repository contains a parametric standard OoO pipeline model, along with a detection procedure of counter-intuitive Timing Anomalies (TAs).
 ### B. Binder, M. Asavoae, F. Brandner, B. Ben Hedia, and M. Jan (RTCSA 2022)
 ### Tested with the TLA+ Toolbox Version 1.7.1 of 31 December 2020 and the TLC Version 2.16 of 31 December 2020.
