@@ -1,0 +1,49 @@
+@!@!@STARTMSG 2262:0 @!@!@
+TLC2 Version 2.20 of Day Month 20?? (rev: bacd9d2)
+@!@!@ENDMSG 2262 @!@!@
+@!@!@STARTMSG 2187:0 @!@!@
+Running breadth-first search Model-Checking with fp 105 and seed 7304790590269976470 with 1 worker on 8 cores with 5298MB heap and 64MB offheap memory [pid: 579121] (Linux 6.11.0-19-generic amd64, Ubuntu 21.0.6 x86_64, MSBDiskFPSet, DiskStateQueue).
+@!@!@ENDMSG 2187 @!@!@
+@!@!@STARTMSG 2220:0 @!@!@
+Starting SANY...
+@!@!@ENDMSG 2220 @!@!@
+Parsing file /home/stariktenger/Internship2025/ta-models/benches/bench/MC.tla
+Parsing file /home/stariktenger/Internship2025/ta-models/benches/bench/pipeline_ooo.tla
+Parsing file /tmp/tlc-141980471509309757/TLC.tla (jar:file:/home/stariktenger/.vscode/extensions/tlaplus.vscode-ide-2025.3.80550/tools/tla2tools.jar!/tla2sany/StandardModules/TLC.tla)
+Parsing file /tmp/tlc-141980471509309757/Sequences.tla (jar:file:/home/stariktenger/.vscode/extensions/tlaplus.vscode-ide-2025.3.80550/tools/tla2tools.jar!/tla2sany/StandardModules/Sequences.tla)
+Parsing file /home/stariktenger/Internship2025/ta-models/benches/bench/instructions_ooo.tla
+Parsing file /tmp/tlc-141980471509309757/Integers.tla (jar:file:/home/stariktenger/.vscode/extensions/tlaplus.vscode-ide-2025.3.80550/tools/tla2tools.jar!/tla2sany/StandardModules/Integers.tla)
+Parsing file /tmp/tlc-141980471509309757/FiniteSets.tla (jar:file:/home/stariktenger/.vscode/extensions/tlaplus.vscode-ide-2025.3.80550/tools/tla2tools.jar!/tla2sany/StandardModules/FiniteSets.tla)
+Parsing file /home/stariktenger/Internship2025/ta-models/benches/bench/TAExpl.tla
+Parsing file /tmp/tlc-141980471509309757/Naturals.tla (jar:file:/home/stariktenger/.vscode/extensions/tlaplus.vscode-ide-2025.3.80550/tools/tla2tools.jar!/tla2sany/StandardModules/Naturals.tla)
+Parsing file /home/stariktenger/Internship2025/ta-models/benches/bench/pipeline_exec_ooo.tla
+Semantic processing of module Naturals
+Semantic processing of module Sequences
+Semantic processing of module Integers
+Semantic processing of module FiniteSets
+Semantic processing of module instructions_ooo
+Semantic processing of module TLC
+Semantic processing of module TAExpl
+Semantic processing of module pipeline_exec_ooo
+Semantic processing of module pipeline_ooo
+Semantic processing of module MC
+@!@!@STARTMSG 2219:0 @!@!@
+SANY finished.
+@!@!@ENDMSG 2219 @!@!@
+@!@!@STARTMSG 2185:0 @!@!@
+Starting... (2025-03-14 16:04:02)
+@!@!@ENDMSG 2185 @!@!@
+@!@!@STARTMSG 2168:0 @!@!@
+Loading HasTA operator override from file:/home/stariktenger/Internship2025/ta-models/lib/TAExpl.class with signature: <Java Method: public static tlc2.value.impl.Value TAExpl.HasTA(tlc2.value.impl.Value,tlc2.value.impl.Value,tlc2.value.impl.Value,tlc2.value.impl.BoolValue) throws java.io.IOException,java.lang.InterruptedException>.
+@!@!@ENDMSG 2168 @!@!@
+@!@!@STARTMSG 2168:0 @!@!@
+Loading InitOutputFile operator override from file:/home/stariktenger/Internship2025/ta-models/lib/TAExpl.class with signature: <Java Method: public static tlc2.value.impl.Value TAExpl.InitOutputFile(tlc2.value.impl.Value,tlc2.value.impl.Value,tlc2.value.impl.Value,tlc2.value.impl.Value,tlc2.value.impl.Value,tlc2.value.impl.Value,tlc2.value.impl.Value) throws java.io.IOException,java.lang.InterruptedException>.
+@!@!@ENDMSG 2168 @!@!@
+/home/stariktenger/Internship2025/ta-models/tlc_graphs/test.txt
+Delete/rename the output file first!
+@!@!@STARTMSG 2104:1 @!@!@
+Assumption line 7, col 8 to line 7, col 79 of module pipeline_ooo is false.
+@!@!@ENDMSG 2104 @!@!@
+@!@!@STARTMSG 2186:0 @!@!@
+Finished in 794ms at (2025-03-14 16:04:03)
+@!@!@ENDMSG 2186 @!@!@

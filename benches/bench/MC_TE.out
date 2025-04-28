@@ -1,0 +1,431 @@
+@!@!@STARTMSG 2262:0 @!@!@
+TLC2 Version 2.16 of 31 December 2020 (rev: cdddf55)
+@!@!@ENDMSG 2262 @!@!@
+@!@!@STARTMSG 2187:0 @!@!@
+Running breadth-first search Model-Checking with fp 23 and seed -3170881811704290305 with 4 workers on 8 cores with 2380MB heap and 5351MB offheap memory [pid: 9522] (Mac OS X 10.16 x86_64, AdoptOpenJDK 14.0.1 x86_64, OffHeapDiskFPSet, DiskStateQueue).
+@!@!@ENDMSG 2187 @!@!@
+@!@!@STARTMSG 2220:0 @!@!@
+Starting SANY...
+@!@!@ENDMSG 2220 @!@!@
+Parsing file /Users/benjaminbinder/Desktop/These/timing-anomalies/tla/OoO/detection_procedure/pipeline_ooo.toolbox/bench/MC.tla
+Parsing file /Users/benjaminbinder/Desktop/These/timing-anomalies/tla/OoO/detection_procedure/pipeline_ooo.toolbox/bench/pipeline_ooo.tla
+Parsing file /Applications/TLA+ Toolbox.app/Contents/Eclipse/plugins/org.lamport.tlatools_1.0.0.202012311918/tla2sany/StandardModules/TLC.tla
+Parsing file /Applications/TLA+ Toolbox.app/Contents/Eclipse/plugins/org.lamport.tlatools_1.0.0.202012311918/tla2sany/StandardModules/Sequences.tla
+Parsing file /Users/benjaminbinder/Desktop/These/timing-anomalies/tla/OoO/detection_procedure/pipeline_ooo.toolbox/bench/instructions_ooo.tla
+Parsing file /Applications/TLA+ Toolbox.app/Contents/Eclipse/plugins/org.lamport.tlatools_1.0.0.202012311918/tla2sany/StandardModules/Integers.tla
+Parsing file /Applications/TLA+ Toolbox.app/Contents/Eclipse/plugins/org.lamport.tlatools_1.0.0.202012311918/tla2sany/StandardModules/FiniteSets.tla
+Parsing file /Users/benjaminbinder/Desktop/These/timing-anomalies/tla/OoO/detection_procedure/lib/TAExpl.tla
+Parsing file /Applications/TLA+ Toolbox.app/Contents/Eclipse/plugins/org.lamport.tlatools_1.0.0.202012311918/tla2sany/StandardModules/Naturals.tla
+Parsing file /Users/benjaminbinder/Desktop/These/timing-anomalies/tla/OoO/detection_procedure/pipeline_ooo.toolbox/bench/pipeline_exec_ooo.tla
+Semantic processing of module Naturals
+Semantic processing of module Sequences
+Semantic processing of module Integers
+Semantic processing of module FiniteSets
+Semantic processing of module instructions_ooo
+Semantic processing of module TLC
+Semantic processing of module TAExpl
+Semantic processing of module pipeline_exec_ooo
+Semantic processing of module pipeline_ooo
+Semantic processing of module MC
+@!@!@STARTMSG 2219:0 @!@!@
+SANY finished.
+@!@!@ENDMSG 2219 @!@!@
+@!@!@STARTMSG 2185:0 @!@!@
+Starting... (2023-01-19 19:05:33)
+@!@!@ENDMSG 2185 @!@!@
+@!@!@STARTMSG 2168:0 @!@!@
+Loading InitOutputFile operator override from file:/Users/benjaminbinder/Desktop/These/timing-anomalies/tla/OoO/detection_procedure/lib/TAExpl.class with signature: <Java Method: public static tlc2.value.impl.Value TAExpl.InitOutputFile(tlc2.value.impl.Value,tlc2.value.impl.Value,tlc2.value.impl.Value,tlc2.value.impl.Value,tlc2.value.impl.Value,tlc2.value.impl.Value,tlc2.value.impl.Value) throws java.io.IOException,java.lang.InterruptedException>.
+@!@!@ENDMSG 2168 @!@!@
+@!@!@STARTMSG 2168:0 @!@!@
+Loading HasTA operator override from file:/Users/benjaminbinder/Desktop/These/timing-anomalies/tla/OoO/detection_procedure/lib/TAExpl.class with signature: <Java Method: public static tlc2.value.impl.Value TAExpl.HasTA(tlc2.value.impl.Value,tlc2.value.impl.Value,tlc2.value.impl.Value,tlc2.value.impl.BoolValue) throws java.io.IOException,java.lang.InterruptedException>.
+@!@!@ENDMSG 2168 @!@!@
+/Users/benjaminbinder/Desktop/These/timing-anomalies/tla/OoO/detection_procedure/tlc_graphs/test.txt
+<<"$!@$!@$!@$!@$!", 4>>
+@!@!@STARTMSG 2189:0 @!@!@
+Computing initial states...
+@!@!@ENDMSG 2189 @!@!@
+@!@!@STARTMSG 2190:0 @!@!@
+Finished computing initial states: 1 distinct state generated at 2023-01-19 19:05:34.
+@!@!@ENDMSG 2190 @!@!@
+@!@!@STARTMSG 1000:1 @!@!@
+TLC threw an unexpected exception.
+This was probably caused by an error in the spec or model.
+See the User Output or TLC Console for clues to what happened.
+The exception was a java.lang.RuntimeException
+: Attempted to select nonexistent field "addr" from the record
+[ind |-> 1, type |-> "MemRead", r0 |-> "ra", r1 |-> "", r2 |-> "", targA |-> ""]
+line 168, col 60 to line 168, col 76 of module pipeline_exec_ooo
+@!@!@ENDMSG 1000 @!@!@
+@!@!@STARTMSG 2121:1 @!@!@
+The behavior up to this point is:
+@!@!@ENDMSG 2121 @!@!@
+@!@!@STARTMSG 2217:4 @!@!@
+1: <Initial predicate>
+/\ _RS2 = <<{}, {}, {}, {}>>
+/\ _COM2 = << [ ind |-> 0,
+     type |-> "No_OpClass",
+     r0 |-> "",
+     r1 |-> "",
+     r2 |-> "",
+     addr |-> "" ],
+   [ ind |-> 0,
+     type |-> "No_OpClass",
+     r0 |-> "",
+     r1 |-> "",
+     r2 |-> "",
+     addr |-> "" ] >>
+/\ _ID = << [ ind |-> 0,
+     type |-> "No_OpClass",
+     r0 |-> "",
+     r1 |-> "",
+     r2 |-> "",
+     addr |-> "" ],
+   [ ind |-> 0,
+     type |-> "No_OpClass",
+     r0 |-> "",
+     r1 |-> "",
+     r2 |-> "",
+     addr |-> "" ] >>
+/\ _IF = << [ instr |->
+         [ ind |-> 0,
+           type |-> "No_OpClass",
+           r0 |-> "",
+           r1 |-> "",
+           r2 |-> "",
+           addr |-> "" ],
+     baseLat |-> 1,
+     currLat |-> 1 ],
+   [ instr |->
+         [ ind |-> 0,
+           type |-> "No_OpClass",
+           r0 |-> "",
+           r1 |-> "",
+           r2 |-> "",
+           addr |-> "" ],
+     baseLat |-> 1,
+     currLat |-> 1 ] >>
+/\ _FU2 = << [ instr |->
+         [ ind |-> 0,
+           type |-> "No_OpClass",
+           r0 |-> "",
+           r1 |-> "",
+           r2 |-> "",
+           addr |-> "" ],
+     baseLat |-> 1,
+     currLat |-> 1 ],
+   [ instr |->
+         [ ind |-> 0,
+           type |-> "No_OpClass",
+           r0 |-> "",
+           r1 |-> "",
+           r2 |-> "",
+           addr |-> "" ],
+     baseLat |-> 1,
+     currLat |-> 1 ],
+   [ instr |->
+         [ ind |-> 0,
+           type |-> "No_OpClass",
+           r0 |-> "",
+           r1 |-> "",
+           r2 |-> "",
+           addr |-> "" ],
+     baseLat |-> 1,
+     currLat |-> 1 ],
+   [ instr |->
+         [ ind |-> 0,
+           type |-> "No_OpClass",
+           r0 |-> "",
+           r1 |-> "",
+           r2 |-> "",
+           addr |-> "" ],
+     baseLat |-> 1,
+     currLat |-> 1 ] >>
+/\ _COM = << [ ind |-> 0,
+     type |-> "No_OpClass",
+     r0 |-> "",
+     r1 |-> "",
+     r2 |-> "",
+     addr |-> "" ],
+   [ ind |-> 0,
+     type |-> "No_OpClass",
+     r0 |-> "",
+     r1 |-> "",
+     r2 |-> "",
+     addr |-> "" ] >>
+/\ exec_inst2 = 2
+/\ _ID2 = << [ ind |-> 0,
+     type |-> "No_OpClass",
+     r0 |-> "",
+     r1 |-> "",
+     r2 |-> "",
+     addr |-> "" ],
+   [ ind |-> 0,
+     type |-> "No_OpClass",
+     r0 |-> "",
+     r1 |-> "",
+     r2 |-> "",
+     addr |-> "" ] >>
+/\ graph = [nodes |-> <<>>, edges |-> {}]
+/\ currCycle2 = 0
+/\ _IF2 = << [ instr |->
+         [ ind |-> 0,
+           type |-> "No_OpClass",
+           r0 |-> "",
+           r1 |-> "",
+           r2 |-> "",
+           addr |-> "" ],
+     baseLat |-> 1,
+     currLat |-> 1 ],
+   [ instr |->
+         [ ind |-> 0,
+           type |-> "No_OpClass",
+           r0 |-> "",
+           r1 |-> "",
+           r2 |-> "",
+           addr |-> "" ],
+     baseLat |-> 1,
+     currLat |-> 1 ] >>
+/\ lastBound = 0
+/\ graph2 = [nodes |-> <<>>, edges |-> {}]
+/\ pc2 = 0
+/\ robHead = 1
+/\ rob = <<>>
+/\ _RS = <<{}, {}, {}, {}>>
+/\ currCycle = 0
+/\ exec_inst = 1
+/\ robHead2 = 1
+/\ pc = 0
+/\ rob2 = <<>>
+/\ _FU = << [ instr |->
+         [ ind |-> 0,
+           type |-> "No_OpClass",
+           r0 |-> "",
+           r1 |-> "",
+           r2 |-> "",
+           addr |-> "" ],
+     baseLat |-> 1,
+     currLat |-> 1 ],
+   [ instr |->
+         [ ind |-> 0,
+           type |-> "No_OpClass",
+           r0 |-> "",
+           r1 |-> "",
+           r2 |-> "",
+           addr |-> "" ],
+     baseLat |-> 1,
+     currLat |-> 1 ],
+   [ instr |->
+         [ ind |-> 0,
+           type |-> "No_OpClass",
+           r0 |-> "",
+           r1 |-> "",
+           r2 |-> "",
+           addr |-> "" ],
+     baseLat |-> 1,
+     currLat |-> 1 ],
+   [ instr |->
+         [ ind |-> 0,
+           type |-> "No_OpClass",
+           r0 |-> "",
+           r1 |-> "",
+           r2 |-> "",
+           addr |-> "" ],
+     baseLat |-> 1,
+     currLat |-> 1 ] >>
+
+@!@!@ENDMSG 2217 @!@!@
+@!@!@STARTMSG 2217:4 @!@!@
+2: <Next line 52, col 9 to line 56, col 64 of module pipeline_ooo>
+/\ _RS2 = <<{}, {}, {}, {}>>
+/\ _COM2 = << [ ind |-> 0,
+     type |-> "No_OpClass",
+     r0 |-> "",
+     r1 |-> "",
+     r2 |-> "",
+     addr |-> "" ],
+   [ ind |-> 0,
+     type |-> "No_OpClass",
+     r0 |-> "",
+     r1 |-> "",
+     r2 |-> "",
+     addr |-> "" ] >>
+/\ _ID = << [ ind |-> 0,
+     type |-> "No_OpClass",
+     r0 |-> "",
+     r1 |-> "",
+     r2 |-> "",
+     addr |-> "" ],
+   [ ind |-> 0,
+     type |-> "No_OpClass",
+     r0 |-> "",
+     r1 |-> "",
+     r2 |-> "",
+     addr |-> "" ] >>
+/\ _IF = << [ instr |->
+         [ ind |-> 1,
+           type |-> "MemRead",
+           r0 |-> "ra",
+           r1 |-> "",
+           r2 |-> "",
+           targA |-> "" ],
+     baseLat |-> 1,
+     currLat |-> 1 ],
+   [ instr |->
+         [ ind |-> 2,
+           type |-> "IntAlu",
+           r0 |-> "",
+           r1 |-> "ra",
+           r2 |-> "",
+           targA |-> "" ],
+     baseLat |-> 1,
+     currLat |-> 1 ] >>
+/\ _FU2 = << [ instr |->
+         [ ind |-> 0,
+           type |-> "No_OpClass",
+           r0 |-> "",
+           r1 |-> "",
+           r2 |-> "",
+           addr |-> "" ],
+     baseLat |-> 1,
+     currLat |-> 1 ],
+   [ instr |->
+         [ ind |-> 0,
+           type |-> "No_OpClass",
+           r0 |-> "",
+           r1 |-> "",
+           r2 |-> "",
+           addr |-> "" ],
+     baseLat |-> 1,
+     currLat |-> 1 ],
+   [ instr |->
+         [ ind |-> 0,
+           type |-> "No_OpClass",
+           r0 |-> "",
+           r1 |-> "",
+           r2 |-> "",
+           addr |-> "" ],
+     baseLat |-> 1,
+     currLat |-> 1 ],
+   [ instr |->
+         [ ind |-> 0,
+           type |-> "No_OpClass",
+           r0 |-> "",
+           r1 |-> "",
+           r2 |-> "",
+           addr |-> "" ],
+     baseLat |-> 1,
+     currLat |-> 1 ] >>
+/\ _COM = << [ ind |-> 0,
+     type |-> "No_OpClass",
+     r0 |-> "",
+     r1 |-> "",
+     r2 |-> "",
+     addr |-> "" ],
+   [ ind |-> 0,
+     type |-> "No_OpClass",
+     r0 |-> "",
+     r1 |-> "",
+     r2 |-> "",
+     addr |-> "" ] >>
+/\ exec_inst2 = 2
+/\ _ID2 = << [ ind |-> 0,
+     type |-> "No_OpClass",
+     r0 |-> "",
+     r1 |-> "",
+     r2 |-> "",
+     addr |-> "" ],
+   [ ind |-> 0,
+     type |-> "No_OpClass",
+     r0 |-> "",
+     r1 |-> "",
+     r2 |-> "",
+     addr |-> "" ] >>
+/\ graph = [nodes |-> <<>>, edges |-> {}]
+/\ currCycle2 = 1
+/\ _IF2 = << [ instr |->
+         [ ind |-> 1,
+           type |-> "MemRead",
+           r0 |-> "ra",
+           r1 |-> "",
+           r2 |-> "",
+           targA |-> "" ],
+     baseLat |-> 1,
+     currLat |-> 1 ],
+   [ instr |->
+         [ ind |-> 2,
+           type |-> "IntAlu",
+           r0 |-> "",
+           r1 |-> "ra",
+           r2 |-> "",
+           targA |-> "" ],
+     baseLat |-> 1,
+     currLat |-> 1 ] >>
+/\ lastBound = 0
+/\ graph2 = [nodes |-> <<>>, edges |-> {}]
+/\ pc2 = 2
+/\ robHead = 1
+/\ rob = <<>>
+/\ _RS = <<{}, {}, {}, {}>>
+/\ currCycle = 1
+/\ exec_inst = 1
+/\ robHead2 = 1
+/\ pc = 2
+/\ rob2 = <<>>
+/\ _FU = << [ instr |->
+         [ ind |-> 0,
+           type |-> "No_OpClass",
+           r0 |-> "",
+           r1 |-> "",
+           r2 |-> "",
+           addr |-> "" ],
+     baseLat |-> 1,
+     currLat |-> 1 ],
+   [ instr |->
+         [ ind |-> 0,
+           type |-> "No_OpClass",
+           r0 |-> "",
+           r1 |-> "",
+           r2 |-> "",
+           addr |-> "" ],
+     baseLat |-> 1,
+     currLat |-> 1 ],
+   [ instr |->
+         [ ind |-> 0,
+           type |-> "No_OpClass",
+           r0 |-> "",
+           r1 |-> "",
+           r2 |-> "",
+           addr |-> "" ],
+     baseLat |-> 1,
+     currLat |-> 1 ],
+   [ instr |->
+         [ ind |-> 0,
+           type |-> "No_OpClass",
+           r0 |-> "",
+           r1 |-> "",
+           r2 |-> "",
+           addr |-> "" ],
+     baseLat |-> 1,
+     currLat |-> 1 ] >>
+
+@!@!@ENDMSG 2217 @!@!@
+@!@!@STARTMSG 2147:1 @!@!@
+TLC was unable to fingerprint.
+
+Fingerprint Stack Trace:
+0) line 164, col 36 to line 169, col 57 of module pipeline_exec_ooo
+
+Reason:
+Attempted to select nonexistent field "addr" from the record
+[ind |-> 1, type |-> "MemRead", r0 |-> "ra", r1 |-> "", r2 |-> "", targA |-> ""]
+line 168, col 60 to line 168, col 76 of module pipeline_exec_ooo
+@!@!@ENDMSG 2147 @!@!@
+@!@!@STARTMSG 2200:0 @!@!@
+Progress(2) at 2023-01-19 19:05:34: 2 states generated (62 s/min), 2 distinct states found (62 ds/min), 0 states left on queue.
+@!@!@ENDMSG 2200 @!@!@
+@!@!@STARTMSG 2199:0 @!@!@
+2 states generated, 2 distinct states found, 0 states left on queue.
+@!@!@ENDMSG 2199 @!@!@
+@!@!@STARTMSG 2186:0 @!@!@
+Finished in 1937ms at (2023-01-19 19:05:34)
+@!@!@ENDMSG 2186 @!@!@
